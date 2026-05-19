@@ -1,0 +1,72 @@
+// ============================================================
+//  GROUND ZERO — PALETA KOLORÓW
+// ============================================================
+
+// Bazy z mida (zachowujemy kompatybilność)
+$main-color: #ffb94a;
+$main-color-2: #ffb94a52;
+$main-color-3: #fff8ed;
+$primary-color: #050816;
+$secondary-color: #aaa6c3;
+$tertiary-color: #151030;
+$black-100: #100d25;
+$black-200: #090325;
+$white-100: #f3f3f3;
+$dark-smooth: #050505;
+$dark-smooth-hover: #181616;
+$grey-smooth: #c0c0c0;
+$grey-smooth-2: #646060;
+$grey-smooth-3: #383636;
+$grey-smooth-4: #ebe6e6;
+$grey-smooth-5: #f2f1f6;
+$white-smooth: #fcfcfc;
+$white-smooth-2: #f3f4ee;
+$white-smooth-4: #f5f5f5;
+$dark-gray: #333333;
+$gray-gray: #3b3b3b;
+$main-gray: #4b4b4b;
+$light-gray: #c0c0c0;
+$new-black: #171a21;
+$carbon: #111111;
+$glass: rgba(15, 15, 15, 0.85);
+
+// ============================================================
+//  GROUND ZERO — BRAND COLORS
+// ============================================================
+
+// Tła
+$gz-bg:           #080808;
+$gz-bg-2:         #0e0e0e;
+$gz-surface:      #141414;
+$gz-surface-2:    #1c1c1c;
+
+// Akcent — elektryczny niebieski (Electric Blue z plakatu)
+$gz-accent:       #0066FF;
+$gz-accent-2:     #00A8FF;
+$gz-accent-3:     #0044CC;
+$gz-accent-glow:  rgba(0, 102, 255, 0.45);
+$gz-accent-glow-2:rgba(0, 168, 255, 0.15);
+
+// Tekst
+$gz-text:         #F2F2F2;
+$gz-text-muted:   #888888;
+$gz-text-dim:     #4a4a4a;
+
+// Bordera / linie
+$gz-border:       rgba(255, 255, 255, 0.08);
+$gz-border-accent:rgba(0, 102, 255, 0.40);
+
+// Gradienty
+$gz-gradient-fire: linear-gradient(135deg, $gz-accent 0%, $gz-accent-2 100%);
+$gz-gradient-blue-glow: radial-gradient(circle at center, rgba(0,102,255,0.15) 0%, transparent 70%);
+$gz-gradient-dark: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.95) 100%);
+$gz-gradient-hero: linear-gradient(
+  to bottom,
+  rgba(8, 8, 8, 0.45) 0%,
+  rgba(8, 8, 8, 0.65) 60%,
+  rgba(8, 8, 8, 0.92) 100%
+);
+
+// Glassmorph
+$gz-glass-bg:  rgba(10, 10, 10, 0.70);
+$gz-glass-nav: rgba(8, 8, 8, 0.88);
