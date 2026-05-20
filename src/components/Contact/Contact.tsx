@@ -32,9 +32,8 @@ const Contact = () => {
             <div className={styles.infoGroup}>
               <span className={styles.label}>GODZINY OTWARCIA</span>
               <p className={styles.text}>
-                Pon-Pt: 6:00 - 22:00<br/>
-                Sobota: 8:00 - 20:00<br/>
-                Niedziela: 8:00 - 18:00
+                Pon-Sob: 06:00 - 22:00<br/>
+                Niedziela: 13:00 - 21:00
               </p>
             </div>
           </div>
