@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.marqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  background: transparent;
+  position: relative;
+  z-index: 20;
+}
+
+.marqueeContainer {
+  width: 110vw;
+  margin-left: -5vw;
+  background: $gz-accent;
+  color: #fff;
+  padding: 20px 0;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  // Usunięty scale(1.05) który rozmywał tekst (SD effect). Używamy szerszego width.
+  transform: rotate(-2deg);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  box-shadow: 0 0 40px rgba(0, 102, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.marqueeContent {
+  display: flex;
+  animation: scrollText 20s linear infinite;
+
+  span {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 20px;
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@include respond-to("md") {
+  .marqueeContainer {
+    padding: 15px 0;
+  }
+  .marqueeContent span {
+    font-size: 1.5rem;
+  }
+}

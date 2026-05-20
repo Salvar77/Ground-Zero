@@ -1,0 +1,184 @@
+@import "../../styles/variables";
+
+.features {
+  padding: 100px 0;
+  position: relative;
+  background: $gz-bg;
+  overflow: hidden;
+
+  // Delikatny grid w tle przypominający blueprint / matę na siłowni
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bgText {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  font-size: 10.2rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  text-transform: uppercase;
+  z-index: -1;
+  user-select: none;
+  letter-spacing: 5px;
+
+  @include respond-to("md") {
+    font-size: 5.2rem;
+    top: -20px;
+    left: 0;
+  }
+}
+
+.title {
+  font-size: 4.2rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  span {
+    color: $gz-accent;
+  }
+
+  @include respond-to("md") {
+    font-size: 2.7rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @include respond-to("md") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 50px 40px;
+  // Kształt Industrial/Sci-fi (Cut corners)
+  clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px;
+  
+  // Efekt przechodzącego światła
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.05), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.7s ease;
+    z-index: 0;
+  }
+
+  &:hover {
+    border-color: rgba(0, 102, 255, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.1);
+    
+    &::before {
+      left: 150%;
+    }
+
+    .cardNumber {
+      color: rgba(0, 102, 255, 0.2);
+      transform: scale(1.1) translate(10px, -10px);
+    }
+    
+    .cyberDeco {
+      width: 100px;
+      background: $gz-accent;
+      box-shadow: 0 0 15px $gz-accent;
+    }
+  }
+}
+
+.cardNumber {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 8.2rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 1;
+  transition: all 0.5s ease;
+  user-select: none;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.cardTitle {
+  font-size: 2.2rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.cardDesc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cyberDeco {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 40px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+}
