@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <Image 
-            src="/images/ground-zero-logo.jpg" 
+            src="/images/ground-zero-logo.png" 
             alt="Ground Zero Niemodlin Logo" 
             width={160} 
             height={60} 
