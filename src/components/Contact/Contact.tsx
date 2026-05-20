@@ -6,7 +6,7 @@ const Contact = () => {
     <section className={styles.contact}>
       <div className={styles.container}>
         
-        {/* Schodkowy element informacyjny (Stepped Card) z transform: translateY */}
+        {/* Schodkowy element informacyjny - KARTA ZAWSZE PIERWSZA W HTML DLA DOBREGO MOBILE UX */}
         <div className={styles.steppedCard}>
           <div className={styles.cardHeader}>
             <h2 className={styles.title}>ZNAJDŹ NAS</h2>
@@ -27,7 +27,6 @@ const Contact = () => {
               <p className={styles.text}>
                 Zadzwoń do nas, aby zapytać o<br/>darmowy trening próbny.
               </p>
-              {/* Opcjonalny numer telefonu, jak klient poda, można uzupełnić */}
             </div>
             
             <div className={styles.infoGroup}>
@@ -50,7 +49,7 @@ const Contact = () => {
           </a>
         </div>
 
-        {/* Mapa w asymetrycznym gridzie */}
+        {/* Mapa - W CSS NA DESKTOPIE WEDRUJE NA LEWO */}
         <div className={styles.mapWrapper}>
           <div className={styles.mapOverlay}></div>
           <iframe 

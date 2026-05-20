@@ -22,6 +22,9 @@ export const metadata = {
   },
   description:
     "Ground Zero Siłownia Niemodlin. Twoja siła. Twoje miejsce. Twój czas. Nowoczesny sprzęt, mega atmosfera, zero wymówek!",
+  icons: {
+    icon: "/images/ground-zero-logo.png?v=4",
+  },
   openGraph: {
     title: "Ground Zero Siłownia Niemodlin",
     description: "Nowoczesny sprzęt, mega atmosfera, zero wymówek!",

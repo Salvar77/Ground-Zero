@@ -6,7 +6,6 @@
   background: $gz-bg;
   overflow: hidden;
 
-  // Delikatny grid w tle przypominający blueprint / matę na siłowni
   &::before {
     content: '';
     position: absolute;
@@ -46,7 +45,7 @@
   letter-spacing: 5px;
 
   @include respond-to("md") {
-    font-size: 5.2rem;
+    font-size: 5.4rem;
     top: -20px;
     left: 0;
   }
@@ -66,7 +65,7 @@
   }
 
   @include respond-to("md") {
-    font-size: 2.7rem;
+    font-size: 2.9rem;
   }
 }
 
@@ -92,7 +91,6 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 50px 40px;
-  // Kształt Industrial/Sci-fi (Cut corners)
   clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
@@ -100,7 +98,6 @@
   justify-content: space-between;
   min-height: 350px;
   
-  // Efekt przechodzącego światła
   &::before {
     content: '';
     position: absolute;
