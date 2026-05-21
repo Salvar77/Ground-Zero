@@ -1,0 +1,582 @@
+@import "../../styles/variables";
+
+.schedule {
+  padding: 120px 0;
+  position: relative;
+  background-color: $gz-bg-2;
+  border-top: 1px solid $gz-border;
+  border-bottom: 1px solid $gz-border;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.bgText {
+  position: absolute;
+  top: -45px;
+  left: -15px;
+  font-size: 11rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.015);
+  text-transform: uppercase;
+  z-index: -1;
+  user-select: none;
+  letter-spacing: 6px;
+
+  @include respond-to("md") {
+    font-size: 5.8rem;
+    top: -25px;
+    left: 0;
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $gz-accent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  text-transform: uppercase;
+
+  span {
+    color: $gz-accent;
+  }
+
+  @include respond-to("md") {
+    font-size: 3.4rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Category Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+
+  @include respond-to("md") {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.filterBtn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 24px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: $transition-std;
+
+  &:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &.activeFilter {
+    background: $gz-accent;
+    border-color: $gz-accent;
+    color: #fff;
+    box-shadow: 0 0 20px $gz-accent-glow;
+  }
+
+  @include respond-to("md") {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
+
+.btnFitness.activeFilter {
+  background: #9D4EDD;
+  border-color: #9D4EDD;
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
+}
+
+.btnCross.activeFilter {
+  background: #00F5D4;
+  border-color: #00F5D4;
+  color: #080808;
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
+}
+
+.btnMma.activeFilter {
+  background: #4895EF;
+  border-color: #4895EF;
+  box-shadow: 0 0 20px rgba(72, 149, 239, 0.4);
+}
+
+/* Desktop Grid Styling */
+.desktopGrid {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  @include respond-to("md") {
+    display: none;
+  }
+}
+
+.gridHeader {
+  display: grid;
+  grid-template-columns: 100px repeat(7, 1fr);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.timeLabelCell {
+  padding: 20px 10px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  color: $gz-accent;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayHeaderCell {
+  padding: 20px 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.gridBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: 100px repeat(7, 1fr);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.timeCell {
+  padding: 30px 10px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-style: italic;
+  font-family: var(--font-heading);
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dayCell {
+  padding: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  min-height: 120px;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+/* Class Card Styles */
+.classCard {
+  padding: 12px;
+  border-left: 3px solid #ccc;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &.fitness {
+    border-left-color: #9D4EDD;
+    background: rgba(157, 78, 221, 0.03);
+    
+    &:hover {
+      background: rgba(157, 78, 221, 0.12);
+      border-left-color: #b5179e;
+      box-shadow: 0 4px 15px rgba(157, 78, 221, 0.15);
+    }
+  }
+
+  &.cross {
+    border-left-color: #00F5D4;
+    background: rgba(0, 245, 212, 0.02);
+    
+    &:hover {
+      background: rgba(0, 245, 212, 0.10);
+      border-left-color: #00F5D4;
+      box-shadow: 0 4px 15px rgba(0, 245, 212, 0.15);
+    }
+  }
+
+  &.mma {
+    border-left-color: #4895EF;
+    background: rgba(72, 149, 239, 0.03);
+    
+    &:hover {
+      background: rgba(72, 149, 239, 0.12);
+      border-left-color: #4cc9f0;
+      box-shadow: 0 4px 15px rgba(72, 149, 239, 0.15);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    
+    .bookBtn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.classTime {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.className {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.classFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.classSlots {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bookBtn {
+  background: $gz-accent;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+
+  &:hover {
+    background: #fff;
+    color: #080808;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+
+  &:disabled {
+    background: #00FF88 !important;
+    color: #080808 !important;
+    opacity: 1 !important;
+    cursor: default;
+    transform: none;
+  }
+}
+
+/* Free Gym Card Styling */
+.freeGymCard {
+  padding: 15px 12px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: $transition-std;
+
+  span {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 4px 0;
+  }
+
+  .freeGymTime {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:hover {
+    opacity: 1;
+    border-color: rgba(0, 102, 255, 0.3);
+    background: rgba(0, 102, 255, 0.02);
+  }
+}
+
+/* Mobile View Styling */
+.mobileView {
+  display: none;
+
+  @include respond-to("md") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.mobileDayTabs {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  scrollbar-width: none; // Firefox
+  
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+}
+
+.mobileTabBtn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 10px 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  flex-shrink: 0;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  transition: $transition-std;
+
+  &.activeMobileTab {
+    background: $gz-accent;
+    border-color: $gz-accent;
+    color: #fff;
+    box-shadow: 0 0 15px $gz-accent-glow;
+  }
+}
+
+.mobileClassesList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.noClassesMobile {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mobileClassCard {
+  display: flex;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid #ccc;
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  overflow: hidden;
+  padding: 15px;
+  align-items: center;
+
+  &.fitness { border-left-color: #9D4EDD; background: rgba(157, 78, 221, 0.03); }
+  &.cross { border-left-color: #00F5D4; background: rgba(0, 245, 212, 0.02); }
+  &.mma { border-left-color: #4895EF; background: rgba(72, 149, 239, 0.03); }
+}
+
+.mobileCardLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 75px;
+}
+
+.mobileCardTime {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-style: italic;
+  font-family: var(--font-heading);
+  color: #fff;
+}
+
+.mobileCardDuration {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2px;
+}
+
+.mobileCardRight {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.mobileCardName {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.mobileCardFooter {
+  display: flex;
+  justify-content: flex-between;
+  align-items: center;
+  width: 100%;
+}
+
+.mobileCardSlots {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mobileBookBtn {
+  background: $gz-accent;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+
+  &:active {
+    background: #fff;
+    color: #080808;
+  }
+
+  &:disabled {
+    background: #00FF88 !important;
+    color: #080808 !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile Free Gym */
+.mobileFreeGym {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  padding: 30px 20px;
+  text-align: center;
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px;
+  }
+}
+
+.freeGymHeader {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.freeGymHours {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: $gz-accent;
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  background: rgba(0, 102, 255, 0.05);
+  padding: 10px;
+  display: inline-block;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}

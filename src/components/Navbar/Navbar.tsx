@@ -7,8 +7,9 @@ import styles from "./Navbar.module.scss";
 
 const navLinks = [
   { name: "O NAS", href: "#o-nas" },
+  // { name: "GRAFIK", href: "#grafik" },
   { name: "TRENERZY", href: "#trenerzy" },
-  { name: "CENNIK", href: "#cennik" },
+  // { name: "CENNIK", href: "#cennik" },
   { name: "KONTAKT", href: "#kontakt" },
 ];
 
@@ -43,12 +44,12 @@ export default function Navbar() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          <Image 
-            src="/images/ground-zero-logo.png" 
-            alt="Ground Zero Niemodlin Logo" 
-            width={160} 
-            height={60} 
-            className={styles.logoImage} 
+          <Image
+            src="/images/ground-zero-logo.png"
+            alt="Ground Zero Niemodlin Logo"
+            width={60}
+            height={60}
+            className={styles.logoImage}
             priority
           />
         </Link>
@@ -96,7 +97,11 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Link href="#kontakt" className={styles.mobileCtaBtn} onClick={closeMenu}>
+          <Link
+            href="#kontakt"
+            className={styles.mobileCtaBtn}
+            onClick={closeMenu}
+          >
             DOŁĄCZ DO NAS
           </Link>
         </nav>

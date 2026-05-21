@@ -38,12 +38,12 @@
 }
 
 .logoImage {
-  width: auto;
-  height: 60px;
+  width: auto !important;
+  height: 60px !important;
   object-fit: contain;
 
   @include respond-to("md") {
-    height: 55px;
+    height: 55px !important;
   }
 }
 

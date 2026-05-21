@@ -1,0 +1,371 @@
+@import "../../styles/variables";
+
+.pricing {
+  padding: 120px 0;
+  position: relative;
+  background-color: $gz-bg;
+  overflow: hidden;
+
+  // Background light elements
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 102, 255, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.bgText {
+  position: absolute;
+  top: -45px;
+  left: -15px;
+  font-size: 11rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.015);
+  text-transform: uppercase;
+  z-index: -1;
+  user-select: none;
+  letter-spacing: 6px;
+
+  @include respond-to("md") {
+    font-size: 6rem;
+    top: -25px;
+    left: 0;
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $gz-accent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  text-transform: uppercase;
+
+  span {
+    color: $gz-accent;
+  }
+
+  @include respond-to("md") {
+    font-size: 3.4rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Pricing Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+
+  @include respond-to("lg") {
+    gap: 20px;
+  }
+
+  @include respond-to("md") {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+}
+
+/* Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 45px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
+  min-height: 520px;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateY(-5px);
+  }
+
+  @include respond-to("lg") {
+    padding: 35px 25px;
+  }
+}
+
+.interactiveCard {
+  background: rgba(0, 102, 255, 0.01);
+  border-color: rgba(0, 102, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    border-color: rgba(0, 102, 255, 0.5);
+    background: rgba(0, 102, 255, 0.02);
+    box-shadow: 0 15px 45px rgba(0, 102, 255, 0.12);
+  }
+}
+
+.comboCard {
+  border-color: rgba(255, 255, 255, 0.06);
+  
+  &:hover {
+    border-color: rgba(0, 102, 255, 0.3);
+  }
+}
+
+.cardHeader {
+  margin-bottom: 25px;
+}
+
+.tierBadge {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: $gz-accent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+}
+
+.goldBadge {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: #ffb94a;
+  color: #080808;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+}
+
+.tierName {
+  font-size: 2.6rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.tierDesc {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+  margin-bottom: 25px;
+  min-height: 36px;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.currency {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  margin-right: 4px;
+}
+
+.price {
+  font-size: 5.6rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.period {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.cyberLine {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 30px;
+}
+
+.cyberLineAccent {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 102, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+/* Sub-selector tabs in Miesieczny Card */
+.subSelector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+
+  button {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    padding: 6px 2px;
+    clip-path: polygon(3px 0, 100% 0, 100% calc(100% - 3px), calc(100% - 3px) 100%, 0 100%, 0 3px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    &.activeSub {
+      background: $gz-accent;
+      color: #fff;
+    }
+  }
+}
+
+.cardBody {
+  flex-grow: 1;
+  margin-bottom: 35px;
+}
+
+.optionTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.optionDesc {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 54px;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: rgba(255, 255, 255, 0.4);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .iconAccent {
+      color: $gz-accent;
+    }
+
+    span {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+  }
+}
+
+.cardFooter {
+  margin-top: auto;
+}
+
+.cardBtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 14px 20px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-style: italic;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: all 0.4s ease;
+
+  &:hover {
+    background: #fff;
+    color: #080808;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.cardBtnAccent {
+  background: $gz-accent;
+  border-color: $gz-accent;
+  
+  &:hover {
+    background: #fff;
+    color: #080808;
+    border-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.6);
+  }
+}

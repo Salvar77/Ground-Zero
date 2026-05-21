@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Features.module.scss';
 
 const featuresData = [
@@ -6,16 +7,19 @@ const featuresData = [
     id: '01',
     title: 'STREFA WOLNYCH CIĘŻARÓW',
     desc: 'Prawdziwe żelazo dla prawdziwych wyników. Hantle, gryfy olimpijskie i profesjonalne pomosty ciężarowe dla wyciskających siódme poty.',
+    image: '/images/hantle-ground-zero.jpg'
   },
   {
     id: '02',
     title: 'MASZYNY PÓŁWOLNE',
     desc: 'Najwyższej klasy sprzęt typu Hammer. Maszyny, które wybaczają błędy w technice, ale nie wybaczają słabości na treningu.',
+    image: '/images/maszyna-polwolna-ground-zero.jpg'
   },
   {
     id: '03',
     title: 'TRENING FUNKCJONALNY',
     desc: 'Kettlebells, liny, boxy i klatka treningowa. Zbuduj kondycję, siłę eksplozywną i mobilność w jednym miejscu.',
+    image: '/images/ground_zero_functional_training.png'
   }
 ];
 
@@ -37,6 +41,17 @@ const Features = () => {
         <div className={styles.grid}>
           {featuresData.map((feature) => (
             <div key={feature.id} className={styles.card}>
+              <div className={styles.cardImageWrapper}>
+                <Image 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  fill 
+                  unoptimized
+                  className={styles.cardBgImage} 
+                />
+                <div className={styles.cardOverlay}></div>
+              </div>
+
               <div className={styles.cardNumber}>{feature.id}</div>
               
               <div className={styles.cardContent}>

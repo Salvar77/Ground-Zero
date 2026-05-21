@@ -1,0 +1,237 @@
+@import "../../styles/variables";
+
+.trainers {
+  padding: 150px 0;
+  position: relative;
+  background-color: $gz-bg;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0 calc(100% - 5vw));
+  margin-top: -5vw;
+  z-index: 5;
+
+  // Background ambient glow
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 102, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.container {
+  @include container;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.bgText {
+  position: absolute;
+  top: -45px;
+  left: -15px;
+  font-size: 11rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.015);
+  text-transform: uppercase;
+  z-index: -1;
+  user-select: none;
+  letter-spacing: 6px;
+
+  @include respond-to("md") {
+    font-size: 6rem;
+    top: -25px;
+    left: 0;
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $gz-accent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  text-transform: uppercase;
+
+  span {
+    color: $gz-accent;
+  }
+
+  @include respond-to("md") {
+    font-size: 3.4rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @include respond-to("lg") {
+    gap: 20px;
+  }
+
+  @include respond-to("md") {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+}
+
+/* Trainer Card */
+.card {
+  background: rgba(20, 20, 20, 0.50);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    border-color: rgba(0, 102, 255, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.08);
+
+    .trainerImage {
+      transform: scale(1.05);
+    }
+
+    .cardOverlay {
+      background: linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.3) 100%);
+    }
+
+    .diagonalCut {
+      width: 100%;
+      background: $gz-accent;
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.trainerImage {
+  display: block;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(8, 8, 8, 0.9) 0%, rgba(8, 8, 8, 0.4) 100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.diagonalCut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+}
+
+.cardInfo {
+  padding: 30px 24px;
+  position: relative;
+  z-index: 3;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $gz-accent;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.name {
+  font-size: 2.4rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.desc {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.specBadge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 102, 255, 0.08);
+    border-color: rgba(0, 102, 255, 0.25);
+    color: #fff;
+  }
+}

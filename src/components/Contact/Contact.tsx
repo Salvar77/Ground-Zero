@@ -3,7 +3,7 @@ import styles from './Contact.module.scss';
 
 const Contact = () => {
   return (
-    <section className={styles.contact}>
+    <section id="kontakt" className={styles.contact}>
       <div className={styles.container}>
         
         {/* Schodkowy element informacyjny - KARTA ZAWSZE PIERWSZA W HTML DLA DOBREGO MOBILE UX */}
