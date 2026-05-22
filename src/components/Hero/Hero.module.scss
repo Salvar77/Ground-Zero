@@ -22,6 +22,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @include respond-to("md") {
+    background-attachment: scroll;
+  }
 }
 
 .overlay {
