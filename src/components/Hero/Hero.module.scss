@@ -8,6 +8,7 @@
   min-height: 800px;
   overflow: hidden;
   padding-top: $nav-height;
+  z-index: 21; // Sit above the rotated Marquee wrapper (z-index 20)
 }
 
 .bgImage {
@@ -17,7 +18,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url('/images/hero-grafika.jpg');
+  background-image: url("/images/hero-grafika.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,7 +35,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(8, 8, 8, 0.7) 0%, rgba(4, 15, 30, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 8, 8, 0.7) 0%,
+    rgba(4, 15, 30, 0.95) 100%
+  );
 }
 
 .blueGlow {
@@ -43,7 +48,11 @@
   left: -10%;
   width: 70%;
   height: 70%;
-  background: radial-gradient(circle, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 102, 255, 0.15) 0%,
+    transparent 70%
+  );
   pointer-events: none;
   z-index: 2;
 }
@@ -54,7 +63,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 2;
@@ -69,7 +79,17 @@
   width: 100%;
   height: 53px;
   background: linear-gradient(90deg, $gz-accent 0%, $gz-accent-2 100%);
-  clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  clip-path: polygon(
+    0% 100%,
+    0% 0%,
+    12% 100%,
+    42% 100%,
+    50% 0%,
+    58% 100%,
+    88% 100%,
+    100% 0%,
+    100% 100%
+  );
   z-index: 4;
   opacity: 0.85;
   filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.6));
@@ -88,7 +108,17 @@
   width: 100%;
   height: 50px;
   background: #000000;
-  clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  clip-path: polygon(
+    0% 100%,
+    0% 0%,
+    12% 100%,
+    42% 100%,
+    50% 0%,
+    58% 100%,
+    88% 100%,
+    100% 0%,
+    100% 100%
+  );
   z-index: 5;
   pointer-events: none;
   transition: height 0.3s ease;
@@ -143,7 +173,7 @@
 }
 
 .title {
-  font-size: clamp(5rem, 8vw, 9.5rem);
+  font-size: clamp(5rem, 8vw, 10.5rem); // Zwiększony do 10.5rem dla gigantycznego uderzenia na 4K
   line-height: 0.9;
   color: $gz-text;
   margin-bottom: 30px;
@@ -188,7 +218,14 @@
   font-style: italic;
   font-family: var(--font-heading);
   // Cut corners (Tech/Industrial vibe) zamiast slanta z Mida
-  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+  clip-path: polygon(
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%,
+    0 20px
+  );
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   z-index: 1;
@@ -206,7 +243,12 @@
     left: -150%;
     width: 60%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
     transform: skewX(-25deg);
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: -1;
@@ -214,9 +256,12 @@
 
   // Wzór pasków z tyłu na hover (karbon/sport vibe)
   &::after {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: repeating-linear-gradient(
       -45deg,
       transparent,
@@ -246,7 +291,7 @@
 
 .secondaryBtn {
   position: relative;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
   color: $gz-text;
   padding: 18px 45px;
@@ -257,12 +302,19 @@
   font-style: italic;
   font-family: var(--font-heading);
   // Cut corners
-  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
-  border: 1px solid rgba(255,255,255,0.2);
+  clip-path: polygon(
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%,
+    0 20px
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: $transition-std;
 
   &:hover {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
     transform: translateY(-2px);
   }
@@ -285,8 +337,15 @@
   border: 1px solid $gz-border-accent;
   padding: 25px 40px;
   // Cut corners
-  clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
-  
+  clip-path: polygon(
+    30px 0,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 30px
+  );
+
   @include respond-to("md") {
     flex-wrap: wrap;
     justify-content: center;
@@ -340,5 +399,65 @@
 
   @include respond-to("md") {
     display: none;
+  }
+}
+
+// Spacing optimization for screens with shorter height (e.g. 1080p browser window, 2.5K browser window)
+@media (max-height: 1020px) and (min-width: 992px) {
+  .crownGlow {
+    height: 53px;
+    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  }
+  .crownCut {
+    height: 50px;
+    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  }
+  .badge {
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: clamp(4.5rem, 8vw, 9.5rem); // Przywrócona pełna oryginalna wielkość (max 9.5rem = 152px)
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    font-size: clamp(1.5rem, 1.8vw, 2.1rem);
+    margin-bottom: 40px;
+  }
+  .statsContainer {
+    margin-top: 40px;
+  }
+  .container {
+    padding-top: 3vh; // Lekkie przesunięcie w górę
+    padding-bottom: 80px; // Większy odstęp stats od korony przy większym foncie
+  }
+}
+
+// Spacing optimization for very short screens (e.g. laptops, smaller browser windows)
+@media (max-height: 900px) and (min-width: 992px) {
+  .crownGlow {
+    height: 45px;
+    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  }
+  .crownCut {
+    height: 42px;
+    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  }
+  .badge {
+    margin-bottom: 16px;
+  }
+  .title {
+    font-size: clamp(4rem, 7.5vw, 8rem); // Bardzo mocny font na małych laptopach (max 8rem = 128px)
+    margin-bottom: 25px;
+  }
+  .subtitle {
+    font-size: clamp(1.4rem, 1.7vw, 1.9rem);
+    margin-bottom: 35px;
+  }
+  .statsContainer {
+    margin-top: 30px;
+  }
+  .container {
+    padding-top: 2vh;
+    padding-bottom: 70px;
   }
 }

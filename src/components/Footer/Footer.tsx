@@ -8,7 +8,7 @@ import styles from "./Footer.module.scss";
 
 const navSections = [
   {
-    title: "Na Skróty",
+    title: "Nawigacja",
     links: [
       { label: "O Nas", href: "/o-nas" },
       { label: "Strefa Wellness", href: "/strefa-wellness" },

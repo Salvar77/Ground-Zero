@@ -109,7 +109,7 @@ export default function Trainers() {
 
         <div className={styles.btnWrapper}>
           <Link href="/trenerzy" className={styles.ctaBtn}>
-            ZOBACZ WSZYSTKICH TRENERÓW
+            POZNAJ WSZYSTKICH TRENERÓW
           </Link>
         </div>
       </div>

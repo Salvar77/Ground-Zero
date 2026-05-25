@@ -168,6 +168,11 @@
   position: relative;
   overflow: hidden;
 
+  @include respond-to("md") {
+    display: block;
+    width: 100%;
+  }
+
   &::before {
     content: "";
     position: absolute;

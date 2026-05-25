@@ -240,6 +240,9 @@
   margin-top: 60px;
   display: flex;
   justify-content: center;
+  @include respond-to("md") {
+    width: 100%;
+  }
 }
 
 .ctaBtn {
@@ -259,6 +262,11 @@
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+
+  @include respond-to("md") {
+    display: block;
+    width: 100%;
+  }
 
   &::before {
     content: "";
