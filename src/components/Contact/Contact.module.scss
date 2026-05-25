@@ -60,16 +60,13 @@
     0 calc(100% - 30px)
   );
 
-  // Na desktopie wymuszamy kartę po prawej stronie!
   order: 2;
 
-  // Profesjonalne nachodzenie w górę (Y) i na lewo (X) żeby wejść na mapę
   top: -80px;
   left: -30px;
   box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.8);
 
   @include respond-to("md") {
-    // Na mobile karta leci na samą górę!
     order: 1;
     top: 0;
     left: 0;
