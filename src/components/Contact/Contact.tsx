@@ -1,14 +1,30 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
+import { useDesktopAnimation } from '@/hooks/useDesktopAnimation';
+import { industrialSlide } from '@/utils/motion';
 import styles from './Contact.module.scss';
 
 const Contact = () => {
+  const isDesktop = useDesktopAnimation();
+
   return (
     <section id="kontakt" className={styles.contact}>
       <div className={styles.container}>
         
         {/* Schodkowy element informacyjny - KARTA ZAWSZE PIERWSZA W HTML DLA DOBREGO MOBILE UX */}
-        <div className={styles.steppedCard}>
+        <motion.div 
+          key={isDesktop ? "desktop-contact-card" : "mobile-contact-card"}
+          className={styles.steppedCard}
+          {...(isDesktop && {
+            variants: industrialSlide("right", 0.1, 0.7),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.2 }
+          })}
+        >
           <div className={styles.cardHeader}>
             <h2 className={styles.title}>ZNAJDŹ NAS</h2>
             <div className={styles.cyberLine}></div>
@@ -59,10 +75,19 @@ const Contact = () => {
           >
             WYZNACZ TRASĘ
           </a>
-        </div>
+        </motion.div>
 
         {/* Mapa - W CSS NA DESKTOPIE WEDRUJE NA LEWO */}
-        <div className={styles.mapWrapper}>
+        <motion.div 
+          key={isDesktop ? "desktop-contact-map" : "mobile-contact-map"}
+          className={styles.mapWrapper}
+          {...(isDesktop && {
+            variants: industrialSlide("left", 0.0, 0.7),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.2 }
+          })}
+        >
           <div className={styles.mapOverlay}></div>
           <iframe 
             src="https://maps.google.com/maps?q=Ground%20Zero%20Niemodlin&t=&z=15&ie=UTF8&iwloc=&output=embed" 
@@ -74,7 +99,7 @@ const Contact = () => {
             referrerPolicy="no-referrer-when-downgrade"
             className={styles.mapIframe}
           ></iframe>
-        </div>
+        </motion.div>
 
       </div>
     </section>

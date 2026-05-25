@@ -1,16 +1,32 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { industrialSlide } from "@/utils/motion";
 import styles from "./About.module.scss";
 
 export default function About() {
+  const isDesktop = useDesktopAnimation();
+
   return (
     <section id="o-nas" className={styles.about}>
       <div className={styles.container}>
         
         <div className={styles.grid}>
           {/* Content Left */}
-          <div className={styles.content}>
+          <motion.div 
+            key={isDesktop ? "desktop-about-content" : "mobile-about-content"}
+            className={styles.content}
+            {...(isDesktop && {
+              variants: industrialSlide("left", 0.0, 0.7),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
             <div className={styles.header}>
               <div className={styles.bgText}>ABOUT</div>
               <span className={styles.badge}>O NASZEJ SIŁOWNI</span>
@@ -77,10 +93,19 @@ export default function About() {
                 POZNAJ NAS BLIŻEJ
               </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* Graphic/Image Right */}
-          <div className={styles.imageWrapper}>
+          <motion.div 
+            key={isDesktop ? "desktop-about-image" : "mobile-about-image"}
+            className={styles.imageWrapper}
+            {...(isDesktop && {
+              variants: industrialSlide("right", 0.1, 0.7),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
             <div className={styles.imageBorder}></div>
             <div className={styles.imageContainer}>
               <Image 
@@ -97,7 +122,7 @@ export default function About() {
             {/* Cyberpunk Deco Accents */}
             <div className={styles.cyberTag}>GZ_STUDIO_2026</div>
             <div className={styles.cyberCorner}></div>
-          </div>
+          </motion.div>
         </div>
 
       </div>

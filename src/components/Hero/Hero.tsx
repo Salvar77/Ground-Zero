@@ -1,7 +1,15 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { staggerContainer, stealthReveal, heavyHit } from "@/utils/motion";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
+  const isDesktop = useDesktopAnimation();
+
   return (
     <section className={styles.hero}>
       {/* Background Image & Effects */}
@@ -18,27 +26,47 @@ export default function Hero() {
       <div className={styles.crownCut}></div>
 
       <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.badge}>
+        <motion.div 
+          key={isDesktop ? "desktop-hero-content" : "mobile-hero-content"}
+          className={styles.content}
+          {...(isDesktop && {
+            variants: staggerContainer(0.12, 0.1),
+            initial: "hidden",
+            animate: "show"
+          })}
+        >
+          <motion.div 
+            className={styles.badge}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             <span className={styles.badgeText}>
               SIŁOWNIA GROUND ZERO NIEMODLIN
             </span>
-          </div>
+          </motion.div>
 
-          <h1 className={styles.title}>
+          <motion.h1 
+            className={styles.title}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             TWOJE MIEJSCE.
             <br />
             TWÓJ CEL.
             <br />
             <span className={styles.accent}>NASZE WSPARCIE.</span>
-          </h1>
+          </motion.h1>
 
-          <p className={styles.subtitle}>
+          <motion.p 
+            className={styles.subtitle}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             PONAD 300 M² PRZESTRZENI TRENINGOWEJ, NOWOCZESNY SPRZĘT,
             PROFESJONALNI TRENERZY. ZBUDUJ FORMĘ BEZ WYMÓWEK.
-          </p>
+          </motion.p>
 
-          <div className={styles.buttons}>
+          <motion.div 
+            className={styles.buttons}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             <Link href="/kontakt" className={styles.primaryBtn}>
               <span className={styles.btnText}>DOŁĄCZ DO NAS</span>
               <span className={styles.btnDeco}></span>
@@ -46,11 +74,19 @@ export default function Hero() {
             <Link href="#grafik" className={styles.secondaryBtn}>
               <span className={styles.btnText}>GRAFIK ZAJĘĆ</span>
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Angled Stats Row */}
-        <div className={styles.statsContainer}>
+        <motion.div 
+          key={isDesktop ? "desktop-hero-stats" : "mobile-hero-stats"}
+          className={styles.statsContainer}
+          {...(isDesktop && {
+            variants: heavyHit(0.6),
+            initial: "hidden",
+            animate: "show"
+          })}
+        >
           <div className={styles.statsWrapper}>
             <div className={styles.statItem}>
               <span className={styles.statValue}>40+</span>
@@ -74,7 +110,7 @@ export default function Hero() {
               <span className={styles.statLabel}>MOTYWACJI</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

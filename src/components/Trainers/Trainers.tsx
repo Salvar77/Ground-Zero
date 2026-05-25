@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { staggerContainer, heavyHit, stealthReveal } from "@/utils/motion";
 import styles from "./Trainers.module.scss";
 
 type Trainer = {
@@ -55,25 +60,55 @@ const trainersData: Trainer[] = [
 ];
 
 export default function Trainers() {
+  const isDesktop = useDesktopAnimation();
+
   return (
     <section id="trenerzy" className={styles.trainers}>
       <div className={styles.container}>
-        <div className={styles.header}>
+        <motion.div 
+          key={isDesktop ? "desktop-trainers-header" : "mobile-trainers-header"}
+          className={styles.header}
+          {...(isDesktop && {
+            variants: staggerContainer(0.1),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.3 }
+          })}
+        >
           <div className={styles.bgText}>TEAM</div>
           <span className={styles.badge}>NASZA KADRA</span>
-          <h2 className={styles.title}>
-            TRENUJ Z <span>NAJLEPSZYMI</span>
-          </h2>
-          <p className={styles.subtitle}>
+          <motion.h2 
+            className={styles.title}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
+            Trenuj z <span>najlepszymi</span>
+          </motion.h2>
+          <motion.p 
+            className={styles.subtitle}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             Nasi instruktorzy to licencjonowani trenerzy z wieloletnim
             doświadczeniem, czynni zawodnicy i pasjonaci zdrowego stylu życia. Z
             nimi osiągniesz każdy cel.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className={styles.grid}>
+        <motion.div 
+          key={isDesktop ? "desktop-trainers-grid" : "mobile-trainers-grid"}
+          className={styles.grid}
+          {...(isDesktop && {
+            variants: staggerContainer(0.18, 0.1),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.15 }
+          })}
+        >
           {trainersData.map((trainer) => (
-            <div key={trainer.id} className={styles.card}>
+            <motion.div 
+              key={trainer.id} 
+              className={styles.card}
+              {...(isDesktop && { variants: heavyHit() })}
+            >
               <div className={styles.imageContainer}>
                 <Image
                   src={trainer.image}
@@ -103,15 +138,24 @@ export default function Trainers() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className={styles.btnWrapper}>
+        <motion.div 
+          key={isDesktop ? "desktop-trainers-btn" : "mobile-trainers-btn"}
+          className={styles.btnWrapper}
+          {...(isDesktop && {
+            variants: stealthReveal(0.3),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true }
+          })}
+        >
           <Link href="/trenerzy" className={styles.ctaBtn}>
             POZNAJ WSZYSTKICH TRENERÓW
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

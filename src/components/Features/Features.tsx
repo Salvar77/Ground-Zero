@@ -1,5 +1,10 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useDesktopAnimation } from '@/hooks/useDesktopAnimation';
+import { staggerContainer, heavyHit, stealthReveal } from '@/utils/motion';
 import styles from './Features.module.scss';
 
 const featuresData = [
@@ -24,23 +29,53 @@ const featuresData = [
 ];
 
 const Features = () => {
+  const isDesktop = useDesktopAnimation();
+
   return (
     <section className={styles.features}>
       <div className={styles.container}>
         
-        <div className={styles.header}>
+        <motion.div 
+          key={isDesktop ? "desktop-features-header" : "mobile-features-header"}
+          className={styles.header}
+          {...(isDesktop && {
+            variants: staggerContainer(0.1),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.3 }
+          })}
+        >
           <div className={styles.bgText}>ZONES</div>
-          <h2 className={styles.title}>
+          <motion.h2 
+            className={styles.title}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             Twój punkt <span>startowy</span>
-          </h2>
-          <p className={styles.subtitle}>
+          </motion.h2>
+          <motion.p 
+            className={styles.subtitle}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
             Nie uznajemy kompromisów. Stworzyliśmy przestrzeń, w której każdy znajdzie sprzęt dopasowany do swoich celów – od amatora po zawodowca.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className={styles.grid}>
+        <motion.div 
+          key={isDesktop ? "desktop-features-grid" : "mobile-features-grid"}
+          className={styles.grid}
+          {...(isDesktop && {
+            variants: staggerContainer(0.18, 0.1),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.15 }
+          })}
+        >
           {featuresData.map((feature) => (
-            <div key={feature.id} className={styles.card}>
+            <motion.div 
+              key={feature.id} 
+              className={styles.card}
+              {...(isDesktop && { variants: heavyHit() })}
+            >
               <div className={styles.cardImageWrapper}>
                 <Image 
                   src={feature.image} 
@@ -60,9 +95,9 @@ const Features = () => {
               </div>
 
               <div className={styles.cyberDeco}></div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

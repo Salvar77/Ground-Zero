@@ -169,7 +169,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 2px;
-  transform: skewX(15deg); // Un-skew text
+  transform: skewX(15deg);
 
   @include respond-to("md") {
     font-size: 1.3rem;
@@ -177,7 +177,7 @@
 }
 
 .title {
-  font-size: clamp(5rem, 8vw, 10.5rem); // Zwiększony do 10.5rem dla gigantycznego uderzenia na 4K
+  font-size: clamp(5rem, 8vw, 10.5rem);
   line-height: 0.9;
   color: $gz-text;
   margin-bottom: 30px;
@@ -434,17 +434,41 @@
 @media (max-height: 1020px) and (min-width: 992px) {
   .crownGlow {
     height: 53px;
-    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+    clip-path: polygon(
+      0% 100%,
+      0% 0%,
+      12% 100%,
+      42% 100%,
+      50% 0%,
+      58% 100%,
+      88% 100%,
+      100% 0%,
+      100% 100%
+    );
   }
   .crownCut {
     height: 50px;
-    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+    clip-path: polygon(
+      0% 100%,
+      0% 0%,
+      12% 100%,
+      42% 100%,
+      50% 0%,
+      58% 100%,
+      88% 100%,
+      100% 0%,
+      100% 100%
+    );
   }
   .badge {
     margin-bottom: 20px;
   }
   .title {
-    font-size: clamp(4.5rem, 8vw, 9.5rem); // Przywrócona pełna oryginalna wielkość (max 9.5rem = 152px)
+    font-size: clamp(
+      4.5rem,
+      8vw,
+      9.5rem
+    ); // Przywrócona pełna oryginalna wielkość (max 9.5rem = 152px)
     margin-bottom: 30px;
   }
   .subtitle {
@@ -464,17 +488,41 @@
 @media (max-height: 900px) and (min-width: 992px) {
   .crownGlow {
     height: 45px;
-    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+    clip-path: polygon(
+      0% 100%,
+      0% 0%,
+      12% 100%,
+      42% 100%,
+      50% 0%,
+      58% 100%,
+      88% 100%,
+      100% 0%,
+      100% 100%
+    );
   }
   .crownCut {
     height: 42px;
-    clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+    clip-path: polygon(
+      0% 100%,
+      0% 0%,
+      12% 100%,
+      42% 100%,
+      50% 0%,
+      58% 100%,
+      88% 100%,
+      100% 0%,
+      100% 100%
+    );
   }
   .badge {
     margin-bottom: 16px;
   }
   .title {
-    font-size: clamp(4rem, 7.5vw, 8rem); // Bardzo mocny font na małych laptopach (max 8rem = 128px)
+    font-size: clamp(
+      4rem,
+      7.5vw,
+      8rem
+    ); // Bardzo mocny font na małych laptopach (max 8rem = 128px)
     margin-bottom: 25px;
   }
   .subtitle {

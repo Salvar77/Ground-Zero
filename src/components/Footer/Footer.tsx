@@ -4,6 +4,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { staggerContainer, stealthReveal } from "@/utils/motion";
 import styles from "./Footer.module.scss";
 
 const navSections = [
@@ -48,6 +51,7 @@ const socialLinks = [
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const isDesktop = useDesktopAnimation();
 
   return (
     <footer className={styles.footer}>
@@ -103,10 +107,22 @@ export default function Footer() {
         <div className={styles.container}>
 
           {/* ── TOP ROW: Brand + Nav columns ── */}
-          <div className={styles.topRow}>
+          <motion.div 
+            key={isDesktop ? "desktop-footer-top" : "mobile-footer-top"}
+            className={styles.topRow}
+            {...(isDesktop && {
+              variants: staggerContainer(0.15, 0.1),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
 
             {/* Brand Column */}
-            <div className={styles.brandCol}>
+            <motion.div 
+              className={styles.brandCol}
+              {...(isDesktop && { variants: stealthReveal() })}
+            >
               <Link href="/" className={styles.logoLink}>
                 <Image
                   src="/images/ground-zero-logo.png"
@@ -142,11 +158,15 @@ export default function Footer() {
                   </a>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* Nav Columns */}
             {navSections.map((section) => (
-              <div key={section.title} className={styles.navCol}>
+              <motion.div 
+                key={section.title} 
+                className={styles.navCol}
+                {...(isDesktop && { variants: stealthReveal() })}
+              >
                 <h3 className={styles.colTitle}>{section.title}</h3>
                 <ul className={styles.navList}>
                   {section.links.map((link) => (
@@ -158,11 +178,14 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
 
             {/* Contact / Hours Column */}
-            <div className={styles.navCol}>
+            <motion.div 
+              className={styles.navCol}
+              {...(isDesktop && { variants: stealthReveal() })}
+            >
               <h3 className={styles.colTitle}>Kontakt & Godziny</h3>
               <ul className={styles.contactList}>
                 <li className={styles.contactItem}>
@@ -193,15 +216,24 @@ export default function Footer() {
                   <span className={styles.hoursValue}>13:00 – 21:00</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-          </div>
+          </motion.div>
 
           {/* ── DIVIDER ── */}
           <div className={styles.divider}></div>
 
           {/* ── BOTTOM ROW: Copyright + Legal ── */}
-          <div className={styles.bottomRow}>
+          <motion.div 
+            key={isDesktop ? "desktop-footer-bottom" : "mobile-footer-bottom"}
+            className={styles.bottomRow}
+            {...(isDesktop && {
+              variants: stealthReveal(0.4),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.1 }
+            })}
+          >
             <p className={styles.copyright}>
               © {currentYear} <strong>Ground Zero Siłownia</strong> — Niemodlin. Wszelkie prawa zastrzeżone.
             </p>
@@ -229,7 +261,7 @@ export default function Footer() {
                 SearchIT.pl
               </a>
             </p>
-          </div>
+          </motion.div>
 
         </div>
       </div>

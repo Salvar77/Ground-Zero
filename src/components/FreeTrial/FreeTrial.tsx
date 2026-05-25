@@ -2,9 +2,13 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { ironGrip, powerClean } from "@/utils/motion";
 import styles from "./FreeTrial.module.scss";
 
 export default function FreeTrial() {
+  const isDesktop = useDesktopAnimation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -13,7 +17,6 @@ export default function FreeTrial() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
     alert(`Dziękujemy ${formData.name}! Skontaktujemy się z Tobą wkrótce w celu ustalenia terminu darmowego treningu.`);
     setFormData({ name: "", phone: "", email: "" });
   };
@@ -27,7 +30,16 @@ export default function FreeTrial() {
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Image Side */}
-          <div className={styles.imageCol}>
+          <motion.div 
+            key={isDesktop ? "desktop-freetrial-image" : "mobile-freetrial-image"}
+            className={styles.imageCol}
+            {...(isDesktop && {
+              variants: ironGrip(0.1),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
             <div className={styles.imageWrapper}>
               <Image 
                 src="/images/ground_zero_free_trial.png"
@@ -38,10 +50,19 @@ export default function FreeTrial() {
               <div className={styles.overlay}></div>
               <div className={styles.glitchDeco}></div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Form Side */}
-          <div className={styles.formCol}>
+          <motion.div 
+            key={isDesktop ? "desktop-freetrial-form" : "mobile-freetrial-form"}
+            className={styles.formCol}
+            {...(isDesktop && {
+              variants: powerClean(0.3),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
             <div className={styles.header}>
               <span className={styles.badge}>SPRAWDŹ NAS</span>
               <h2 className={styles.title}>ODBIERZ <span>DARMOWY</span><br />TRENING PRÓBNY</h2>
@@ -103,7 +124,7 @@ export default function FreeTrial() {
                 * Wysyłając formularz akceptujesz regulamin i zgadzasz się na kontakt telefoniczny.
               </p>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

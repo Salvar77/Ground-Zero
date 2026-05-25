@@ -1,16 +1,32 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { powerCharge, stealthReveal } from "@/utils/motion";
 import styles from "./Wellness.module.scss";
 
 export default function Wellness() {
+  const isDesktop = useDesktopAnimation();
+
   return (
     <section id="wellness" className={styles.wellness}>
       <div className={styles.container}>
         <div className={styles.grid}>
           
           {/* Graphic/Image Left */}
-          <div className={styles.imageWrapper}>
+          <motion.div 
+            key={isDesktop ? "desktop-wellness-image" : "mobile-wellness-image"}
+            className={styles.imageWrapper}
+            {...(isDesktop && {
+              variants: powerCharge(0.0, 0.6),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
             <div className={styles.imageBorder}></div>
             <div className={styles.imageContainer}>
               <Image 
@@ -27,10 +43,19 @@ export default function Wellness() {
             {/* Cyberpunk Deco Accents */}
             <div className={styles.cyberTag}>RELAX_ZONE</div>
             <div className={styles.cyberCorner}></div>
-          </div>
+          </motion.div>
 
           {/* Content Right */}
-          <div className={styles.content}>
+          <motion.div 
+            key={isDesktop ? "desktop-wellness-content" : "mobile-wellness-content"}
+            className={styles.content}
+            {...(isDesktop && {
+              variants: stealthReveal(0.2, 0.7),
+              initial: "hidden",
+              whileInView: "show",
+              viewport: { once: true, amount: 0.2 }
+            })}
+          >
             <div className={styles.header}>
               <div className={styles.bgText}>SAUNA</div>
               <span className={styles.badge}>STREFA WELLNESS</span>
@@ -53,7 +78,7 @@ export default function Wellness() {
                 ZOBACZ STREFĘ WELLNESS
               </Link>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

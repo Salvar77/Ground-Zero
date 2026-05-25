@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
+import { heavyHit } from "@/utils/motion";
 import styles from "./Consultation.module.scss";
 
 export default function Consultation() {
+  const isDesktop = useDesktopAnimation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -28,7 +32,16 @@ export default function Consultation() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.glassCard}>
+        <motion.div 
+          key={isDesktop ? "desktop-consultation-card" : "mobile-consultation-card"}
+          className={styles.glassCard}
+          {...(isDesktop && {
+            variants: heavyHit(0.1),
+            initial: "hidden",
+            whileInView: "show",
+            viewport: { once: true, amount: 0.2 }
+          })}
+        >
           <div className={styles.cardHeader}>
             <div className={styles.cyberDeco}></div>
             <span className={styles.badge}>KROK 1</span>
@@ -96,7 +109,7 @@ export default function Consultation() {
               ZAREZERWUJ KONSULTACJĘ
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
