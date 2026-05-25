@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Trainers.module.scss";
 
 type Trainer = {
@@ -47,7 +48,7 @@ const trainersData: Trainer[] = [
       "Brazylijskie Jiu-Jitsu",
       "Przygotowanie Motoryczne",
     ],
-    image: "/images/trainer_male_strength.png", // Reusing male portrait with different styling
+    image: "/images/trainer_male_strength.png",
     description:
       "Czynny zawodnik sportów walki. Prowadzi zajęcia MMA dla dzieci, młodzieży oraz grupę dorosłych.",
   },
@@ -104,6 +105,12 @@ export default function Trainers() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className={styles.btnWrapper}>
+          <Link href="/trenerzy" className={styles.ctaBtn}>
+            ZOBACZ WSZYSTKICH TRENERÓW
+          </Link>
         </div>
       </div>
     </section>

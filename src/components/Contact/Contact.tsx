@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
 import styles from './Contact.module.scss';
 
 const Contact = () => {
@@ -15,22 +16,34 @@ const Contact = () => {
           
           <div className={styles.infoWrapper}>
             <div className={styles.infoGroup}>
-              <span className={styles.label}>LOKALIZACJA</span>
+              <span className={styles.label}>
+                <FiMapPin className={styles.infoIcon} /> LOKALIZACJA
+              </span>
               <p className={styles.text}>
-                Ground Zero Siłownia<br/>
-                Niemodlin, Polska
+                ul. Opolska 54<br/>
+                49-100 Niemodlin
               </p>
             </div>
             
             <div className={styles.infoGroup}>
-              <span className={styles.label}>KONTAKT</span>
+              <span className={styles.label}>
+                <FiPhone className={styles.infoIcon} /> KONTAKT
+              </span>
               <p className={styles.text}>
-                Zadzwoń do nas, aby zapytać o<br/>darmowy trening próbny.
+                <a href="tel:+48666310850" className={styles.link}>
+                  666 310 850
+                </a>
+                <br/>
+                <a href="mailto:kontakt@groundzero-niemodlin.pl" className={styles.link} style={{ fontSize: '0.9em' }}>
+                  kontakt@groundzero-niemodlin.pl
+                </a>
               </p>
             </div>
             
             <div className={styles.infoGroup}>
-              <span className={styles.label}>GODZINY OTWARCIA</span>
+              <span className={styles.label}>
+                <FiClock className={styles.infoIcon} /> GODZINY OTWARCIA
+              </span>
               <p className={styles.text}>
                 Pon-Sob: 06:00 - 22:00<br/>
                 Niedziela: 13:00 - 21:00

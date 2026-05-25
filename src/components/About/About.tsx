@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./About.module.scss";
 
 export default function About() {
@@ -69,6 +70,12 @@ export default function About() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className={styles.btnWrapper}>
+              <Link href="/o-nas" className={styles.ctaBtn}>
+                POZNAJ NAS BLIŻEJ
+              </Link>
             </div>
           </div>
 

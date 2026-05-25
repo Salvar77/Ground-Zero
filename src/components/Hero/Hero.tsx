@@ -13,24 +13,33 @@ export default function Hero() {
       {/* Decorative Grid Lines */}
       <div className={styles.gridOverlay}></div>
 
+      {/* Cyberpunk Crown Cut Bottom Overlays */}
+      <div className={styles.crownGlow}></div>
+      <div className={styles.crownCut}></div>
+
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.badge}>
-            <span className={styles.badgeText}>SIŁOWNIA GROUND ZERO NIEMODLIN</span>
+            <span className={styles.badgeText}>
+              SIŁOWNIA GROUND ZERO NIEMODLIN
+            </span>
           </div>
-          
+
           <h1 className={styles.title}>
-            TWOJE MIEJSCE.<br />
-            TWÓJ CEL.<br />
+            TWOJE MIEJSCE.
+            <br />
+            TWÓJ CEL.
+            <br />
             <span className={styles.accent}>NASZE WSPARCIE.</span>
           </h1>
-          
+
           <p className={styles.subtitle}>
-            PONAD 300 M² PRZESTRZENI TRENINGOWEJ, NOWOCZESNY SPRZĘT, PROFESJONALNI TRENERZY. ZBUDUJ FORMĘ BEZ WYMÓWEK.
+            PONAD 300 M² PRZESTRZENI TRENINGOWEJ, NOWOCZESNY SPRZĘT,
+            PROFESJONALNI TRENERZY. ZBUDUJ FORMĘ BEZ WYMÓWEK.
           </p>
-          
+
           <div className={styles.buttons}>
-            <Link href="#cennik" className={styles.primaryBtn}>
+            <Link href="/kontakt" className={styles.primaryBtn}>
               <span className={styles.btnText}>DOŁĄCZ DO NAS</span>
               <span className={styles.btnDeco}></span>
             </Link>
@@ -49,7 +58,9 @@ export default function Hero() {
             </div>
             <div className={styles.divider}></div>
             <div className={styles.statItem}>
-              <span className={styles.statValue}>300<span className={styles.smallUnit}>M²</span></span>
+              <span className={styles.statValue}>
+                300<span className={styles.smallUnit}>M²</span>
+              </span>
               <span className={styles.statLabel}>PRZESTRZENI</span>
             </div>
             <div className={styles.divider}></div>

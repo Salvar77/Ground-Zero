@@ -62,11 +62,47 @@
   pointer-events: none;
 }
 
+.crownGlow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 53px;
+  background: linear-gradient(90deg, $gz-accent 0%, $gz-accent-2 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  z-index: 4;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.6));
+  pointer-events: none;
+  transition: height 0.3s ease;
+
+  @include respond-to("md") {
+    height: 33px;
+  }
+}
+
+.crownCut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #000000;
+  clip-path: polygon(0% 100%, 0% 0%, 12% 100%, 42% 100%, 50% 0%, 58% 100%, 88% 100%, 100% 0%, 100% 100%);
+  z-index: 5;
+  pointer-events: none;
+  transition: height 0.3s ease;
+
+  @include respond-to("md") {
+    height: 30px;
+  }
+}
+
 .container {
   @include container;
   width: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;

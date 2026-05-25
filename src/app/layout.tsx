@@ -1,4 +1,6 @@
 import { Barlow, Barlow_Condensed } from "next/font/google";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 import "./globals.scss";
 
 const barlow = Barlow({
@@ -44,7 +46,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className={`${barlow.variable} ${barlowCondensed.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

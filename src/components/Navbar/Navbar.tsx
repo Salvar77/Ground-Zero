@@ -6,11 +6,12 @@ import Image from "next/image";
 import styles from "./Navbar.module.scss";
 
 const navLinks = [
-  { name: "O NAS", href: "#o-nas" },
-  // { name: "GRAFIK", href: "#grafik" },
-  { name: "TRENERZY", href: "#trenerzy" },
-  // { name: "CENNIK", href: "#cennik" },
-  { name: "KONTAKT", href: "#kontakt" },
+  { name: "O NAS", href: "/o-nas" },
+  { name: "WELLNESS", href: "/strefa-wellness" },
+  // { name: "GRAFIK", href: "/grafik" },
+  { name: "TRENERZY", href: "/trenerzy" },
+  // { name: "CENNIK", href: "/cennik" },
+  { name: "KONTAKT", href: "/kontakt" },
 ];
 
 export default function Navbar() {
@@ -62,7 +63,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Link href="#kontakt" className={styles.ctaBtn}>
+          <Link href="/kontakt" className={styles.ctaBtn}>
             DOŁĄCZ DO NAS
           </Link>
         </nav>
@@ -98,7 +99,7 @@ export default function Navbar() {
             ))}
           </ul>
           <Link
-            href="#kontakt"
+            href="/kontakt"
             className={styles.mobileCtaBtn}
             onClick={closeMenu}
           >
