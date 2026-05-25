@@ -9,6 +9,10 @@
   margin-top: -5vw;
   z-index: 5;
 
+  @include respond-to("md") {
+    padding: 80px 0;
+  }
+
   // Background ambient glow
   &::before {
     content: "";
@@ -32,6 +36,10 @@
 .header {
   position: relative;
   margin-bottom: 70px;
+
+  @include respond-to("md") {
+    margin-bottom: 40px;
+  }
 }
 
 .bgText {
@@ -242,6 +250,7 @@
   justify-content: center;
   @include respond-to("md") {
     width: 100%;
+    margin-top: 30px;
   }
 }
 

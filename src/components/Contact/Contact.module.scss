@@ -8,6 +8,11 @@
   z-index: 10;
   overflow: hidden;
 
+  @include respond-to("md") {
+    padding: 20px 0 100px;
+    margin-top: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;

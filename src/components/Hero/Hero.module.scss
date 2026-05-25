@@ -170,6 +170,10 @@
   font-weight: 700;
   letter-spacing: 2px;
   transform: skewX(15deg); // Un-skew text
+
+  @include respond-to("md") {
+    font-size: 1.3rem;
+  }
 }
 
 .title {
@@ -186,6 +190,10 @@
     @include text-gradient-fire;
     text-shadow: 0 0 40px rgba(0, 102, 255, 0.4);
   }
+
+  @include respond-to("md") {
+    font-size: clamp(4.7rem, 8vw, 10.5rem);
+  }
 }
 
 .subtitle {
@@ -198,6 +206,10 @@
   line-height: 1.5;
   border-left: 3px solid $gz-accent;
   padding-left: 20px;
+
+  @include respond-to("md") {
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+  }
 }
 
 .buttons {
@@ -217,6 +229,10 @@
   text-transform: uppercase;
   font-style: italic;
   font-family: var(--font-heading);
+
+  @include respond-to("md") {
+    font-size: 1.7rem;
+  }
   // Cut corners (Tech/Industrial vibe) zamiast slanta z Mida
   clip-path: polygon(
     20px 0,
@@ -301,6 +317,10 @@
   text-transform: uppercase;
   font-style: italic;
   font-family: var(--font-heading);
+
+  @include respond-to("md") {
+    font-size: 1.7rem;
+  }
   // Cut corners
   clip-path: polygon(
     20px 0,
@@ -375,6 +395,10 @@
   line-height: 1;
   text-shadow: 0 0 15px rgba(0, 102, 255, 0.4);
 
+  @include respond-to("md") {
+    font-size: 3.8rem;
+  }
+
   .smallUnit {
     font-size: 2rem;
     color: $gz-accent;
@@ -389,6 +413,10 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 2px;
+
+  @include respond-to("md") {
+    font-size: 1.3rem;
+  }
 }
 
 .divider {

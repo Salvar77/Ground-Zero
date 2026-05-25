@@ -9,6 +9,10 @@
   margin-top: -5vw;
   z-index: 3;
 
+  @include respond-to("md") {
+    padding: 80px 0;
+  }
+
   // Background glow element
   &::after {
     content: "";
