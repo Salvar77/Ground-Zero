@@ -228,7 +228,64 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* 4. SOCIAL PROOF / CONNECT (GLASSMORPHISM) */}
+      {/* 4. FOUNDERS SECTION (WIZJA I PASJA) */}
+      <section className={styles.foundersSection}>
+        <div className={styles.container}>
+          <div className={styles.foundersGrid}>
+            <motion.div 
+              className={styles.foundersText}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className={styles.sectionTitle}>
+                TWÓRCY <span className={styles.accentText}>GROUND ZERO</span>
+              </h2>
+              <div className={styles.accentLineLeft}></div>
+              
+              <div className={styles.foundersDescription}>
+                <p>
+                  Za każdym prawdziwym miejscem stoją ludzie z wizją. <strong>Kacper i Nikola Miller</strong> połączyli dwie różne perspektywy w jeden cel: stworzenie obiektu, który nie idzie na kompromisy.
+                </p>
+                <p>
+                  Kacper odpowiada za surowy charakter Ground Zero – bezbłędny dobór sprzętu Hammer Strength i strefę ciężarów, w której każdy znajdzie wyzwanie. Nikola stworzyła przestrzeń, która przełamuje stereotypy – budując wyjątkową społeczność kobiet i dbając o strefę fitness.
+                </p>
+              </div>
+
+              <div className={styles.foundersQuote}>
+                <div className={styles.quoteMark}>"</div>
+                <blockquote>
+                  Zbudowaliśmy miejsce, w którym sami chcielibyśmy trenować. Bez owijania w bawełnę, liczy się praca i efekty.
+                </blockquote>
+                <cite>— Kacper & Nikola</cite>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className={styles.foundersImages}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className={styles.mainImageWrapper}>
+                <Image 
+                  src="/images/founders-placeholder.webp" 
+                  alt="Kacper i Nikola Miller - Założyciele Ground Zero"
+                  fill
+                  className={styles.foundersImg}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className={styles.imageOverlay}></div>
+                <div className={styles.cyberCorner}></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. SOCIAL PROOF / CONNECT (GLASSMORPHISM) */}
       <section className={styles.socialSection}>
         <div className={styles.orb1}></div>
         <div className={styles.orb2}></div>
