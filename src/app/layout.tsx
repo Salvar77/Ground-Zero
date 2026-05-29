@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Ground Zero Niemodlin",
   },
   description:
-    "Najlepsza siłownia w Niemodlinie. Oferujemy nowoczesny sprzęt, treningi personalne, strefę wellness oraz profesjonalne wsparcie trenerów. Zbuduj formę bez wymówek w Ground Zero na ul. Opolskiej 54!",
+    "Najlepsza siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Oferujemy nowoczesny sprzęt, treningi personalne, strefę wellness i saunę. Zbuduj formę w Ground Zero na ul. Opolskiej 54!",
   keywords: [
     "siłownia Niemodlin",
     "klub fitness Niemodlin",
@@ -38,6 +38,29 @@ export const metadata: Metadata = {
     "karnety siłownia Niemodlin",
     "fitness Niemodlin",
     "sport Niemodlin",
+    "siłownia Opole",
+    "klub fitness Opole",
+    "siłownia Tułowice",
+    "siłownia Gracze",
+    "siłownia Szydłów",
+    "siłownia Łambinowice",
+    "siłownia Grodków",
+    "siłownia Lewin Brzeski",
+    "siłownia Prószków",
+    "siłownia Dąbrowa",
+    "siłownia Lipno",
+    "siłownia opolszczyzna",
+    "fitness Tułowice",
+    "fitness Gracze",
+    "fitness Grodków",
+    "trener personalny Opole",
+    "trener personalny Tułowice",
+    "trener personalny Grodków",
+    "trening personalny Niemodlin",
+    "najlepsza siłownia Niemodlin",
+    "sauna Niemodlin",
+    "wellness opolskie",
+    "siłownia Niemodlin i okolice"
   ],
   authors: [{ name: "Ground Zero Niemodlin", url: "https://www.groundzero-niemodlin.pl" }],
   creator: "Ground Zero Niemodlin",
@@ -53,7 +76,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ground Zero Siłownia Niemodlin | Twój Klub Fitness",
     description:
-      "Najlepsza siłownia w Niemodlinie. Nowoczesny sprzęt, mega atmosfera, treningi personalne i zero wymówek! Dołącz do nas już dziś.",
+      "Najlepsza siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Nowoczesny sprzęt, mega atmosfera, treningi personalne i zero wymówek! Dołącz do nas już dziś.",
     url: "https://www.groundzero-niemodlin.pl",
     siteName: "Ground Zero Niemodlin",
     locale: "pl_PL",
@@ -76,10 +99,10 @@ export const viewport = {
   themeColor: "#080808",
 };
 
-// JSON-LD LocalBusiness (HealthClub / ExerciseGym) schema dla Google i EEAT
+// JSON-LD LocalBusiness (ExerciseGym) schema dla Google i EEAT
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "HealthClub",
+  "@type": "ExerciseGym",
   name: "Ground Zero Siłownia Niemodlin",
   image: "https://www.groundzero-niemodlin.pl/images/hero-grafika.jpg",
   "@id": "https://www.groundzero-niemodlin.pl",
@@ -96,9 +119,10 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 50.640562, // Przybliżona lokalizacja dla Niemodlin Opolska 54
-    longitude: 17.574696,
+    latitude: 50.644670,
+    longitude: 17.645690,
   },
+  hasMap: "https://www.google.com/maps/search/?api=1&query=Ground+Zero+Si%C5%82ownia+Opolska+54+Niemodlin",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -113,8 +137,27 @@ const localBusinessSchema = {
       closes: "21:00",
     },
   ],
+  sameAs: [
+    "https://www.facebook.com/p/Ground-Zero-Si%C5%82ownia-Niemodlin-61576885212351/",
+    "https://www.instagram.com/silownia.niemodlin.groundzero/",
+  ],
+  areaServed: [
+    { "@type": "AdministrativeArea", "name": "Niemodlin" },
+    { "@type": "AdministrativeArea", "name": "Opole" },
+    { "@type": "AdministrativeArea", "name": "Tułowice" },
+    { "@type": "AdministrativeArea", "name": "Gracze" },
+    { "@type": "AdministrativeArea", "name": "Szydłów" },
+    { "@type": "AdministrativeArea", "name": "Dąbrowa" },
+    { "@type": "AdministrativeArea", "name": "Łambinowice" },
+    { "@type": "AdministrativeArea", "name": "Grodków" },
+    { "@type": "AdministrativeArea", "name": "Lewin Brzeski" },
+    { "@type": "AdministrativeArea", "name": "Prószków" },
+    { "@type": "AdministrativeArea", "name": "Korfantów" },
+    { "@type": "AdministrativeArea", "name": "Lipno" },
+    { "@type": "AdministrativeArea", "name": "województwo opolskie" }
+  ],
   priceRange: "$$",
-  description: "Najnowocześniejsza siłownia i klub fitness w Niemodlinie. Treningi personalne, strefa maszyn, wolne ciężary oraz strefa wellness.",
+  description: "Najnowocześniejsza siłownia i klub fitness w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Ponad 300m² strefy maszyn, strefa wolnych ciężarów, wellness oraz pomoc trenerów personalnych.",
 };
 
 export default function RootLayout({

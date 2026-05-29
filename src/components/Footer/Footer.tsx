@@ -55,51 +55,6 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      {/* JSON-LD Structured Data for E-E-A-T */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SportsActivityLocation",
-            name: "Ground Zero Siłownia",
-            description: "Nowoczesna siłownia w Niemodlinie. Ponad 300m² przestrzeni treningowej, profesjonalni trenerzy, strefa wellness. Zero wymówek.",
-            url: "https://www.groundzero-niemodlin.pl",
-            telephone: "+48 666 310 850",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "ul. Opolska 54",
-              addressLocality: "Niemodlin",
-              postalCode: "49-100",
-              addressCountry: "PL",
-            },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: "50.7427",
-              longitude: "17.6143",
-            },
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                opens: "06:00",
-                closes: "22:00",
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Sunday"],
-                opens: "13:00",
-                closes: "21:00",
-              },
-            ],
-            sameAs: [
-              "https://www.facebook.com/p/Ground-Zero-Si%C5%82ownia-Niemodlin-61576885212351/",
-              "https://www.instagram.com/silownia.niemodlin.groundzero/",
-            ],
-          }),
-        }}
-      />
-
       {/* Diagonal Top Cut */}
       <div className={styles.topCut}></div>
 
@@ -138,7 +93,7 @@ export default function Footer() {
                 <strong>Nasze wsparcie.</strong>
               </p>
               <p className={styles.brandDesc}>
-                Nowoczesna siłownia w Niemodlinie — ponad <strong>300 m²</strong> profesjonalnego 
+                Nowoczesna siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic) — ponad <strong>300 m²</strong> profesjonalnego 
                 sprzętu, wykwalifikowani trenerzy i strefa wellness. Zero sieciówek. 
                 Zero wymówek.
               </p>

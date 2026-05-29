@@ -39,9 +39,10 @@ export default function About() {
             <p className={styles.description}>
               Ground Zero Niemodlin to nie jest kolejna bezduszna sieciówka. To nowoczesne 
               centrum treningowe o powierzchni ponad <strong>300 m²</strong>, stworzone przez pasjonatów 
-              dla wszystkich, którzy chcą od życia czegoś więcej. Nie znajdziesz tu wymówek – 
-              znajdziesz za to profesjonalny sprzęt, zintegrowaną społeczność i atmosferę, 
-              która motywuje do ciężkiej pracy od wejścia.
+              dla wszystkich, którzy chcą od życia czegoś więcej. Z naszych usług chętnie korzystają 
+              mieszkańcy Niemodlina oraz okolicznych miejscowości (m.in. Tułowic, Graczy, Szydłowa, Dąbrowy, Łambinowic, 
+              Grodkowa, a także Opola). Nie znajdziesz tu wymówek – znajdziesz za to profesjonalny sprzęt, 
+              zintegrowaną społeczność i atmosferę, która motywuje do ciężkiej pracy od wejścia.
             </p>
 
             <div className={styles.features}>
