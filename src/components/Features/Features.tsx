@@ -12,13 +12,13 @@ const featuresData = [
     id: '01',
     title: 'STREFA WOLNYCH CIĘŻARÓW',
     desc: 'Prawdziwe żelazo dla prawdziwych wyników. Hantle, gryfy olimpijskie i profesjonalne pomosty ciężarowe dla wyciskających siódme poty.',
-    image: '/images/hantle-ground-zero.jpg'
+    image: '/images/hantle-wolne-ciezary-ground-zero.webp'
   },
   {
     id: '02',
     title: 'MASZYNY PÓŁWOLNE',
     desc: 'Najwyższej klasy sprzęt typu Hammer. Maszyny, które wybaczają błędy w technice, ale nie wybaczają słabości na treningu.',
-    image: '/images/maszyna-polwolna-ground-zero.jpg'
+    image: '/images/maszyna-polwolna-strefa-treningu-ground-zero.webp'
   },
   {
     id: '03',

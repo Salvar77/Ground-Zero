@@ -31,7 +31,7 @@ export default function Wellness() {
             <div className={styles.imageContainer}>
               <Image 
                 src="/images/ground_zero_wellness.png" 
-                alt="Strefa Wellness i Sauna" 
+                alt="Strefa Wellness i Sauna - Ground Zero Niemodlin" 
                 width={600} 
                 height={500} 
                 style={{ width: "100%", height: "auto" }}

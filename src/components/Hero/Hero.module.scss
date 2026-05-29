@@ -1,5 +1,4 @@
 @import "../../styles/variables";
-// Force recompile
 
 .hero {
   position: relative;
@@ -8,7 +7,13 @@
   min-height: 800px;
   overflow: hidden;
   padding-top: $nav-height;
-  z-index: 21; // Sit above the rotated Marquee wrapper (z-index 20)
+  z-index: 21;
+
+  @include respond-to("md") {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
 }
 
 .bgImage {
@@ -18,7 +23,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url("/images/hero-grafika.jpg");
+  background-image: url("/images/ground-zero-opole-silownia-fitness-hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,6 +144,10 @@
   height: 100%;
   padding-top: 5vh;
   padding-bottom: 60px;
+
+  @include respond-to("md") {
+    padding-bottom: 110px;
+  }
 }
 
 .content {
@@ -148,7 +157,7 @@
   margin-bottom: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; // Wymusza trzymanie się lewej strony
+  align-items: flex-start;
   position: relative;
   z-index: 10;
 }
@@ -202,7 +211,7 @@
   margin-bottom: 40px;
   font-weight: 500;
   letter-spacing: 1px;
-  max-width: 600px; // Węziej, żeby nie wchodziło na prawą stronę
+  max-width: 600px;
   line-height: 1.5;
   border-left: 3px solid $gz-accent;
   padding-left: 20px;
@@ -233,7 +242,7 @@
   @include respond-to("md") {
     font-size: 1.7rem;
   }
-  // Cut corners (Tech/Industrial vibe) zamiast slanta z Mida
+
   clip-path: polygon(
     20px 0,
     100% 0,
@@ -251,7 +260,6 @@
     z-index: 2;
   }
 
-  // Animacja promienia światła (shine)
   &::before {
     content: "";
     position: absolute;
@@ -270,7 +278,6 @@
     z-index: -1;
   }
 
-  // Wzór pasków z tyłu na hover (karbon/sport vibe)
   &::after {
     content: "";
     position: absolute;
@@ -292,7 +299,6 @@
 
   &:hover {
     transform: translateY(-3px);
-    // Używamy filter: drop-shadow zamiast box-shadow, bo clip-path obcina box-shadow!
     filter: drop-shadow(0 10px 25px rgba(0, 102, 255, 0.7));
 
     &::before {
@@ -321,7 +327,7 @@
   @include respond-to("md") {
     font-size: 1.7rem;
   }
-  // Cut corners
+
   clip-path: polygon(
     20px 0,
     100% 0,
@@ -340,7 +346,6 @@
   }
 }
 
-// Stats - Sporty/Angled Design
 .statsContainer {
   width: 100%;
   display: flex;
@@ -356,7 +361,6 @@
   backdrop-filter: blur(10px);
   border: 1px solid $gz-border-accent;
   padding: 25px 40px;
-  // Cut corners
   clip-path: polygon(
     30px 0,
     100% 0,
@@ -430,7 +434,6 @@
   }
 }
 
-// Spacing optimization for screens with shorter height (e.g. 1080p browser window, 2.5K browser window)
 @media (max-height: 1020px) and (min-width: 992px) {
   .crownGlow {
     height: 53px;
@@ -464,11 +467,7 @@
     margin-bottom: 20px;
   }
   .title {
-    font-size: clamp(
-      4.5rem,
-      8vw,
-      9.5rem
-    ); // Przywrócona pełna oryginalna wielkość (max 9.5rem = 152px)
+    font-size: clamp(4.5rem, 8vw, 9.5rem);
     margin-bottom: 30px;
   }
   .subtitle {
@@ -479,12 +478,11 @@
     margin-top: 40px;
   }
   .container {
-    padding-top: 3vh; // Lekkie przesunięcie w górę
-    padding-bottom: 80px; // Większy odstęp stats od korony przy większym foncie
+    padding-top: 3vh;
+    padding-bottom: 80px;
   }
 }
 
-// Spacing optimization for very short screens (e.g. laptops, smaller browser windows)
 @media (max-height: 900px) and (min-width: 992px) {
   .crownGlow {
     height: 45px;
@@ -518,11 +516,7 @@
     margin-bottom: 16px;
   }
   .title {
-    font-size: clamp(
-      4rem,
-      7.5vw,
-      8rem
-    ); // Bardzo mocny font na małych laptopach (max 8rem = 128px)
+    font-size: clamp(4rem, 7.5vw, 8rem);
     margin-bottom: 25px;
   }
   .subtitle {
