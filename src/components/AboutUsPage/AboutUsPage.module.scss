@@ -284,6 +284,13 @@
   position: relative;
   background: $gz-bg;
   z-index: 1;
+
+  @include respond-to("md") {
+    padding: 80px 0;
+  }
+  @include respond-to("sm") {
+    padding: 60px 0;
+  }
 }
 
 .giantBgText {
@@ -456,10 +463,19 @@
    3. VALUES SECTION (DARK GYM CARDS)
 ============================ */
 .valuesSection {
-  padding: 150px 0;
+  padding: 150px 0 180px 0;
   background: #05080d;
   position: relative;
-  z-index: 5;
+  z-index: 20; /* Z-index potrzebny, by dół najechał na kolejną sekcję */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw)); /* Skos tylko na dole */
+
+  @include respond-to("md") {
+    padding: 100px 0 120px 0;
+  }
+  @include respond-to("sm") {
+    padding: 70px 0 100px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 8vw));
+  }
 }
 
 .valuesHeader {
@@ -612,12 +628,21 @@
    4. FOUNDERS SECTION
 ============================ */
 .foundersSection {
-  padding: 160px 0 140px 0;
+  padding: 160px 0 180px 0;
   position: relative;
-  background-color: $gz-bg-2; /* Używamy zmiennej drugiego tła by odciąć wizualnie sekcję */
-  z-index: 10;
-  clip-path: polygon(0 5vw, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  background-color: $gz-bg-2;
+  z-index: 10; /* Niższy z-index, wchodzi pod valuesSection */
   margin-top: -5vw;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%); /* Skos wraca na pierwszą stronę */
+
+  @include respond-to("md") {
+    padding: 120px 0 120px 0;
+  }
+  @include respond-to("sm") {
+    padding: 100px 0 100px 0;
+    margin-top: -8vw;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8vw), 0 100%);
+  }
 }
 
 .foundersGrid {
@@ -763,6 +788,16 @@
   align-items: center;
   background: #000;
   overflow: hidden;
+  z-index: 5; /* Najniższy z-index, wchodzi pod foundersSection */
+  margin-top: -5vw;
+
+  @include respond-to("md") {
+    padding: 100px 0;
+  }
+  @include respond-to("sm") {
+    padding: 70px 0;
+    margin-top: -8vw;
+  }
 }
 
 /* Glowing Orbs */

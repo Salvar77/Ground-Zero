@@ -67,7 +67,7 @@ export default function AboutUsPage() {
           {/* Bottom fade gradient to seamlessly blend into next section */}
           <div className={styles.bottomFade}></div>
           <Image 
-            src="/images/ground-zero-niemodlin-silownia-fitness-hero.webp" 
+            src="/images/o-nas-hero-desktop.jpg" 
             alt="Ground Zero Niemodlin" 
             fill
             sizes="100vw"
