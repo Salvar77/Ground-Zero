@@ -88,6 +88,7 @@ export default function AboutUsPage() {
             <span className={styles.badgeText}>ZBUDOWANE Z PASJI</span>
           </div>
           <h1 className={styles.heroTitle}>
+            <span className={styles.srOnly}>O Nas - Najlepsza Siłownia w Niemodlinie: </span>
             TO NIE JEST <br />
             <span className={styles.outlineText}>KOLEJNA</span> SIECIÓWKA
           </h1>
@@ -174,7 +175,7 @@ export default function AboutUsPage() {
               <div className={styles.imageCard}>
                 <Image 
                   src="/images/maszyny-treningowe-strefa-silownia-ground-zero-niemodlin.webp" 
-                  alt="Strefa treningowa siłowni Ground Zero"
+                  alt="Kacper Miller, założyciel Ground Zero Niemodlin w strefie wolnych ciężarów"
                   width={550}
                   height={650}
                   className={styles.storyImg}
@@ -191,6 +192,13 @@ export default function AboutUsPage() {
 
       {/* 3. VALUES SECTION (DARK GYM AESTHETIC WITH MULTICOLOR STAIRCASE) */}
       <section className={styles.valuesSection}>
+        {/* Tło ozdobne - okręgi stylizowane na talerze od sztangi / techniczny radar */}
+        <div className={styles.plateOrnaments}>
+          <div className={styles.concentricCircle1}></div>
+          <div className={styles.concentricCircle2}></div>
+          <div className={styles.gridOverlay}></div>
+        </div>
+
         <div className={styles.container}>
           <motion.div 
             className={styles.valuesHeader}
@@ -219,7 +227,7 @@ export default function AboutUsPage() {
                   <div className={styles.iconContainer}>
                     {val.icon}
                   </div>
-                  <h4 className={styles.darkTitle}>{val.title}</h4>
+                  <h3 className={styles.darkTitle}>{val.title}</h3>
                   <p className={styles.darkDesc}>{val.desc}</p>
                 </div>
               </motion.div>
