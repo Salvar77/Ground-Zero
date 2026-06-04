@@ -25,10 +25,10 @@ export default function WellnessCta() {
         // Random position
         bubble.style.left = `${Math.random() * 100}%`;
         bubble.style.top = `${Math.random() * 100}%`;
-        // Random animation duration between 10s and 20s
-        bubble.style.animationDuration = `${Math.random() * 10 + 10}s`;
+        // Random animation duration between 20s and 50s
+        bubble.style.animationDuration = `${Math.random() * 30 + 20}s`;
         // Random delay
-        bubble.style.animationDelay = `${Math.random() * 5}s`;
+        bubble.style.animationDelay = `${Math.random() * 15}s`;
         starsContainer.appendChild(bubble);
       }
     };
