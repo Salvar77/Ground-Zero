@@ -7,11 +7,15 @@ import { useDesktopAnimation } from '@/hooks/useDesktopAnimation';
 import { industrialSlide } from '@/utils/motion';
 import styles from './Contact.module.scss';
 
-const Contact = () => {
+interface ContactProps {
+  isSubpage?: boolean;
+}
+
+const Contact = ({ isSubpage = false }: ContactProps) => {
   const isDesktop = useDesktopAnimation();
 
   return (
-    <section id="kontakt" className={styles.contact}>
+    <section id="kontakt" className={`${styles.contact} ${isSubpage ? styles.isSubpage : ''}`}>
       <div className={styles.container}>
         
         {/* Schodkowy element informacyjny - KARTA ZAWSZE PIERWSZA W HTML DLA DOBREGO MOBILE UX */}

@@ -9,7 +9,7 @@ export const metadata = {
 export default function KontaktPage() {
   return (
     <main>
-      <Contact />
+      <Contact isSubpage={true} />
     </main>
   );
 }

@@ -4,13 +4,22 @@
   position: relative;
   padding: 100px 0 150px;
   background: #000;
-  margin-top: 50px;
+  margin-top: 0;
   z-index: 10;
   overflow: hidden;
 
   @include respond-to("md") {
     padding: 20px 0 100px;
     margin-top: 0;
+  }
+
+  &.isSubpage {
+    padding-top: 200px;
+    margin-top: 0;
+
+    @include respond-to("md") {
+      padding-top: 130px;
+    }
   }
 
   &::before {
