@@ -4,13 +4,14 @@ import AboutUsPage from "@/components/AboutUsPage/AboutUsPage";
 export const metadata = {
   title: "O Nas | Ground Zero - Najlepsza Siłownia i Fitness w Niemodlinie",
   description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie o powierzchni ponad 300 m². Założyciele Kacper i Nikola Miller. Siłownia, wolne ciężary, zajęcia fitness, MMA na Opolszczyźnie.",
+  keywords: ["o nas siłownia", "historia Ground Zero", "Kacper Miller", "Nikola Miller", "siłownia Niemodlin właściciele", "klub fitness Niemodlin", "najlepsza siłownia opolskie"],
   alternates: {
-    canonical: "https://groundzeroniemodlin.pl/o-nas",
+    canonical: "https://www.groundzero-niemodlin.pl/o-nas",
   },
   openGraph: {
     title: "O Nas | Ground Zero - Najlepsza Siłownia i Fitness w Niemodlinie",
     description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie. Siłownia, wolne ciężary, fitness, MMA stworzone z pasji przez Kacpra i Nikolę Miller.",
-    url: "https://groundzeroniemodlin.pl/o-nas",
+    url: "https://www.groundzero-niemodlin.pl/o-nas",
     siteName: "Ground Zero Siłownia Niemodlin",
     images: [
       {

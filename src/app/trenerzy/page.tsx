@@ -4,13 +4,14 @@ import TrainersPage from "@/components/TrainersPage/TrainersPage";
 export const metadata = {
   title: "Nasi Trenerzy | Kacper i Nikola Miller - Ground Zero Niemodlin",
   description: "Poznaj trenerów Ground Zero. Kacper Miller - ekspert od treningu siłowego i przygotowania motorycznego. Nikola Miller - specjalistka od fitnessu i treningu kobiet. Zmień swoją sylwetkę w Niemodlinie.",
+  keywords: ["trener personalny Niemodlin", "trenerzy Ground Zero", "Kacper Miller trener", "Nikola Miller trenerka", "trening personalny", "przygotowanie motoryczne", "fitness dla kobiet"],
   alternates: {
-    canonical: "https://groundzeroniemodlin.pl/trenerzy",
+    canonical: "https://www.groundzero-niemodlin.pl/trenerzy",
   },
   openGraph: {
     title: "Trenerzy Personalni | Ground Zero Niemodlin",
     description: "Kacper i Nikola Miller. Indywidualne podejście, bezlitosna praca nad formą i profesjonalna opieka trenerska na Opolszczyźnie.",
-    url: "https://groundzeroniemodlin.pl/trenerzy",
+    url: "https://www.groundzero-niemodlin.pl/trenerzy",
     siteName: "Ground Zero Siłownia Niemodlin",
     images: [
       {

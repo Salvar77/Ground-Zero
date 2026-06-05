@@ -35,13 +35,16 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
           </div>
           
           <div className={styles.infoWrapper}>
+
             <div className={styles.infoGroup}>
               <span className={styles.label}>
                 <FiMapPin className={styles.infoIcon} /> LOKALIZACJA
               </span>
               <p className={styles.text}>
-                ul. Opolska 54<br/>
-                49-100 Niemodlin
+                <a href="https://www.google.com/maps/search/?api=1&query=Ground+Zero+Siłownia+Opolska+54+Niemodlin" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="Zobacz lokalizację Ground Zero na mapach Google">
+                  ul. Opolska 54<br/>
+                  49-100 Niemodlin
+                </a>
               </p>
             </div>
             
@@ -50,11 +53,11 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
                 <FiPhone className={styles.infoIcon} /> KONTAKT
               </span>
               <p className={styles.text}>
-                <a href="tel:+48666310850" className={styles.link}>
+                <a href="tel:+48666310850" className={styles.link} aria-label="Zadzwoń do nas pod numer +48 666 310 850">
                   666 310 850
                 </a>
                 <br/>
-                <a href="mailto:kontakt@groundzero-niemodlin.pl" className={styles.link} style={{ fontSize: '0.9em' }}>
+                <a href="mailto:kontakt@groundzero-niemodlin.pl" className={styles.link} style={{ fontSize: '0.9em' }} aria-label="Napisz do nas maila na kontakt@groundzero-niemodlin.pl">
                   kontakt@groundzero-niemodlin.pl
                 </a>
               </p>
@@ -69,6 +72,11 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
                 Niedziela: 13:00 - 21:00
               </p>
             </div>
+
+            <div className={styles.socialMedia} aria-label="Nasze profile w mediach społecznościowych">
+              <a href="https://www.facebook.com/p/Ground-Zero-Si%C5%82ownia-Niemodlin-61576885212351/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Profil Ground Zero na Facebooku">Facebook</a>
+              <a href="https://www.instagram.com/silownia.niemodlin.groundzero/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Profil Ground Zero na Instagramie">Instagram</a>
+            </div>
           </div>
 
           <a 
@@ -76,6 +84,7 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
             target="_blank" 
             rel="noreferrer" 
             className={styles.navBtn}
+            aria-label="Wyznacz trasę dojazdu w Google Maps"
           >
             WYZNACZ TRASĘ
           </a>

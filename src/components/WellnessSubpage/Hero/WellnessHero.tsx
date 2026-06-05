@@ -66,9 +66,13 @@ export default function WellnessHero() {
       </div>
       
       {/* Scroll Indicator */}
-      <div className={styles.scrollIndicator} onClick={scrollToContent}>
+      <button 
+        className={styles.scrollIndicator} 
+        onClick={scrollToContent}
+        aria-label="Przewiń do następnej sekcji"
+      >
         <div className={styles.mouseScroll}></div>
-      </div>
+      </button>
     </section>
   );
 }

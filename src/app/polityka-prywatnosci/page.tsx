@@ -21,8 +21,20 @@ import {
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Polityka Prywatności",
+  title: "Polityka Prywatności | Ground Zero Niemodlin",
   description: "Polityka prywatności siłowni Ground Zero Niemodlin. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.",
+  keywords: ["polityka prywatności siłownia", "RODO siłownia Niemodlin", "Ground Zero prywatność"],
+  alternates: {
+    canonical: "https://www.groundzero-niemodlin.pl/polityka-prywatnosci",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Polityka Prywatności - Ground Zero",
+  "description": "Dokument określający zasady przetwarzania danych osobowych przez Ground Zero Siłownia Niemodlin w zgodzie z rozporządzeniem RODO.",
+  "url": "https://www.groundzero-niemodlin.pl/polityka-prywatnosci"
 };
 
 const sections = [
@@ -248,7 +260,12 @@ const sections = [
 
 export default function PolitykaPrywatnosci() {
   return (
-    <main className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className={styles.page}>
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroBg}></div>
@@ -307,5 +324,6 @@ export default function PolitykaPrywatnosci() {
         </div>
       </div>
     </main>
+    </>
   );
 }

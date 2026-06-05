@@ -15,8 +15,20 @@ import {
 import styles from "../polityka-prywatnosci/page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Regulamin Siłowni",
-  description: "Regulamin korzystania z siłowni Ground Zero Niemodlin oraz świadczenia usług drogą elektroniczną.",
+  title: "Regulamin Siłowni | Ground Zero Niemodlin",
+  description: "Regulamin korzystania z siłowni Ground Zero Niemodlin oraz zasady świadczenia usług drogą elektroniczną.",
+  keywords: ["regulamin siłowni", "zasady siłowni", "Ground Zero regulamin", "siłownia Niemodlin regulamin"],
+  alternates: {
+    canonical: "https://www.groundzero-niemodlin.pl/regulamin",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Regulamin Siłowni - Ground Zero",
+  "description": "Zasady korzystania z klubu fitness Ground Zero w Niemodlinie.",
+  "url": "https://www.groundzero-niemodlin.pl/regulamin"
 };
 
 const sections = [
@@ -168,7 +180,12 @@ const sections = [
 
 export default function Regulamin() {
   return (
-    <main className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className={styles.page}>
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroBg}></div>
@@ -223,5 +240,6 @@ export default function Regulamin() {
         </div>
       </div>
     </main>
+    </>
   );
 }

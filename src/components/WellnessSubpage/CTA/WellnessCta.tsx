@@ -66,6 +66,7 @@ export default function WellnessCta() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={`${styles.socialBtn} ${styles.fb}`}
+                aria-label="Sprawdź nasz profil na Facebooku"
               >
                 <FaFacebookF className={styles.btnIcon} />
                 <span>FACEBOOK</span>
@@ -75,6 +76,7 @@ export default function WellnessCta() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={`${styles.socialBtn} ${styles.ig}`}
+                aria-label="Obserwuj nas na Instagramie"
               >
                 <FaInstagram className={styles.btnIcon} />
                 <span>INSTAGRAM</span>
