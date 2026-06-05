@@ -1,0 +1,161 @@
+@import "../../../styles/variables";
+
+.equipmentSection {
+  position: relative;
+  background-color: #020202;
+  padding: 180px 0 200px 0;
+  z-index: 15;
+  margin-top: -6vw; /* Pulls it under the Features tab */
+  /* V-Taper Cut */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 6vw), 
+    50% 100%, 
+    0 calc(100% - 6vw)
+  );
+
+  @include respond-to("sm") {
+    margin-top: -8vw;
+    clip-path: polygon(
+      0 0, 
+      100% 0, 
+      100% calc(100% - 10vw), 
+      50% 100%, 
+      0 calc(100% - 10vw)
+    );
+    padding: 120px 0 150px;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+
+  @include respond-to("md") {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  color: $gz-accent;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.accentText {
+  color: transparent;
+  -webkit-text-stroke: 1px $gz-accent;
+  text-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    line-height: 1.5;
+    
+    strong {
+      color: #fff;
+    }
+  }
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  background-color: $gz-accent;
+  margin-top: 8px;
+  box-shadow: 0 0 10px $gz-accent;
+  flex-shrink: 0;
+}
+
+.imageContent {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top right, rgba(0, 102, 255, 0.2), transparent 50%);
+  mix-blend-mode: overlay;
+}
+
+.cornerDecor {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  width: 50px;
+  height: 50px;
+  border-bottom: 4px solid $gz-accent;
+  border-left: 4px solid $gz-accent;
+  z-index: 2;
+}

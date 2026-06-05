@@ -22,9 +22,9 @@ export default function WellnessCta() {
         // Random size between 2px and 8px
         bubble.style.width = `${Math.random() * 6 + 2}px`;
         bubble.style.height = bubble.style.width;
-        // Random position
+        // Random position at the bottom of the page (bottom 15%)
         bubble.style.left = `${Math.random() * 100}%`;
-        bubble.style.top = `${Math.random() * 100}%`;
+        bubble.style.top = `${85 + Math.random() * 15}%`;
         // Random animation duration between 20s and 50s
         bubble.style.animationDuration = `${Math.random() * 30 + 20}s`;
         // Random delay
@@ -37,11 +37,12 @@ export default function WellnessCta() {
   }, []);
 
   return (
-    <section className={styles.section}>
-      {/* Background bubbles wrapper */}
+    <>
+      {/* Background bubbles wrapper - now outside section to float over everything */}
       <div className={styles.bubblesContainer} ref={starsRef}></div>
       
-      <div className={styles.container}>
+      <section className={styles.section}>
+        <div className={styles.container}>
         <motion.div 
           className={styles.wrapper}
           initial={{ opacity: 0, scale: 0.95 }}
@@ -83,5 +84,6 @@ export default function WellnessCta() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }

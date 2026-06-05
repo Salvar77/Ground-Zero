@@ -15,19 +15,28 @@ export default function WellnessHero() {
 
   const yBackground = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
+  const scrollToContent = () => {
+    window.scrollTo({
+      top: window.innerHeight * 0.95,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <section className={styles.heroSection} ref={containerRef}>
-      <motion.div className={styles.heroBackground} style={{ y: yBackground }}>
-        <Image 
-          src="/images/ground_zero_wellness.png" 
-          alt="Ground Zero Wellness" 
-          fill
-          priority
-          sizes="100vw"
-          className={styles.heroImg}
-        />
-        <div className={styles.overlay}></div>
-      </motion.div>
+      <div className={styles.heroBgWrapper}>
+        <motion.div className={styles.heroBackground} style={{ y: yBackground }}>
+          <Image 
+            src="/images/ground_zero_wellness.png" 
+            alt="Ground Zero Wellness" 
+            fill
+            priority
+            sizes="100vw"
+            className={styles.heroImg}
+          />
+          <div className={styles.overlay}></div>
+        </motion.div>
+      </div>
 
       {/* Fog Layers */}
       <div className={styles.fogContainer}>
@@ -57,7 +66,7 @@ export default function WellnessHero() {
       </div>
       
       {/* Scroll Indicator */}
-      <div className={styles.scrollIndicator}>
+      <div className={styles.scrollIndicator} onClick={scrollToContent}>
         <div className={styles.mouseScroll}></div>
       </div>
     </section>
