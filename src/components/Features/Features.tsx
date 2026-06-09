@@ -10,20 +10,20 @@ import styles from './Features.module.scss';
 const featuresData = [
   {
     id: '01',
-    title: 'STREFA WOLNYCH CIĘŻARÓW',
-    desc: 'Prawdziwe żelazo dla prawdziwych wyników. Hantle, gryfy olimpijskie i profesjonalne pomosty ciężarowe dla wyciskających siódme poty.',
+    title: 'SALA MASZYN I WOLNYCH CIĘŻARÓW',
+    desc: 'Prawdziwe żelazo i profesjonalne maszyny oporowe. Hantle, gryfy olimpijskie oraz najwyższej klasy sprzęt izotoniczny dla tych, którzy chcą solidnie budować masę i siłę.',
     image: '/images/hantle-wolne-ciezary-silownia-ground-zero-niemodlin.webp'
   },
   {
     id: '02',
-    title: 'MASZYNY PÓŁWOLNE',
-    desc: 'Najwyższej klasy sprzęt typu Hammer. Maszyny, które wybaczają błędy w technice, ale nie wybaczają słabości na treningu.',
+    title: 'SALA FITNESS I SPORTÓW WALKI',
+    desc: 'Przestrzeń dedykowana zajęciom ogólnorozwojowym i sportom walki. Wyposażona w strefę do walki, akcesoria fitness oraz miejsce idealne do budowania dynamiki i techniki.',
     image: '/images/maszyny-treningowe-strefa-silownia-ground-zero-niemodlin.webp'
   },
   {
     id: '03',
-    title: 'TRENING FUNKCJONALNY',
-    desc: 'Kettlebells, liny, boxy i klatka treningowa. Zbuduj kondycję, siłę eksplozywną i mobilność w jednym miejscu.',
+    title: 'SALA TRENINGU FUNKCJONALNEGO',
+    desc: 'Kettlebells, liny, boxy i specjalistyczna klatka treningowa. Rozwijaj sprawność, zrzuć zbędne kilogramy i buduj siłę eksplozywną bez żadnych ograniczeń.',
     image: '/images/ground_zero_functional_training.png'
   }
 ];

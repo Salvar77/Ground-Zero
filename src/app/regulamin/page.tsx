@@ -48,7 +48,7 @@ const sections = [
           <p>Ground Zero Siłownia</p>
           <p>ul. Opolska 54, 49-100 Niemodlin</p>
           <p>Tel.: <a href="tel:+48666310850">666 310 850</a></p>
-          <p>E-mail: <a href="mailto:kontakt@groundzero-niemodlin.pl">kontakt@groundzero-niemodlin.pl</a></p>
+          <p>E-mail: <a href="mailto:groundzero.niemodlin@gmail.com">groundzero.niemodlin@gmail.com</a></p>
         </div>
         <p>
           Każda osoba korzystająca z usług siłowni, zwana dalej „Klubowiczem”,
@@ -147,7 +147,7 @@ const sections = [
           internetowej należy kierować:
         </p>
         <ul className={styles.list}>
-          <li>Drogą elektroniczną na adres: <strong>kontakt@groundzero-niemodlin.pl</strong></li>
+          <li>Drogą elektroniczną na adres: <strong>groundzero.niemodlin@gmail.com</strong></li>
           <li>Pisemnie na adres: <strong>ul. Opolska 54, 49-100 Niemodlin</strong></li>
         </ul>
         <p>

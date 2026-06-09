@@ -155,8 +155,8 @@ export default function Footer() {
                 </li>
                 <li className={styles.contactItem}>
                   <FiMail className={styles.contactIcon} />
-                  <a href="mailto:kontakt@groundzero-niemodlin.pl" className={styles.contactLink}>
-                    kontakt@groundzero-niemodlin.pl
+                  <a href="mailto:groundzero.niemodlin@gmail.com" className={styles.contactLink}>
+                    groundzero.niemodlin@gmail.com
                   </a>
                 </li>
               </ul>

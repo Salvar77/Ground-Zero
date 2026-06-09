@@ -108,7 +108,7 @@ const localBusinessSchema = {
   "@id": "https://www.groundzero-niemodlin.pl",
   url: "https://www.groundzero-niemodlin.pl",
   telephone: "+48666310850",
-  email: "kontakt@groundzero-niemodlin.pl",
+  email: "groundzero.niemodlin@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "ul. Opolska 54",

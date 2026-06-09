@@ -145,6 +145,33 @@
   line-height: 1.5;
 }
 
+.socialMedia {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $gz-accent;
+    border-color: $gz-accent;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+  }
+}
+
 .link {
   color: inherit;
   text-decoration: none;

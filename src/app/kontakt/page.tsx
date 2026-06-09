@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "@/components/Contact/Contact";
+import FreeTrial from "@/components/FreeTrial/FreeTrial";
 
 export const metadata = {
   title: "Kontakt | Ground Zero Siłownia Niemodlin",
@@ -28,7 +29,7 @@ const jsonLd = {
     "@type": "LocalBusiness",
     "name": "Ground Zero Siłownia Niemodlin",
     "telephone": "+48666310850",
-    "email": "kontakt@groundzero-niemodlin.pl",
+    "email": "groundzero.niemodlin@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "ul. Opolska 54",
@@ -49,6 +50,7 @@ export default function KontaktPage() {
       />
       <main>
         <Contact isSubpage={true} />
+        <FreeTrial />
       </main>
     </>
   );

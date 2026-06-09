@@ -67,8 +67,8 @@ export default function Hero() {
             className={styles.buttons}
             {...(isDesktop && { variants: stealthReveal() })}
           >
-            <Link href="/kontakt" className={styles.primaryBtn}>
-              <span className={styles.btnText}>DOŁĄCZ DO NAS</span>
+            <Link href="#consultation" className={styles.primaryBtn}>
+              <span className={styles.btnText}>DARMOWA KONSULTACJA</span>
               <span className={styles.btnDeco}></span>
             </Link>
             <Link href="#grafik" className={styles.secondaryBtn}>

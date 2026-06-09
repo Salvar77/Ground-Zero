@@ -63,8 +63,8 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Link href="/kontakt" className={styles.ctaBtn}>
-            DOŁĄCZ DO NAS
+          <Link href="/#free-trial" className={styles.ctaBtn}>
+            ODBIERZ WEJŚCIE
           </Link>
         </nav>
 
@@ -99,11 +99,11 @@ export default function Navbar() {
             ))}
           </ul>
           <Link
-            href="/kontakt"
+            href="/#free-trial"
             className={styles.mobileCtaBtn}
             onClick={closeMenu}
           >
-            DOŁĄCZ DO NAS
+            ODBIERZ WEJŚCIE
           </Link>
         </nav>
       </div>

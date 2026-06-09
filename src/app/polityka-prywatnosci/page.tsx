@@ -48,7 +48,7 @@ const sections = [
         <div className={styles.infoCard}>
           <p><strong>Ground Zero Siłownia</strong></p>
           <p>ul. Opolska 54, 49-100 Niemodlin</p>
-          <p>E-mail: <a href="mailto:kontakt@groundzero-niemodlin.pl">kontakt@groundzero-niemodlin.pl</a></p>
+          <p>E-mail: <a href="mailto:groundzero.niemodlin@gmail.com">groundzero.niemodlin@gmail.com</a></p>
           <p>Tel.: <a href="tel:+48666310850">666 310 850</a></p>
         </div>
         <p>
@@ -146,7 +146,7 @@ const sections = [
           <FiMail className={styles.noteIcon} />
           <p>
             Aby skorzystać z powyższych praw, skontaktuj się z nami pod adresem:{" "}
-            <a href="mailto:kontakt@groundzero-niemodlin.pl">kontakt@groundzero-niemodlin.pl</a>
+            <a href="mailto:groundzero.niemodlin@gmail.com">groundzero.niemodlin@gmail.com</a>
           </p>
         </div>
       </>
@@ -245,7 +245,7 @@ const sections = [
         </p>
         <div className={styles.infoCard}>
           <p><strong>Ground Zero Siłownia — Inspektor Ochrony Danych</strong></p>
-          <p>E-mail: <a href="mailto:kontakt@groundzero-niemodlin.pl">kontakt@groundzero-niemodlin.pl</a></p>
+          <p>E-mail: <a href="mailto:groundzero.niemodlin@gmail.com">groundzero.niemodlin@gmail.com</a></p>
           <p>Tel.: <a href="tel:+48666310850">666 310 850</a></p>
           <p>Adres: ul. Opolska 54, 49-100 Niemodlin</p>
         </div>

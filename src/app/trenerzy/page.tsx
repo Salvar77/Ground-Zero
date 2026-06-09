@@ -1,5 +1,6 @@
 import React from "react";
 import TrainersPage from "@/components/TrainersPage/TrainersPage";
+import Consultation from "@/components/Consultation/Consultation";
 
 export const metadata = {
   title: "Nasi Trenerzy | Kacper i Nikola Miller - Ground Zero Niemodlin",
@@ -62,6 +63,7 @@ export default function Trenerzy() {
       />
       <main>
         <TrainersPage />
+        <Consultation />
       </main>
     </>
   );

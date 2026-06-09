@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { useDesktopAnimation } from '@/hooks/useDesktopAnimation';
 import { industrialSlide } from '@/utils/motion';
 import styles from './Contact.module.scss';
@@ -57,8 +58,8 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
                   666 310 850
                 </a>
                 <br/>
-                <a href="mailto:kontakt@groundzero-niemodlin.pl" className={styles.link} style={{ fontSize: '0.9em' }} aria-label="Napisz do nas maila na kontakt@groundzero-niemodlin.pl">
-                  kontakt@groundzero-niemodlin.pl
+                <a href="mailto:groundzero.niemodlin@gmail.com" className={styles.link} style={{ fontSize: '0.9em' }} aria-label="Napisz do nas maila na groundzero.niemodlin@gmail.com">
+                  groundzero.niemodlin@gmail.com
                 </a>
               </p>
             </div>
@@ -74,8 +75,12 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
             </div>
 
             <div className={styles.socialMedia} aria-label="Nasze profile w mediach społecznościowych">
-              <a href="https://www.facebook.com/p/Ground-Zero-Si%C5%82ownia-Niemodlin-61576885212351/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Profil Ground Zero na Facebooku">Facebook</a>
-              <a href="https://www.instagram.com/silownia.niemodlin.groundzero/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Profil Ground Zero na Instagramie">Instagram</a>
+              <a href="https://www.facebook.com/p/Ground-Zero-Si%C5%82ownia-Niemodlin-61576885212351/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Profil Ground Zero na Facebooku">
+                <FaFacebookF />
+              </a>
+              <a href="https://www.instagram.com/silownia.niemodlin.groundzero/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Profil Ground Zero na Instagramie">
+                <FaInstagram />
+              </a>
             </div>
           </div>
 
