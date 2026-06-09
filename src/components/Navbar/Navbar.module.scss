@@ -15,6 +15,14 @@
   &.scrolled {
     @include glass-nav;
     height: 70px;
+    
+    .logo {
+      transform: translateY(0);
+    }
+    
+    .logoImage {
+      height: 60px !important;
+    }
   }
 
   @include respond-to("md") {
@@ -35,15 +43,24 @@
   z-index: 101;
   display: flex;
   align-items: center;
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
 }
 
 .logoImage {
   width: auto !important;
-  height: 60px !important;
+  height: 85px !important;
   object-fit: contain;
+  transition: height 0.4s ease;
+  /* Opcja 2: invert(1) odwraca kolory, a potrójny drop-shadow tworzy mocną, szeroką poświatę, 
+     która świetnie wybija czarny napis i lwa z ciemnego tła */
+  filter: invert(1) 
+          drop-shadow(0 0 4px rgba(255, 255, 255, 0.9)) 
+          drop-shadow(0 0 12px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 25px rgba(0, 102, 255, 0.5));
 
   @include respond-to("md") {
-    height: 55px !important;
+    height: 70px !important;
   }
 }
 
