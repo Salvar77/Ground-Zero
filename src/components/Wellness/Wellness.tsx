@@ -58,7 +58,7 @@ export default function Wellness() {
           >
             <div className={styles.header}>
               <div className={styles.bgText}>SAUNA</div>
-              <span className={styles.badge}>STREFA WELLNESS</span>
+              <span className={styles.badge}>RECOVERY ROOM</span>
               <h2 className={styles.title}>
                 REGENERACJA NA<br />
                 <span>NAJWYŻSZYM</span> POZIOMIE
@@ -73,9 +73,9 @@ export default function Wellness() {
               dostępna dla każdego klubowicza.
             </p>
 
-            <div className={styles.btnWrapper}>
-              <Link href="/strefa-wellness" className={styles.ctaBtn}>
-                ZOBACZ STREFĘ WELLNESS
+            <div className={styles.actions}>
+              <Link href="/recovery-room" className={styles.ctaBtn}>
+                ZOBACZ RECOVERY ROOM
               </Link>
             </div>
           </motion.div>

@@ -7,10 +7,11 @@ import styles from "./Navbar.module.scss";
 
 const navLinks = [
   { name: "O NAS", href: "/o-nas" },
-  { name: "WELLNESS", href: "/strefa-wellness" },
-  // { name: "GRAFIK", href: "/grafik" },
+  { name: "GRAFIK ZAJĘĆ", href: "/grafik" },
+  { name: "RECOVERY ROOM", href: "/recovery-room" },
   { name: "TRENERZY", href: "/trenerzy" },
-  // { name: "CENNIK", href: "/cennik" },
+  { name: "CENNIK", href: "/cennik" },
+  { name: "GALERIA", href: "/galeria" },
   { name: "KONTAKT", href: "/kontakt" },
 ];
 

@@ -6,16 +6,16 @@ import WellnessEquipment from "@/components/WellnessSubpage/Equipment/WellnessEq
 import WellnessCta from "@/components/WellnessSubpage/CTA/WellnessCta";
 
 export const metadata: Metadata = {
-  title: "Strefa Wellness i Sauna | Ground Zero Niemodlin",
-  description: "Zregeneruj siły w naszej strefie Wellness. Sauna fińska, pokój relaksu, drenaż limfatyczny (Normatec) i odnowa biologiczna w najlepszej siłowni w regionie.",
-  keywords: ["strefa wellness Niemodlin", "sauna Niemodlin", "sauna fińska Niemodlin", "drenaż limfatyczny Niemodlin", "odnowa biologiczna Niemodlin", "relaks siłownia", "masaż uciskowy", "regeneracja po treningu"],
+  title: "Recovery Room i Sauna | Ground Zero Niemodlin",
+  description: "Zregeneruj siły w naszym Recovery Room. Sauna fińska, pokój relaksu, drenaż limfatyczny i pistolety masujące w najlepszej siłowni w regionie.",
+  keywords: ["recovery room Niemodlin", "sauna Niemodlin", "sauna fińska Niemodlin", "drenaż limfatyczny Niemodlin", "odnowa biologiczna Niemodlin", "relaks siłownia", "masaż uciskowy", "regeneracja po treningu"],
   alternates: {
-    canonical: "https://www.groundzero-niemodlin.pl/strefa-wellness",
+    canonical: "https://www.groundzero-niemodlin.pl/recovery-room",
   },
   openGraph: {
-    title: "Strefa Wellness i Sauna | Ground Zero Niemodlin",
-    description: "Sauna fińska, profesjonalny drenaż limfatyczny Normatec i strefa relaksu. Zregeneruj się po ciężkim treningu w Ground Zero.",
-    url: "https://www.groundzero-niemodlin.pl/strefa-wellness",
+    title: "Recovery Room i Sauna | Ground Zero Niemodlin",
+    description: "Zregeneruj siły w naszym Recovery Room. Sauna fińska, pokój relaksu, drenaż limfatyczny.",
+    url: "https://www.groundzero-niemodlin.pl/recovery-room",
     siteName: "Ground Zero Siłownia Niemodlin",
     locale: "pl_PL",
     type: "website",
@@ -25,8 +25,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["WebPage", "Service"],
-  "name": "Strefa Wellness i Sauna - Ground Zero",
-  "description": "Profesjonalna strefa odnowy biologicznej w Ground Zero Niemodlin. Oferujemy saunę fińską oraz sesje drenażu limfatycznego (Normatec) dla optymalnej regeneracji.",
+  "name": "Recovery Room i Sauna - Ground Zero",
+  "description": "Profesjonalna odnowa biologiczna, sauna, drenaż limfatyczny i pokój relaksu w Niemodlinie.",
+  "url": "https://www.groundzero-niemodlin.pl/recovery-room",
   "provider": {
     "@type": "ExerciseGym",
     "name": "Ground Zero Siłownia Niemodlin",
@@ -42,7 +43,7 @@ const jsonLd = {
   "areaServed": "Niemodlin i okolice",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Usługi Wellness",
+    "name": "Usługi Recovery Room",
     "itemListElement": [
       {
         "@type": "Offer",

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
 import { staggerContainer, stealthReveal, heavyHit } from "@/utils/motion";
+import Marquee from "@/components/Marquee/Marquee";
 import styles from "./Hero.module.scss";
 
 export default function Hero() {
@@ -63,6 +64,12 @@ export default function Hero() {
             PROFESJONALNI TRENERZY. ZBUDUJ FORMĘ BEZ WYMÓWEK.
           </motion.p>
 
+          <motion.div
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
+            <Marquee />
+          </motion.div>
+
           <motion.div 
             className={styles.buttons}
             {...(isDesktop && { variants: stealthReveal() })}
@@ -71,7 +78,7 @@ export default function Hero() {
               <span className={styles.btnText}>DARMOWA KONSULTACJA</span>
               <span className={styles.btnDeco}></span>
             </Link>
-            <Link href="#grafik" className={styles.secondaryBtn}>
+            <Link href="/grafik" className={styles.secondaryBtn}>
               <span className={styles.btnText}>GRAFIK ZAJĘĆ</span>
             </Link>
           </motion.div>

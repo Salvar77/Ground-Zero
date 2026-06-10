@@ -2,20 +2,24 @@
 
 .marqueeWrapper {
   width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
+  overflow: visible; /* Zezwalamy dziecku wylać się na boki */
+  padding: 0;
+  margin-top: -15px; /* Podciągamy mocno do góry */
+  margin-bottom: 60px; /* Dajemy dużo oddechu przyciskom poniżej */
   background: transparent;
   position: relative;
   z-index: 20;
 
   @include respond-to("md") {
-    padding: 40px 0 20px;
+    padding: 0;
+    margin-top: 15px; /* Obniżamy z powrotem na mobile */
+    margin-bottom: 30px;
   }
 }
 
 .marqueeContainer {
-  width: 110vw;
-  margin-left: -5vw;
+  width: 200vw;
+  margin-left: -50vw; /* Cofamy kontener by w 100% przeciął ekran */
   background: $gz-accent;
   color: #fff;
   padding: 20px 0;

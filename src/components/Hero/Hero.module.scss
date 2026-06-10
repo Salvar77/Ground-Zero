@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 1000px; /* Zwiększone by pomieścić pasek */
   overflow: hidden;
   padding-top: $nav-height;
   z-index: 21;
@@ -12,7 +12,7 @@
   @include respond-to("md") {
     height: auto;
     min-height: 100dvh;
-    overflow: visible;
+    overflow: hidden; /* KLUCZOWE: chroni przed rozsadzeniem strony przez 200vw paska na mobile */
   }
 }
 
@@ -142,10 +142,11 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding-top: 5vh;
-  padding-bottom: 60px;
+  padding-top: 75px; /* Podnosimy leciutko na desktopie */
+  padding-bottom: 110px;
 
   @include respond-to("md") {
+    padding-top: 45px; /* Dodane specjalnie dla mobile, tu mocniej w górę */
     padding-bottom: 110px;
   }
 }
@@ -208,7 +209,7 @@
 .subtitle {
   font-size: clamp(1.6rem, 2vw, 2.2rem);
   color: #c0c0c0;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   font-weight: 500;
   letter-spacing: 1px;
   max-width: 600px;
@@ -472,14 +473,14 @@
   }
   .subtitle {
     font-size: clamp(1.5rem, 1.8vw, 2.1rem);
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
   .statsContainer {
     margin-top: 40px;
   }
   .container {
-    padding-top: 3vh;
-    padding-bottom: 80px;
+    padding-top: 55px;
+    padding-bottom: 100px;
   }
 }
 
@@ -521,13 +522,13 @@
   }
   .subtitle {
     font-size: clamp(1.4rem, 1.7vw, 1.9rem);
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
   .statsContainer {
     margin-top: 30px;
   }
   .container {
-    padding-top: 2vh;
-    padding-bottom: 70px;
+    padding-top: 45px;
+    padding-bottom: 90px;
   }
 }

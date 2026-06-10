@@ -13,9 +13,12 @@ const navSections = [
   {
     title: "Nawigacja",
     links: [
-      { label: "O Nas", href: "/o-nas" },
-      { label: "Strefa Wellness", href: "/strefa-wellness" },
-      { label: "Nasi Trenerzy", href: "/trenerzy" },
+      { label: "O nas", href: "/o-nas" },
+      { label: "Grafik Zajęć", href: "/grafik" },
+      { label: "Recovery Room", href: "/recovery-room" },
+      { label: "Trenerzy", href: "/trenerzy" },
+      { label: "Cennik", href: "/cennik" },
+      { label: "Galeria", href: "/galeria" },
       { label: "Kontakt", href: "/kontakt" },
     ],
   },
@@ -94,7 +97,7 @@ export default function Footer() {
               </p>
               <p className={styles.brandDesc}>
                 Nowoczesna siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic) — ponad <strong>300 m²</strong> profesjonalnego 
-                sprzętu, wykwalifikowani trenerzy i strefa wellness. Zero sieciówek. 
+                sprzętu, wykwalifikowani trenerzy i recovery room. Zero sieciówek. 
                 Zero wymówek.
               </p>
 

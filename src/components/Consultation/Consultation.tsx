@@ -11,14 +11,37 @@ export default function Consultation() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     goal: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Dziękujemy ${formData.name}! Twoje zgłoszenie na konsultację zostało przyjęte.`);
-    setFormData({ name: "", phone: "", goal: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ formType: 'consultation', ...formData }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", phone: "", email: "", goal: "", message: "" });
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -62,7 +85,7 @@ export default function Consultation() {
                   value={formData.name}
                   onChange={handleChange}
                   required 
-                  placeholder="Imię i Nazwisko"
+                  placeholder="Imię"
                 />
               </div>
               <div className={styles.inputGroup}>
@@ -76,6 +99,18 @@ export default function Consultation() {
                   placeholder="Numer Telefonu"
                 />
               </div>
+            </div>
+
+            <div className={styles.inputGroup}>
+              <input 
+                type="email" 
+                name="email"
+                id="consult-email"
+                value={formData.email}
+                onChange={handleChange}
+                required 
+                placeholder="Adres E-mail"
+              />
             </div>
 
             <div className={styles.inputGroup}>
@@ -105,9 +140,15 @@ export default function Consultation() {
               ></textarea>
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
-              ZAREZERWUJ KONSULTACJĘ
+            <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+              {isSubmitting ? "WYSYŁANIE..." : "ZAREZERWUJ KONSULTACJĘ"}
             </button>
+            {submitStatus === "success" && (
+              <p className={styles.successMsg}>Dziękujemy! Zgłoszenie zostało pomyślnie wysłane.</p>
+            )}
+            {submitStatus === "error" && (
+              <p className={styles.errorMsg}>Wystąpił błąd podczas wysyłania. Spróbuj ponownie później.</p>
+            )}
           </form>
         </motion.div>
       </div>

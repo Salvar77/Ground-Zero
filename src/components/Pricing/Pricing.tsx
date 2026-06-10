@@ -1,253 +1,128 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import { staggerContainer, heavyHit, powerCharge } from "@/utils/motion";
 import styles from "./Pricing.module.scss";
 
 type MembershipOption = {
   name: string;
   price: number;
+  period: string;
   desc: string;
-  features: string[];
+  badge?: string;
 };
 
-const monthlyOptions: Record<string, MembershipOption> = {
-  silownia: {
-    name: "Karnet Miesięczny - Siłownia",
-    price: 150,
-    desc: "Idealna opcja dla osób, które chcą trenować we własnym tempie i na własnych zasadach na profesjonalnej sali treningowej.",
-    features: [
-      "Nielimitowany dostęp do strefy siłowej i maszyn",
-      "Dostęp do strefy kardio i wolnych ciężarów",
-      "Wejścia w dowolnych godzinach otwarcia",
-      "Darmowy pakiet powitalny i konsultacja",
-    ],
+const pricingOptions: MembershipOption[] = [
+  {
+    name: "Karnet 1 wejście",
+    price: 30,
+    period: "/ dzień",
+    desc: "Karnet na jedno wejście to idealna opcja dla osób, które chcą spróbować treningu bez zobowiązań lub potrzebują jednorazowego dostępu do zajęć czy siłowni. To wygodne rozwiązanie, gdy chcesz sprawdzić miejsce, wejść na szybki trening lub dopasować aktywność do napiętego grafiku. Karnet obowiązuje na Siłownię, zajęcia Fitness oraz zajęcia Cross",
   },
-  cross: {
-    name: "Karnet Miesięczny - Cross",
+  {
+    name: "Karnet miesieczny - Cross",
     price: 140,
-    desc: "Trening funkcjonalny, siłowy oraz kondycyjny. Dynamiczne zajęcia grupowe pod okiem wykwalifikowanego trenera.",
-    features: [
-      "Udział w zajęciach Cross wg grafiku",
-      "Intensywny rozwój kondycji i siły",
-      "Stała opieka trenera prowadzącego",
-      "Dostęp do dedykowanego sprzętu Cross",
-    ],
+    period: "/ miesiąc",
+    desc: "Karnet miesięczny to idealne rozwiązanie dla osób, które chcą trenować regularnie i widzieć szybkie postępy. Zajęcia CROSS łączą elementy treningu funkcjonalnego, siłowego oraz kondycyjnego, dzięki czemu poprawisz swoją sprawność, zwiększysz siłę i wytrzymałość, a przy tym spalisz dużą ilość kalorii.",
   },
-  fitness: {
-    name: "Karnet Miesięczny - Fitness",
+  {
+    name: "Karnet miesięczny - Fitness",
     price: 140,
-    desc: "Zajęcia grupowe wspierające zdrowie, ruchomość stawów i redukcję stresu w motywującej, energicznej atmosferze.",
-    features: [
-      "Udział w zajęciach Fitness wg grafiku",
-      "Poprawa mobilności i elastyczności",
-      "Świetna atmosfera i wsparcie grupy",
-      "Różnorodne zestawy ćwiczeń cardio/ABS",
-    ],
+    period: "/ miesiąc",
+    desc: "Karnet miesięczny na fitness to świetny wybór dla osób, które chcą zadbać o swoje zdrowie, sylwetkę i dobre samopoczucie. Zajęcia fitness pozwalają rozwijać kondycję, wzmacniać mięśnie, poprawiać mobilność oraz redukować stres — a wszystko w przyjaznej, energicznej atmosferze.",
   },
-  mma: {
-    name: "Karnet MMA (Dzieci / Młodzież)",
+  {
+    name: "Karnet miesięczny - Siłownia",
     price: 150,
-    desc: "Wszechstronny rozwój sprawności, nauka dyscypliny i technik boksu, zapasów oraz BJJ pod okiem profesjonalistów.",
-    features: [
-      "Zajęcia MMA dla dzieci lub młodzieży",
-      "Bezpieczny trening w grupach wiekowych",
-      "Rozwój koordynacji i pewności siebie",
-      "Dostęp do pełnego zaplecza treningowego",
-    ],
+    period: "/ miesiąc",
+    desc: "Karnet miesięczny na siłownię to idealna opcja dla osób, które chcą trenować we własnym tempie i na własnych zasadach. Profesjonalnie wyposażona sala pozwala na kompleksowy trening siłowy, kondycyjny oraz funkcjonalny — niezależnie od poziomu zaawansowania.",
   },
-};
+  {
+    name: "Karnet na zajęcia MMA Grupa dziecięca",
+    price: 150,
+    period: "/ miesiąc",
+    desc: "Karnet na zajęcia MMA to idealna opcja dla osób, które chcą rozwijać swoją kondycję, siłę oraz umiejętności sztuk walki pod okiem profesjonalnych trenerów. Treningi łączą elementy boksu, zapasów i brazylijskiego jiu-jitsu, zapewniając wszechstronny rozwój oraz intensywny, angażujący wysiłek.\n\nKarnet obejmuje udział w regularnych zajęciach MMA w Siłowni Ground Zero Niemodlin, dostęp do pełnego wyposażenia treningowego oraz możliwość pracy w grupie dostosowanej do poziomu zaawansowania – zarówno dla początkujących, jak i bardziej doświadczonych zawodników.\nKarnet obowiązuje na zajęcia na grupę dziecięcą według obowiązującego grafiku zajęć",
+  },
+  {
+    name: "Karnet na zajęcia MMA grupa młodzież",
+    price: 150,
+    period: "/ miesiąc",
+    desc: "Karnet na zajęcia MMA to idealna opcja dla osób, które chcą rozwijać swoją kondycję, siłę oraz umiejętności sztuk walki pod okiem profesjonalnych trenerów. Treningi łączą elementy boksu, zapasów i brazylijskiego jiu-jitsu, zapewniając wszechstronny rozwój oraz intensywny, angażujący wysiłek.\n\nKarnet obejmuje udział w regularnych zajęciach MMA w Siłowni Ground Zero Niemodlin, dostęp do pełnego wyposażenia treningowego oraz możliwość pracy w grupie dostosowanej do poziomu zaawansowania – zarówno dla początkujących, jak i bardziej doświadczonych zawodników.\n\nKarnet obejmuje uczestnictwo w zajęciach grupy młodzieżowej według obowiązującego grafiku",
+  },
+  {
+    name: "Karnet Siłownia + Cross",
+    price: 250,
+    period: "/ miesiąc",
+    desc: "Karnet łączony to idealny wybór dla osób, które chcą maksymalnie wykorzystać możliwości treningowe. Połączenie nielimitowanego dostępu do siłowni z intensywnymi zajęciami Cross daje pełną swobodę planowania i pozwala rozwijać siłę, wytrzymałość oraz ogólną sprawność na każdym poziomie zaawansowania.",
+    badge: "COMBO",
+  },
+  {
+    name: "Karnet Siłownia + Fitness",
+    price: 250,
+    period: "/ miesiąc",
+    desc: "Karnet łączony to świetna propozycja dla osób, które chcą połączyć samodzielny trening na siłowni z energią zajęć fitness. Dzięki temu zyskujesz pełną elastyczność — możesz realizować własny plan treningowy, a jednocześnie korzystać z prowadzonej aktywności, która motywuje, wzmacnia i urozmaica codzienny ruch.",
+    badge: "COMBO",
+  }
+];
 
 export default function Pricing() {
-  const [selectedMonthly, setSelectedMonthly] = useState<string>("silownia");
-  const currentMonthly = monthlyOptions[selectedMonthly];
-
   return (
     <section id="cennik" className={styles.pricing}>
       <div className={styles.container}>
         
-        <div className={styles.header}>
+        <motion.div 
+          className={styles.header}
+          variants={heavyHit()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className={styles.bgText}>PRICING</div>
-          <span className={styles.badge}>CENNIK KARNETÓW</span>
+          <span className={styles.badge}>OFERTA</span>
           <h2 className={styles.title}>
-            WYBIERZ SWÓJ <span>PLAN TRENINGOWY</span>
+            CENNIK <span>KARNETÓW</span>
           </h2>
           <p className={styles.subtitle}>
-            Zdecyduj, jak chcesz trenować. Jasne zasady, brak ukrytych opłat. 
-            Wybierz karnet dostosowany do Twojego grafiku i celów.
+            Brak ukrytych opłat, jasne zasady. Wybierz plan idealnie dopasowany do Twojego grafiku i celów, i zacznij działać już dziś.
           </p>
-        </div>
+        </motion.div>
 
-        <div className={styles.grid}>
-          {/* Card 1: Jednorazowy */}
-          <div className={styles.card}>
-            <div className={styles.cardHeader}>
-              <h3 className={styles.tierName}>JEDNORAZOWY</h3>
-              <p className={styles.tierDesc}>Dla osób chcących sprawdzić siłownię lub trenujących okazjonalnie.</p>
+        <motion.div 
+          className={styles.grid}
+          variants={staggerContainer(0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {pricingOptions.map((option, index) => (
+            <motion.div key={index} className={styles.card} variants={powerCharge()}>
+              {option.badge && <div className={styles.comboBadge}>{option.badge}</div>}
               
-              <div className={styles.priceContainer}>
-                <span className={styles.currency}>PLN</span>
-                <span className={styles.price}>30</span>
-                <span className={styles.period}>/ dzień</span>
+              <div className={styles.cardHeader}>
+                <h3 className={styles.tierName}>{option.name}</h3>
               </div>
-            </div>
-            
-            <div className={styles.cyberLine}></div>
-
-            <div className={styles.cardBody}>
-              <ul className={styles.featuresList}>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>1 wejście do klubu</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Dostęp do strefy siłowni</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Dostęp do zajęć Fitness / Cross</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Bez zobowiązań i umów</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className={styles.cardFooter}>
-              <a href="#kontakt" className={styles.cardBtn}>
-                KUP WEJŚCIÓWKĘ
-              </a>
-            </div>
-          </div>
-
-          {/* Card 2: Miesięczny (Interactive) */}
-          <div className={`${styles.card} ${styles.interactiveCard}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.tierBadge}>NAJPOPULARNIEJSZE</div>
-              <h3 className={styles.tierName}>MIESIĘCZNY</h3>
-              <p className={styles.tierDesc}>Dostęp do wybranej strefy aktywności na pełny miesiąc kalendarzowy.</p>
               
-              <div className={styles.priceContainer}>
-                <span className={styles.currency}>PLN</span>
-                <span className={styles.price}>{currentMonthly.price}</span>
-                <span className={styles.period}>/ miesiąc</span>
-              </div>
-            </div>
-
-            {/* Selector tabs inside the card */}
-            <div className={styles.subSelector}>
-              <button 
-                className={selectedMonthly === "silownia" ? styles.activeSub : ""}
-                onClick={() => setSelectedMonthly("silownia")}
-              >
-                Siłownia
-              </button>
-              <button 
-                className={selectedMonthly === "cross" ? styles.activeSub : ""}
-                onClick={() => setSelectedMonthly("cross")}
-              >
-                Cross
-              </button>
-              <button 
-                className={selectedMonthly === "fitness" ? styles.activeSub : ""}
-                onClick={() => setSelectedMonthly("fitness")}
-              >
-                Fitness
-              </button>
-              <button 
-                className={selectedMonthly === "mma" ? styles.activeSub : ""}
-                onClick={() => setSelectedMonthly("mma")}
-              >
-                MMA
-              </button>
-            </div>
-            
-            <div className={styles.cyberLineAccent}></div>
-
-            <div className={styles.cardBody}>
-              <h4 className={styles.optionTitle}>{currentMonthly.name}</h4>
-              <p className={styles.optionDesc}>{currentMonthly.desc}</p>
-              
-              <ul className={styles.featuresList}>
-                {currentMonthly.features.map((feature, i) => (
-                  <li key={i}>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className={styles.iconAccent}>
-                      <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <span>{feature}</span>
-                  </li>
+              <div className={styles.cardBody}>
+                {option.desc.split('\n').map((paragraph, i) => (
+                  <p key={i} className={styles.tierDesc}>{paragraph}</p>
                 ))}
-              </ul>
-            </div>
-
-            <div className={styles.cardFooter}>
-              <a href="#kontakt" className={`${styles.cardBtn} ${styles.cardBtnAccent}`}>
-                WYBIERZ KARNET
-              </a>
-            </div>
-          </div>
-
-          {/* Card 3: Łączony (Combo) */}
-          <div className={`${styles.card} ${styles.comboCard}`}>
-            <div className={styles.cardHeader}>
-              <div className={styles.goldBadge}>KOMPLEKSOWY</div>
-              <h3 className={styles.tierName}>ŁĄCZONY COMBO</h3>
-              <p className={styles.tierDesc}>Dla osób chcących łączyć trening na siłowni z zajęciami zorganizowanymi.</p>
-              
-              <div className={styles.priceContainer}>
-                <span className={styles.currency}>PLN</span>
-                <span className={styles.price}>250</span>
-                <span className={styles.period}>/ miesiąc</span>
               </div>
-            </div>
-            
-            <div className={styles.cyberLine}></div>
 
-            <div className={styles.cardBody}>
-              <ul className={styles.featuresList}>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Nielimitowany dostęp do Siłowni</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Dostęp do zajęć Cross LUB Fitness</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Dowolna liczba wejść w miesiącu</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Maksymalna elastyczność i progres</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className={styles.cardFooter}>
-              <a href="#kontakt" className={styles.cardBtn}>
-                WYBIERZ COMBO
-              </a>
-            </div>
-          </div>
-        </div>
+              <div className={styles.cardFooter}>
+                <div className={styles.cyberLine}></div>
+                <div className={styles.priceContainer}>
+                  <span className={styles.price}>{option.price.toFixed(2).replace('.', ',')}</span>
+                  <span className={styles.currency}>PLN</span>
+                  <span className={styles.period}>{option.period}</span>
+                </div>
+                <a href="/kontakt" className={styles.cardBtn}>
+                  KUP KARNET
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
       </div>
     </section>

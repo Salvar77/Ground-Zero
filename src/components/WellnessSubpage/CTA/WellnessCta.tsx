@@ -56,7 +56,7 @@ export default function WellnessCta() {
             </h2>
             <p className={styles.text}>
               Nie zapominaj, że prawdziwe efekty buduje się podczas regeneracji. 
-              Dołącz do nas, odwiedź Strefę Wellness i sprawdź, jak zregenerowane ciało 
+              Dołącz do nas, odwiedź Recovery Room i sprawdź, jak zregenerowane ciało 
               przekłada się na lepsze wyniki.
             </p>
             

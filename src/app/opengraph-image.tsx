@@ -177,7 +177,7 @@ export default async function og() {
                 fontFamily: "sans-serif",
               }}
             >
-              Ponad 300 m² profesjonalnego sprzętu, strefa wellness i sauna. Bezkompromisowa atmosfera. Zero sieciówek, zero wymówek.
+              Ponad 300 m² profesjonalnego sprzętu, recovery room i sauna. Bezkompromisowa atmosfera. Zero sieciówek, zero wymówek.
             </span>
           </div>
         </div>

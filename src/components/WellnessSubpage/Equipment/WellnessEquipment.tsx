@@ -31,27 +31,27 @@ export default function WellnessEquipment() {
             </div>
             
             <h2 className={styles.title}>
-              DRENAŻ LIMFATYCZNY <br />
-              <span className={styles.accentText}>NORMATEC</span>
+              RECOVERY <br />
+              <span className={styles.accentText}>ROOM</span>
             </h2>
             
             <p className={styles.description}>
-              W naszej strefie Wellness znajdziesz specjalistyczne urządzenia do presoterapii (masażu pneumatycznego). 
-              To te charakterystyczne "nogawki", w które wkładasz nogi, a system kompresyjny wykonuje głęboki masaż relaksujący.
+              W naszej strefie Wellness znajdziesz specjalistyczny pokój do odnowy biologicznej. 
+              To idealne miejsce na przyspieszenie regeneracji, rozluźnienie napiętych mięśni i głęboki relaks po ciężkim treningu.
             </p>
             
             <ul className={styles.benefitsList}>
               <li>
                 <div className={styles.bullet}></div>
-                <span><strong>Ekspresowa regeneracja:</strong> Przyspiesza usuwanie kwasu mlekowego po najcięższych siadach.</span>
+                <span><strong>Drenaż limfatyczny (2 stanowiska):</strong> Profesjonalna presoterapia, która błyskawicznie redukuje obrzęki i przyspiesza usuwanie kwasu mlekowego ("lekkie nogi").</span>
               </li>
               <li>
                 <div className={styles.bullet}></div>
-                <span><strong>Lepsze krążenie:</strong> Stymuluje układ limfatyczny i krwionośny, redukując obrzęki.</span>
+                <span><strong>Pistolet masujący:</strong> Głęboki masaż perkusywny, idealny do precyzyjnego rozbijania punktów spustowych i najbardziej spiętych powięzi.</span>
               </li>
               <li>
                 <div className={styles.bullet}></div>
-                <span><strong>Czysty relaks:</strong> Idealny sposób na odprężenie i "lekkie nogi" po ciężkim dniu.</span>
+                <span><strong>Masażer do karku:</strong> Odprężający i rozgrzewający masaż karku oraz szyi, rewelacyjnie niwelujący stres i sztywność po całym dniu pracy.</span>
               </li>
             </ul>
           </motion.div>

@@ -14,11 +14,33 @@ export default function FreeTrial() {
     phone: "",
     email: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Dziękujemy ${formData.name}! Skontaktujemy się z Tobą wkrótce w celu ustalenia terminu darmowego treningu.`);
-    setFormData({ name: "", phone: "", email: "" });
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ formType: 'trial', ...formData }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", phone: "", email: "" });
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,7 +105,7 @@ export default function FreeTrial() {
                   required 
                   placeholder=" "
                 />
-                <label htmlFor="trial-name">Imię i Nazwisko</label>
+                <label htmlFor="trial-name">Imię</label>
                 <div className={styles.inputLine}></div>
               </div>
 
@@ -115,10 +137,17 @@ export default function FreeTrial() {
                 <div className={styles.inputLine}></div>
               </div>
 
-              <button type="submit" className={styles.submitBtn}>
-                <span className={styles.btnText}>ODBIERZ WEJŚCIÓWKĘ</span>
+              <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                <span className={styles.btnText}>{isSubmitting ? "WYSYŁANIE..." : "ODBIERZ WEJŚCIÓWKĘ"}</span>
                 <div className={styles.btnCyberCut}></div>
               </button>
+              
+              {submitStatus === "success" && (
+                <p className={styles.successMsg}>Dziękujemy! Twój wniosek został pomyślnie wysłany.</p>
+              )}
+              {submitStatus === "error" && (
+                <p className={styles.errorMsg}>Wystąpił błąd podczas wysyłania. Spróbuj ponownie później.</p>
+              )}
               
               <p className={styles.rodo}>
                 * Wysyłając formularz akceptujesz regulamin i zgadzasz się na kontakt telefoniczny.

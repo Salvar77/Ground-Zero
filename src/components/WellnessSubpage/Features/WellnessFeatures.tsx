@@ -17,7 +17,7 @@ const features = [
   {
     id: 2,
     title: "ODNOWA BIOLOGICZNA",
-    desc: "Przyspiesz regenerację włókien mięśniowych, popraw krążenie i zmniejsz ryzyko kontuzji dzięki regularnym sesjom w strefie wellness.",
+    desc: "Przyspiesz regenerację włókien mięśniowych, popraw krążenie i zmniejsz ryzyko kontuzji dzięki regularnym sesjom w Recovery Room.",
     icon: <FaHeartbeat />,
     delay: 0.2,
   },
@@ -54,7 +54,7 @@ export default function WellnessFeatures() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className={styles.title}>CO OFERUJE <span className={styles.accentText}>STREFA WELLNESS?</span></h2>
+          <h2 className={styles.title}>CO OFERUJE <span className={styles.accentText}>RECOVERY ROOM?</span></h2>
           <div className={styles.cyberLine}></div>
           <p className={styles.subtitle}>
             Stworzyliśmy przestrzeń, która kompleksowo dba o Twoją regenerację. 
