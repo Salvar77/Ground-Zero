@@ -30,7 +30,7 @@ export default function ElfsightLazyWrapper() {
   }, []);
 
   return (
-    <div ref={wrapperRef}>
+    <section className={classes.reviewsSection} ref={wrapperRef}>
       {visible ? (
         <ElfsightWidget />
       ) : (
@@ -41,6 +41,6 @@ export default function ElfsightLazyWrapper() {
           </p>
         </div>
       )}
-    </div>
+    </section>
   );
 }
