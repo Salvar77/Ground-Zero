@@ -8,6 +8,7 @@ import Trainers from "@/components/Trainers/Trainers";
 import Consultation from "@/components/Consultation/Consultation";
 import Contact from "@/components/Contact/Contact";
 // import Pricing from "@/components/Pricing/Pricing";
+import ElfsightLazyWrapper from "@/components/Elfsight/ElfsightLazyWrapper";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Trainers />
         <Consultation />
         {/* <Pricing /> */}
+        <ElfsightLazyWrapper />
         <Contact />
       </main>
     </>

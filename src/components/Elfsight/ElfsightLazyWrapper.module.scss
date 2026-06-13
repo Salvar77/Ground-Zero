@@ -1,0 +1,30 @@
+@import "../../styles/colors";
+
+.placeholder {
+  min-height: 200px;
+  text-align: center;
+  background-color: transparent;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @media (min-width: 992px) {
+    padding: 2rem;
+  }
+}
+
+.placeholderTitle {
+  margin: 0 0 5px;
+  font-size: 1.5rem;
+  color: $gz-text;
+  font-weight: 600;
+}
+
+.placeholderText {
+  margin: 0;
+  font-size: 1.1rem;
+  color: $gz-text-muted;
+}
