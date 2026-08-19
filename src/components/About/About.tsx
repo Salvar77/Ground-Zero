@@ -110,8 +110,8 @@ export default function About() {
             <div className={styles.imageBorder}></div>
             <div className={styles.imageContainer}>
               <Image 
-                src="/images/ground_zero_gym_interior.png" 
-                alt="Wnętrze siłowni Ground Zero Niemodlin - nowoczesny sprzęt fitness" 
+                src="/images/ground-zero-strength-zone.webp" 
+                alt="Strefa siłowa Ground Zero Niemodlin - nowoczesny sprzęt HES" 
                 width={600} 
                 height={500} 
                 style={{ width: "100%", height: "auto" }}

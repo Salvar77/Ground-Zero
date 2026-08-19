@@ -27,7 +27,7 @@ export default function WellnessHero() {
       <div className={styles.heroBgWrapper}>
         <motion.div className={styles.heroBackground} style={{ y: yBackground }}>
           <Image 
-            src="/images/ground_zero_wellness.png" 
+            src="/images/drenaz-limfatyczny-wellness.webp" 
             alt="Ground Zero Wellness" 
             fill
             priority

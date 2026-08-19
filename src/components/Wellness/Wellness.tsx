@@ -30,7 +30,7 @@ export default function Wellness() {
             <div className={styles.imageBorder}></div>
             <div className={styles.imageContainer}>
               <Image 
-                src="/images/ground_zero_wellness.png" 
+                src="/images/drenaz-limfatyczny-wellness.webp" 
                 alt="Strefa Wellness i Sauna - Ground Zero Niemodlin" 
                 width={600} 
                 height={500} 

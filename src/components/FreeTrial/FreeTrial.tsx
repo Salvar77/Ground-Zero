@@ -64,8 +64,8 @@ export default function FreeTrial() {
           >
             <div className={styles.imageWrapper}>
               <Image 
-                src="/images/ground_zero_free_trial.png"
-                alt="Ground Zero Darmowy Trening"
+                src="/images/trenerzy-ground-zero-niemodlin.webp"
+                alt="Trenerzy Ground Zero Niemodlin - Darmowy Trening"
                 fill
                 className={styles.image}
               />

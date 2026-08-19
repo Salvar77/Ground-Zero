@@ -27,7 +27,7 @@ const trainersData: Trainer[] = [
       "Kształtowanie Sylwetki",
       "Rehabilitacja Ruchowa",
     ],
-    image: "/images/trainer_male_strength.png",
+    image: "/images/trener-wlasciciel-kacper-miller.webp",
     description:
       "Z branżą fitness związany od ponad 10 lat. Pomaga zbudować żelazną siłę i skorygować wady postawy.",
   },
@@ -40,23 +40,10 @@ const trainersData: Trainer[] = [
       "Mobilność & Stretching",
       "Spalanie Tkanki Tłuszczowej",
     ],
-    image: "/images/trainer_female_fitness.png",
+    image: "/images/trenerka-wlascicielka-nikola-miller.webp",
     description:
       "Wulkan energii. Na jej zajęciach Cross i Fitness wylejesz siódme poty, świetnie się przy tym bawiąc.",
-  },
-  {
-    id: "t3",
-    name: "Kamil Wiśniewski",
-    role: "Trener Sekcji MMA",
-    specialization: [
-      "Boks & K-1",
-      "Brazylijskie Jiu-Jitsu",
-      "Przygotowanie Motoryczne",
-    ],
-    image: "/images/trainer_male_strength.png",
-    description:
-      "Czynny zawodnik sportów walki. Prowadzi zajęcia MMA dla dzieci, młodzieży oraz grupę dorosłych.",
-  },
+  }
 ];
 
 export default function Trainers() {

@@ -68,7 +68,7 @@ export default function WellnessEquipment() {
             <div className={styles.imageWrapper}>
               {/* Zmień ten placeholder na prawdziwe zdjęcie Normatec / nogawek w Ground Zero */}
               <Image 
-                src="/images/ground_zero_wellness.png" 
+                src="/images/drenaz-limfatyczny-wellness.webp" 
                 alt="System drenażu limfatycznego - buty kompresyjne w Ground Zero"
                 width={600}
                 height={600}
