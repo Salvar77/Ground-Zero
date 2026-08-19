@@ -10,10 +10,10 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; 
 
   @include respond-to("md") {
-    font-size: 66.0%; /* 1rem = 10.56px */
+    font-size: 66.0%; 
   }
 }
 
