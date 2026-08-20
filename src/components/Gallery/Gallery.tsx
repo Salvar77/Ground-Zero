@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, heavyHit, powerCharge } from "@/utils/motion";
 import styles from "./Gallery.module.scss";
@@ -12,16 +13,17 @@ type ImageItem = {
   size: "normal" | "wide" | "tall";
 };
 
-// Zastępcze obrazy z picsum
-const DUMMY_IMAGES: ImageItem[] = [
-  { id: 1, src: "https://picsum.photos/seed/gz1/800/600", category: "Siłownia", size: "wide" },
-  { id: 2, src: "https://picsum.photos/seed/gz2/600/800", category: "Cross", size: "tall" },
-  { id: 3, src: "https://picsum.photos/seed/gz3/800/600", category: "MMA", size: "normal" },
-  { id: 4, src: "https://picsum.photos/seed/gz4/800/600", category: "Fitness", size: "normal" },
-  { id: 5, src: "https://picsum.photos/seed/gz5/800/600", category: "Cross", size: "normal" },
-  { id: 6, src: "https://picsum.photos/seed/gz6/800/600", category: "Siłownia", size: "normal" },
-  { id: 7, src: "https://picsum.photos/seed/gz7/800/600", category: "MMA", size: "wide" },
-  { id: 8, src: "https://picsum.photos/seed/gz8/800/600", category: "Siłownia", size: "normal" },
+const REAL_IMAGES: ImageItem[] = [
+  { id: 1, src: "/images/strefa-wolnych-ciezarow-hantle-ground-zero-niemodlin.webp", category: "Siłownia", size: "wide" },
+  { id: 2, src: "/images/klatki-treningowe-squat-rack-silownia-ground-zero-niemodlin.webp", category: "Cross", size: "tall" },
+  { id: 3, src: "/images/strefa-sportow-walki-mma-worek-treningowy-ground-zero-niemodli.webp", category: "MMA", size: "normal" },
+  { id: 4, src: "/images/rowerek-powietrzny-air-bike-trening-funkcjonalny-ground-zero-niemodlin.webp", category: "Fitness", size: "normal" },
+  { id: 5, src: "/images/brama-treningowa-wyciag-silownia-ground-zero-niemodlin.webp", category: "Siłownia", size: "normal" },
+  { id: 6, src: "/images/maszyna-na-nogi-sprzet-silowy-ground-zero-niemodlin.webp", category: "Siłownia", size: "normal" },
+  { id: 7, src: "/images/maszyny-treningowe-wolne-ciezary-ground-zero-niemodlin.webp", category: "Siłownia", size: "wide" },
+  { id: 8, src: "/images/profesjonalny-sprzet-do-cwiczen-ground-zero-niemodlin.webp", category: "Siłownia", size: "normal" },
+  { id: 9, src: "/images/porecze-do-dipow-trening-silowy-ground-zero-niemodlin.webp", category: "Cross", size: "normal" },
+  { id: 10, src: "/images/pistolet-do-masazu-recovery-room-ground-zero-niemodlin.webp", category: "Fitness", size: "normal" },
 ];
 
 const CATEGORIES = ["Wszystkie", "Siłownia", "Cross", "MMA", "Fitness"];
@@ -30,7 +32,7 @@ export default function Gallery() {
   const [filter, setFilter] = useState("Wszystkie");
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
-  const filteredImages = DUMMY_IMAGES.filter(
+  const filteredImages = REAL_IMAGES.filter(
     (img) => filter === "Wszystkie" || img.category === filter
   );
 
@@ -92,8 +94,7 @@ export default function Gallery() {
                 className={`${styles.item} ${styles[img.size]}`}
                 onClick={() => setLightboxImg(img.src)}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.src} alt={`Galeria ${img.category}`} className={styles.image} loading="lazy" />
+                <Image src={img.src} alt={`Galeria ${img.category}`} className={styles.image} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 <div className={styles.itemOverlay}>
                   <div className={styles.zoomIcon}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

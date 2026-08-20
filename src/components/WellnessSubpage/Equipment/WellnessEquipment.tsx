@@ -65,17 +65,28 @@ export default function WellnessEquipment() {
               viewport: { once: true, amount: 0.3 }
             })}
           >
-            <div className={styles.imageWrapper}>
-              {/* Zmień ten placeholder na prawdziwe zdjęcie Normatec / nogawek w Ground Zero */}
+            <div className={styles.mainImageWrapper}>
               <Image 
                 src="/images/drenaz-limfatyczny-wellness.webp" 
                 alt="System drenażu limfatycznego - buty kompresyjne w Ground Zero"
-                width={600}
-                height={600}
+                fill
+                sizes="(max-width: 768px) 90vw, 50vw"
                 className={styles.image}
               />
               <div className={styles.imageOverlay}></div>
               <div className={styles.cornerDecor}></div>
+            </div>
+            
+            <div className={styles.floatingImageWrapper}>
+              <Image 
+                src="/images/pistolet-do-masazu-recovery-room-ground-zero-niemodlin.webp" 
+                alt="Pistolet masujący do odnowy biologicznej w Ground Zero"
+                fill
+                sizes="(max-width: 768px) 70vw, 30vw"
+                className={styles.image}
+              />
+              <div className={styles.imageOverlay}></div>
+              <div className={styles.cornerDecorFloating}></div>
             </div>
           </motion.div>
           

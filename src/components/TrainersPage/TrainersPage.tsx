@@ -73,7 +73,7 @@ export default function TrainersPage() {
               <div className={`${styles.neonGlow} ${styles.neonGlowKacper}`}></div>
               <div className={`${styles.decoCorner} ${styles.cornerKacper}`}></div>
               <Image 
-                src="/images/kacper-miller-placeholder.webp"
+                src="/images/trener-wlasciciel-kacper-miller.webp"
                 alt="Kacper Miller - Trener Personalny Niemodlin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -152,7 +152,7 @@ export default function TrainersPage() {
               <div className={`${styles.neonGlow} ${styles.neonGlowNikola}`}></div>
               <div className={`${styles.decoCorner} ${styles.cornerNikola}`}></div>
               <Image 
-                src="/images/nikola-miller-placeholder.webp"
+                src="/images/trenerka-wlascicielka-nikola-miller.webp"
                 alt="Nikola Miller - Instruktorka Fitness Niemodlin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

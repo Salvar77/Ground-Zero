@@ -67,8 +67,8 @@ export default function AboutUsPage() {
           {/* Bottom fade gradient to seamlessly blend into next section */}
           <div className={styles.bottomFade}></div>
           <Image 
-            src="/images/o-nas-hero-desktop.jpg" 
-            alt="Ground Zero Niemodlin" 
+            src="/images/trenerzy-personalni-niemodlin-kacper-nikola.webp" 
+            alt="Trener personalny Niemodlin - Kacper i Nikola Miller" 
             fill
             sizes="100vw"
             quality={100}
@@ -279,7 +279,7 @@ export default function AboutUsPage() {
             >
               <div className={styles.mainImageWrapper}>
                 <Image 
-                  src="/images/founders-placeholder.webp" 
+                  src="/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller.webp" 
                   alt="Kacper i Nikola Miller - Założyciele Ground Zero"
                   fill
                   className={styles.foundersImg}

@@ -42,7 +42,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/hantle-ground-zero-niemodlin-1920.jpg");
+    background-image: url("/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 
     @include respond-to("md") {
       background-attachment: scroll;
-          background-image: url("/images/ground_zero_gym_interior.png");
+      background-image: url("/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller.webp");
     }
   }
 
