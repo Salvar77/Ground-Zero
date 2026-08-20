@@ -2,37 +2,37 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFireAlt, FaHeartbeat, FaLeaf, FaWater } from "react-icons/fa";
+import { FaFireAlt, FaHeartbeat, FaLeaf, FaShieldAlt } from "react-icons/fa";
 import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
 import styles from "./WellnessFeatures.module.scss";
 
 const features = [
   {
     id: 1,
-    title: "SAUNA FIŃSKA",
-    desc: "Temperatura sięgająca 90-100°C. Idealna do głębokiego oczyszczenia organizmu z toksyn i rozluźnienia napiętych mięśni po treningu siłowym.",
-    icon: <FaFireAlt />,
+    title: "SZYBSZA REGENERACJA",
+    desc: "Błyskawicznie redukuj obrzęki i usuwaj kwas mlekowy. Pozbądź się uczucia «ciężkich nóg» po morderczym treningu.",
+    icon: <FaHeartbeat />,
     delay: 0.1,
   },
   {
     id: 2,
-    title: "ODNOWA BIOLOGICZNA",
-    desc: "Przyspiesz regenerację włókien mięśniowych, popraw krążenie i zmniejsz ryzyko kontuzji dzięki regularnym sesjom w Recovery Room.",
-    icon: <FaHeartbeat />,
+    title: "REDUKCJA STRESU",
+    desc: "Głębokie odprężenie dla Twojego ciała. Idealny sposób na zniwelowanie sztywności karku i napięć po całym dniu w pracy.",
+    icon: <FaFireAlt />,
     delay: 0.2,
   },
   {
     id: 3,
-    title: "POKÓJ RELAKSU",
-    desc: "Strefa wyciszenia, gdzie po sesji w saunie możesz odciąć się od bodźców, uspokoić oddech i w pełni zrelaksować umysł.",
-    icon: <FaLeaf />,
+    title: "PREWENCJA KONTUZJI",
+    desc: "Zadbaj o elastyczność powięzi. Precyzyjne rozbijanie punktów spustowych bezpośrednio minimalizuje ryzyko urazów na sali.",
+    icon: <FaShieldAlt />,
     delay: 0.3,
   },
   {
     id: 4,
-    title: "TERAPIA KONTRASTOWA",
-    desc: "Możliwość schłodzenia organizmu po wyjściu z sauny poprawia wydolność układu immunologicznego i krążenia.",
-    icon: <FaWater />,
+    title: "STREFA WYCISZENIA",
+    desc: "Specjalnie przygotowana przestrzeń, w której po wysiłku możesz odciąć się od bodźców, uspokoić tętno i wyciszyć umysł.",
+    icon: <FaLeaf />,
     delay: 0.4,
   }
 ];
