@@ -79,7 +79,7 @@ export default function Navbar() {
             ))}
           </ul>
           <Link href="/#free-trial" className={styles.ctaBtn} onClick={handleCtaClick}>
-            ODBIERZ WEJŚCIE
+            ODBIERZ KONSULTACJĘ
           </Link>
         </nav>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
             className={styles.mobileCtaBtn}
             onClick={handleCtaClick}
           >
-            ODBIERZ WEJŚCIE
+            ODBIERZ KONSULTACJĘ
           </Link>
         </nav>
       </div>
