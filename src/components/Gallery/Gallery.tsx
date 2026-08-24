@@ -16,17 +16,18 @@ type ImageItem = {
 const REAL_IMAGES: ImageItem[] = [
   { id: 1, src: "/images/strefa-wolnych-ciezarow-hantle-ground-zero-niemodlin.webp", category: "Siłownia", size: "wide" },
   { id: 2, src: "/images/klatki-treningowe-squat-rack-silownia-ground-zero-niemodlin.webp", category: "Cross", size: "tall" },
-  { id: 3, src: "/images/strefa-sportow-walki-mma-worek-treningowy-ground-zero-niemodli.webp", category: "MMA", size: "normal" },
-  { id: 4, src: "/images/rowerek-powietrzny-air-bike-trening-funkcjonalny-ground-zero-niemodlin.webp", category: "Fitness", size: "normal" },
+  { id: 3, src: "/images/strefa-sportow-walki-mma-worek-treningowy-ground-zero-niemodli.webp", category: "Fitness/MMA", size: "normal" },
+  { id: 4, src: "/images/rowerek-powietrzny-air-bike-trening-funkcjonalny-ground-zero-niemodlin.webp", category: "Fitness/MMA", size: "normal" },
   { id: 5, src: "/images/brama-treningowa-wyciag-silownia-ground-zero-niemodlin.webp", category: "Siłownia", size: "normal" },
   { id: 6, src: "/images/maszyna-na-nogi-sprzet-silowy-ground-zero-niemodlin.webp", category: "Siłownia", size: "normal" },
   { id: 7, src: "/images/maszyny-treningowe-wolne-ciezary-ground-zero-niemodlin.webp", category: "Siłownia", size: "wide" },
   { id: 8, src: "/images/profesjonalny-sprzet-do-cwiczen-ground-zero-niemodlin.webp", category: "Siłownia", size: "normal" },
   { id: 9, src: "/images/porecze-do-dipow-trening-silowy-ground-zero-niemodlin.webp", category: "Cross", size: "normal" },
-  { id: 10, src: "/images/pistolet-do-masazu-recovery-room-ground-zero-niemodlin.webp", category: "Fitness", size: "normal" },
+  { id: 10, src: "/images/pistolet-do-masazu-recovery-room-ground-zero-niemodlin.webp", category: "Recovery Room", size: "normal" },
+  { id: 11, src: "/images/drenaz-limfatyczny-wellness.webp", category: "Recovery Room", size: "normal" },
 ];
 
-const CATEGORIES = ["Wszystkie", "Siłownia", "Cross", "MMA", "Fitness"];
+const CATEGORIES = ["Wszystkie", "Siłownia", "Cross", "Fitness/MMA", "Recovery Room"];
 
 export default function Gallery() {
   const [filter, setFilter] = useState("Wszystkie");
