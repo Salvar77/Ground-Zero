@@ -3,8 +3,8 @@ import AboutUsPage from "@/components/AboutUsPage/AboutUsPage";
 
 export const metadata = {
   title: "O Nas | Ground Zero - Najlepsza Siłownia i Fitness w Niemodlinie",
-  description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie o powierzchni ponad 400 m². Założyciele Kacper Miller i Nicole Drescher. Siłownia, wolne ciężary, zajęcia fitness, MMA na Opolszczyźnie.",
-  keywords: ["o nas siłownia", "historia Ground Zero", "Kacper Miller", "Nicole Drescher", "siłownia Niemodlin właściciele", "klub fitness Niemodlin", "najlepsza siłownia opolskie"],
+  description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie o powierzchni ponad 400 m². Kadra: Kacper Miller i Nicole Drescher. Siłownia, wolne ciężary, zajęcia fitness, MMA na Opolszczyźnie.",
+  keywords: ["o nas siłownia", "historia Ground Zero", "Kacper Miller", "Nicole Drescher", "siłownia Niemodlin kadra", "klub fitness Niemodlin", "najlepsza siłownia opolskie"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/o-nas",
   },

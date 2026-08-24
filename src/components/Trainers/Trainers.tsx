@@ -20,8 +20,8 @@ type Trainer = {
 const trainersData: Trainer[] = [
   {
     id: "t1",
-    name: "Kacper Miller",
-    role: "Założyciel & Trener Personalny",
+    name: "Kacper",
+    role: "Trener Personalny",
     specialization: [
       "Trening Siłowy",
       "Kształtowanie Sylwetki",
@@ -33,8 +33,8 @@ const trainersData: Trainer[] = [
   },
   {
     id: "t2",
-    name: "Nicole Drescher",
-    role: "Instruktorka Fitness & Kobieca Siła",
+    name: "Nicole",
+    role: "Trenerka Personalna",
     specialization: [
       "Kształtowanie Sylwetki",
       "Budowanie Siły",

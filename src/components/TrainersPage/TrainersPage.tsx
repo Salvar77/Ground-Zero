@@ -88,8 +88,7 @@ export default function TrainersPage() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className={`${styles.nameBadge} ${styles.badgeKacper}`}>HARDCORE & SIŁA</span>
-              <h2 className={styles.name}>KACPER MILLER</h2>
+              <h2 className={styles.name}>KACPER</h2>
               <p className={styles.desc}>
                 Specjalista od ciężkiego sprzętu i żelaznej dyscypliny. Jego domeną jest <strong>trening siłowy, hipertrofia i sporty walki</strong>. Jeśli chcesz budować masę mięśniową, siłę absolutną lub przygotować się motorycznie pod MMA – Kacper wyciśnie z Ciebie 110% normy.
               </p>
@@ -120,8 +119,7 @@ export default function TrainersPage() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
             >
-              <span className={`${styles.nameBadge} ${styles.badgeNikola}`}>FITNESS & KOBIECA SIŁA</span>
-              <h2 className={styles.name}>NICOLE DRESCHER</h2>
+              <h2 className={styles.name}>NICOLE</h2>
               <p className={styles.desc}>
                 Trening siłowy to moja pasja, a pomaganie kobietom w budowaniu silnej i wymodelowanej sylwetki to moja specjalność. Skupiam się na kształtowaniu kobiecej sylwetki, poprawie sprawności oraz budowaniu siły.<br/><br/>
                 Stawiam na indywidualne podejście, dobrą atmosferę i trening dopasowany do Twoich celów i możliwości. 💪<br/><br/>

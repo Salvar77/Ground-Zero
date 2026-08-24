@@ -116,7 +116,7 @@ export default function Pricing() {
                   <span className={styles.currency}>PLN</span>
                   <span className={styles.period}>{option.period}</span>
                 </div>
-                <a href="/kontakt" className={styles.cardBtn}>
+                <a href="https://groundzero.oos.pl/buyCarnet" target="_blank" rel="noopener noreferrer" className={styles.cardBtn}>
                   KUP KARNET
                 </a>
               </div>

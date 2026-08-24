@@ -74,6 +74,7 @@ export default function AboutUsPage() {
             quality={100}
             priority
             className={styles.heroImg}
+            style={{ objectPosition: "45% center" }}
           />
         </motion.div>
         
@@ -146,7 +147,7 @@ export default function AboutUsPage() {
               </h3>
               <div className={styles.paragraphs}>
                 <p>
-                  Siłownia <strong>Ground Zero</strong> w Niemodlinie, stworzona w 2025 roku, to nowoczesne centrum treningowe o powierzchni ponad 300 m². Powstaliśmy z prostej potrzeby: stworzyć miejsce na mapie Opolszczyzny, w którym panuje prawdziwa sportowa atmosfera.
+                  Siłownia <strong>Ground Zero</strong> w Niemodlinie, stworzona w 2025 roku, to nowoczesne centrum treningowe o powierzchni ponad 400 m². Powstaliśmy z prostej potrzeby: stworzyć miejsce na mapie Opolszczyzny, w którym panuje prawdziwa sportowa atmosfera.
                 </p>
                 <p>
                   Nie znajdziesz u nas oceniających spojrzeń. Stawiamy na <strong>kompleksowy rozwój</strong> – od treningów personalnych, przez zajęcia funkcjonalne, aż po treningi siłowe i przestrzeń dla zawodników MMA.
@@ -155,7 +156,7 @@ export default function AboutUsPage() {
               
               <div className={styles.stats}>
                 <div className={styles.statBox}>
-                  <span className={styles.statNumber}>300<span className={styles.plus}>+</span></span>
+                  <span className={styles.statNumber}>400<span className={styles.plus}>+</span></span>
                   <span className={styles.statLabel}>m² POWIERZCHNI</span>
                 </div>
                 <div className={styles.statBox}>
@@ -174,15 +175,15 @@ export default function AboutUsPage() {
             >
               <div className={styles.imageCard}>
                 <Image 
-                  src="/images/trener-wlasciciel-kacper-miller.webp" 
-                  alt="Kacper Miller, założyciel Ground Zero Niemodlin w strefie wolnych ciężarów"
+                  src="/images/trenerzy-personalni-niemodlin-kacper-nikola.webp" 
+                  alt="Kacper i Nicole - Kadra Ground Zero Niemodlin"
                   width={550}
                   height={650}
                   className={styles.storyImg}
                 />
                 <div className={styles.ownerTag}>
-                  <span className={styles.role}>WŁAŚCICIEL / ZAŁOŻYCIEL</span>
-                  <span className={styles.name}>Kacper Miller</span>
+                  <span className={styles.role}>KADRA GROUND ZERO</span>
+                  <span className={styles.name}>Kacper & Nicole</span>
                 </div>
               </div>
             </motion.div>
@@ -248,16 +249,16 @@ export default function AboutUsPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className={styles.sectionTitle}>
-                TWÓRCY <span className={styles.accentText}>GROUND ZERO</span>
+                KADRA <span className={styles.accentText}>GROUND ZERO</span>
               </h2>
               <div className={styles.accentLineLeft}></div>
               
               <div className={styles.foundersDescription}>
                 <p>
-                  Za każdym prawdziwym miejscem stoją ludzie z wizją. <strong>Kacper Miller i Nicole Drescher</strong> połączyli dwie różne perspektywy w jeden cel: stworzenie obiektu, który nie idzie na kompromisy.
+                  Za każdym prawdziwym miejscem stoją zmotywowani ludzie. <strong>Kacper Miller i Nicole Drescher</strong> tworzą ekipę Ground Zero z jednym, jasnym celem: prowadzić obiekt, który nie idzie na kompromisy i gwarantuje efekty.
                 </p>
                 <p>
-                  Kacper odpowiada za surowy charakter Ground Zero – bezbłędny dobór sprzętu Hammer Strength i strefę ciężarów, w której każdy znajdzie wyzwanie. Nicole stworzyła przestrzeń, która przełamuje stereotypy – budując wyjątkową społeczność kobiet i dbając o strefę fitness.
+                  Kacper odpowiada za surowy charakter miejsca – bezbłędny dobór sprzętu Hammer Strength i strefę ciężarów, w której każdy znajdzie wyzwanie. Nicole dba o strefę fitness i przełamuje stereotypy, budując wyjątkową, wspierającą się społeczność kobiet.
                 </p>
               </div>
 
@@ -280,7 +281,7 @@ export default function AboutUsPage() {
               <div className={styles.mainImageWrapper}>
                 <Image 
                   src="/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller.webp" 
-                  alt="Kacper Miller i Nicole Drescher - Założyciele Ground Zero"
+                  alt="Kacper Miller i Nicole Drescher - Kadra Ground Zero"
                   fill
                   className={styles.foundersImg}
                   sizes="(max-width: 768px) 100vw, 50vw"
