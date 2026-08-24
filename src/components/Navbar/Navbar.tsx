@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.scss";
 
 const navLinks = [
@@ -18,6 +19,7 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +44,18 @@ export default function Navbar() {
     document.body.style.overflow = "unset";
   };
 
+  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      const element = document.getElementById("free-trial");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", "/#free-trial");
+      }
+    }
+    closeMenu();
+  };
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
@@ -64,7 +78,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Link href="/#free-trial" className={styles.ctaBtn}>
+          <Link href="/#free-trial" className={styles.ctaBtn} onClick={handleCtaClick}>
             ODBIERZ WEJŚCIE
           </Link>
         </nav>
@@ -102,7 +116,7 @@ export default function Navbar() {
           <Link
             href="/#free-trial"
             className={styles.mobileCtaBtn}
-            onClick={closeMenu}
+            onClick={handleCtaClick}
           >
             ODBIERZ WEJŚCIE
           </Link>

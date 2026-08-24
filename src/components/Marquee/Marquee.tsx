@@ -3,7 +3,7 @@ import styles from "./Marquee.module.scss";
 
 const Marquee = () => {
   const text =
-    "// TRENINGI PERSONALNE // ZAJĘCIA FITNESS // TRENINGI PERSONALNE // ZAJĘCIA FITNESS // ";
+    "// TRENINGI PERSONALNE DOPASOWANE DO CIEBIE // ZAJĘCIA GRUPOWE // TRENINGI PERSONALNE DOPASOWANE DO CIEBIE // ZAJĘCIA GRUPOWE // ";
 
   return (
     <div className={styles.marqueeWrapper}>

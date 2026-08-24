@@ -87,10 +87,10 @@ export default function FreeTrial() {
           >
             <div className={styles.header}>
               <span className={styles.badge}>SPRAWDŹ NAS</span>
-              <h2 className={styles.title}>ODBIERZ <span>DARMOWY</span><br />TRENING PRÓBNY</h2>
+              <h2 className={styles.title}>ODBIERZ <span>DARMOWĄ</span><br />KONSULTACJĘ TRENERSKĄ</h2>
               <p className={styles.subtitle}>
                 Zostaw swoje dane, a nasz doradca skontaktuje się z Tobą, aby umówić Cię na pierwszą, 
-                niezobowiązującą wizytę w Ground Zero Niemodlin. Przekonaj się sam!
+                niezobowiązującą konsultację w Ground Zero Niemodlin. Przekonaj się sam!
               </p>
             </div>
 
@@ -138,7 +138,7 @@ export default function FreeTrial() {
               </div>
 
               <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
-                <span className={styles.btnText}>{isSubmitting ? "WYSYŁANIE..." : "ODBIERZ WEJŚCIÓWKĘ"}</span>
+                <span className={styles.btnText}>{isSubmitting ? "WYSYŁANIE..." : "ODBIERZ KONSULTACJĘ"}</span>
                 <div className={styles.btnCyberCut}></div>
               </button>
               

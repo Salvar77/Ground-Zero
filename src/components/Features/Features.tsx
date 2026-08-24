@@ -12,19 +12,19 @@ const featuresData = [
     id: '01',
     title: 'SALA MASZYN I WOLNYCH CIĘŻARÓW',
     desc: 'Prawdziwe żelazo i profesjonalne maszyny oporowe. Hantle, gryfy olimpijskie oraz najwyższej klasy sprzęt izotoniczny dla tych, którzy chcą solidnie budować masę i siłę.',
-    image: '/images/hantle-wolne-ciezary-silownia-ground-zero-niemodlin.webp'
+    image: '/images/strefa-wolnych-ciezarow-hantle-ground-zero-niemodlin.webp'
   },
   {
     id: '02',
     title: 'SALA FITNESS I SPORTÓW WALKI',
     desc: 'Przestrzeń dedykowana zajęciom ogólnorozwojowym i sportom walki. Wyposażona w strefę do walki, akcesoria fitness oraz miejsce idealne do budowania dynamiki i techniki.',
-    image: '/images/maszyny-treningowe-strefa-silownia-ground-zero-niemodlin.webp'
+    image: '/images/strefa-sportow-walki-mma-worek-treningowy-ground-zero-niemodli.webp'
   },
   {
     id: '03',
     title: 'SALA TRENINGU FUNKCJONALNEGO',
     desc: 'Kettlebells, liny, boxy i specjalistyczna klatka treningowa. Rozwijaj sprawność, zrzuć zbędne kilogramy i buduj siłę eksplozywną bez żadnych ograniczeń.',
-    image: '/images/ground_zero_functional_training.png'
+    image: '/images/rowerek-powietrzny-air-bike-trening-funkcjonalny-ground-zero-niemodlin.webp'
   }
 ];
 

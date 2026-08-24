@@ -111,7 +111,7 @@ export default function TrainersPage() {
             </motion.div>
           </div>
 
-          {/* NIKOLA MILLER */}
+          {/* NICOLE DRESCHER */}
           <div className={`${styles.profileRow} ${styles.reverse}`}>
             <motion.div 
               className={`${styles.profileInfo} ${styles.reverseInfo}`}
@@ -121,23 +121,25 @@ export default function TrainersPage() {
               transition={{ duration: 0.8 }}
             >
               <span className={`${styles.nameBadge} ${styles.badgeNikola}`}>FITNESS & KOBIECA SIŁA</span>
-              <h2 className={styles.name}>NIKOLA MILLER</h2>
+              <h2 className={styles.name}>NICOLE DRESCHER</h2>
               <p className={styles.desc}>
-                Ekspertka od fitnessu i kształtowania kobiecej sylwetki. Nikola łamie stereotypy, pokazując że <strong>silna kobieta to piękna kobieta</strong>. Skupia się na pośladkach, spalaniu tkanki tłuszczowej i budowaniu niezachwianej pewności siebie na sali treningowej.
+                Trening siłowy to moja pasja, a pomaganie kobietom w budowaniu silnej i wymodelowanej sylwetki to moja specjalność. Skupiam się na kształtowaniu kobiecej sylwetki, poprawie sprawności oraz budowaniu siły.<br/><br/>
+                Stawiam na indywidualne podejście, dobrą atmosferę i trening dopasowany do Twoich celów i możliwości. 💪<br/><br/>
+                <i>„Każdy trening to rozmowa z Twoją siłą.”</i>
               </p>
               
               <div className={styles.featuresList}>
                 <div className={`${styles.featItem} ${styles.nikolaFeat}`}>
                   <FaFireAlt className={styles.featIcon} />
-                  <span>Spalanie Tkanki Tłuszczowej i Redukcja Wagi</span>
+                  <span>Kształtowanie Kobiecej Sylwetki</span>
                 </div>
                 <div className={`${styles.featItem} ${styles.nikolaFeat}`}>
                   <FaHeartbeat className={styles.featIcon} />
-                  <span>Kształtowanie Pośladków i Modelowanie Sylwetki</span>
+                  <span>Budowanie Siły i Sprawności</span>
                 </div>
                 <div className={`${styles.featItem} ${styles.nikolaFeat}`}>
                   <FaRegCalendarCheck className={styles.featIcon} />
-                  <span>Plany Treningowe Skrojone pod Kobiety</span>
+                  <span>Trening Siłowy</span>
                 </div>
               </div>
             </motion.div>
@@ -219,6 +221,7 @@ export default function TrainersPage() {
       </section>
 
       {/* 4. TRANSFORMATIONS (PLACEHOLDER) */}
+      {/*
       <section className={styles.transformationsSection}>
         <div className={styles.container}>
           <motion.div 
@@ -246,6 +249,7 @@ export default function TrainersPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* 5. CTA SECTION */}
       <section className={styles.ctaSection}>

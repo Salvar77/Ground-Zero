@@ -33,16 +33,16 @@ const trainersData: Trainer[] = [
   },
   {
     id: "t2",
-    name: "Nikola Miller",
-    role: "Instruktorka Fitness & Cross",
+    name: "Nicole Drescher",
+    role: "Instruktorka Fitness & Kobieca Siła",
     specialization: [
-      "Trening Funkcjonalny",
-      "Mobilność & Stretching",
-      "Spalanie Tkanki Tłuszczowej",
+      "Kształtowanie Sylwetki",
+      "Budowanie Siły",
+      "Trening Siłowy",
     ],
     image: "/images/trenerka-wlascicielka-nikola-miller.webp",
     description:
-      "Wulkan energii. Na jej zajęciach Cross i Fitness wylejesz siódme poty, świetnie się przy tym bawiąc.",
+      "Trening siłowy to jej pasja. Pomaga kobietom w budowaniu silnej i wymodelowanej sylwetki. Skupia się na poprawie sprawności, sile i udowadnia, że każdy trening to rozmowa z Twoją siłą.",
   }
 ];
 
@@ -140,7 +140,7 @@ export default function Trainers() {
           })}
         >
           <Link href="/trenerzy" className={styles.ctaBtn}>
-            POZNAJ WSZYSTKICH TRENERÓW
+            POZNAJ NAS BLIŻEJ
           </Link>
         </motion.div>
       </div>

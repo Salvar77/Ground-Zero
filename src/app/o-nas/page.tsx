@@ -3,14 +3,14 @@ import AboutUsPage from "@/components/AboutUsPage/AboutUsPage";
 
 export const metadata = {
   title: "O Nas | Ground Zero - Najlepsza Siłownia i Fitness w Niemodlinie",
-  description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie o powierzchni ponad 300 m². Założyciele Kacper i Nikola Miller. Siłownia, wolne ciężary, zajęcia fitness, MMA na Opolszczyźnie.",
-  keywords: ["o nas siłownia", "historia Ground Zero", "Kacper Miller", "Nikola Miller", "siłownia Niemodlin właściciele", "klub fitness Niemodlin", "najlepsza siłownia opolskie"],
+  description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie o powierzchni ponad 400 m². Założyciele Kacper Miller i Nicole Drescher. Siłownia, wolne ciężary, zajęcia fitness, MMA na Opolszczyźnie.",
+  keywords: ["o nas siłownia", "historia Ground Zero", "Kacper Miller", "Nicole Drescher", "siłownia Niemodlin właściciele", "klub fitness Niemodlin", "najlepsza siłownia opolskie"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/o-nas",
   },
   openGraph: {
     title: "O Nas | Ground Zero - Najlepsza Siłownia i Fitness w Niemodlinie",
-    description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie. Siłownia, wolne ciężary, fitness, MMA stworzone z pasji przez Kacpra i Nikolę Miller.",
+    description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie. Siłownia, wolne ciężary, fitness, MMA stworzone z pasji przez Kacpra i Nicole Drescher.",
     url: "https://www.groundzero-niemodlin.pl/o-nas",
     siteName: "Ground Zero Siłownia Niemodlin",
     images: [
@@ -31,7 +31,7 @@ const jsonLd = {
   "@type": ["AboutPage", "LocalBusiness"],
   "name": "Ground Zero Siłownia Niemodlin",
   "image": "https://groundzeroniemodlin.pl/images/o-nas-hero-desktop.jpg",
-  "description": "Nowoczesne centrum treningowe w Niemodlinie (powierzchnia ponad 300 m²). Oferujemy strefę wolnych ciężarów ze sprzętem Hammer Strength, zajęcia fitness oraz MMA.",
+  "description": "Nowoczesne centrum treningowe w Niemodlinie (powierzchnia ponad 400 m²). Oferujemy strefę wolnych ciężarów ze sprzętem Hammer Strength, zajęcia fitness oraz MMA.",
   "url": "https://groundzeroniemodlin.pl/o-nas",
   "address": {
     "@type": "PostalAddress",
@@ -48,7 +48,7 @@ const jsonLd = {
     },
     {
       "@type": "Person",
-      "name": "Nikola Miller",
+      "name": "Nicole Drescher",
       "jobTitle": "Założycielka, Trenerka",
       "description": "Ekspertka ds. treningu i fitnessu dla kobiet. Buduje wyjątkową społeczność kobiet w Ground Zero."
     }

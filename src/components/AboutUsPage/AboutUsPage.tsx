@@ -68,7 +68,7 @@ export default function AboutUsPage() {
           <div className={styles.bottomFade}></div>
           <Image 
             src="/images/trenerzy-personalni-niemodlin-kacper-nikola.webp" 
-            alt="Trener personalny Niemodlin - Kacper i Nikola Miller" 
+            alt="Trener personalny Niemodlin - Kacper Miller i Nicole Drescher" 
             fill
             sizes="100vw"
             quality={100}
@@ -174,7 +174,7 @@ export default function AboutUsPage() {
             >
               <div className={styles.imageCard}>
                 <Image 
-                  src="/images/maszyny-treningowe-strefa-silownia-ground-zero-niemodlin.webp" 
+                  src="/images/trener-wlasciciel-kacper-miller.webp" 
                   alt="Kacper Miller, założyciel Ground Zero Niemodlin w strefie wolnych ciężarów"
                   width={550}
                   height={650}
@@ -254,10 +254,10 @@ export default function AboutUsPage() {
               
               <div className={styles.foundersDescription}>
                 <p>
-                  Za każdym prawdziwym miejscem stoją ludzie z wizją. <strong>Kacper i Nikola Miller</strong> połączyli dwie różne perspektywy w jeden cel: stworzenie obiektu, który nie idzie na kompromisy.
+                  Za każdym prawdziwym miejscem stoją ludzie z wizją. <strong>Kacper Miller i Nicole Drescher</strong> połączyli dwie różne perspektywy w jeden cel: stworzenie obiektu, który nie idzie na kompromisy.
                 </p>
                 <p>
-                  Kacper odpowiada za surowy charakter Ground Zero – bezbłędny dobór sprzętu Hammer Strength i strefę ciężarów, w której każdy znajdzie wyzwanie. Nikola stworzyła przestrzeń, która przełamuje stereotypy – budując wyjątkową społeczność kobiet i dbając o strefę fitness.
+                  Kacper odpowiada za surowy charakter Ground Zero – bezbłędny dobór sprzętu Hammer Strength i strefę ciężarów, w której każdy znajdzie wyzwanie. Nicole stworzyła przestrzeń, która przełamuje stereotypy – budując wyjątkową społeczność kobiet i dbając o strefę fitness.
                 </p>
               </div>
 
@@ -266,7 +266,7 @@ export default function AboutUsPage() {
                 <blockquote>
                   Zbudowaliśmy miejsce, w którym sami chcielibyśmy trenować. Bez owijania w bawełnę, liczy się praca i efekty.
                 </blockquote>
-                <cite>— Kacper & Nikola</cite>
+                <cite>— Kacper & Nicole</cite>
               </div>
             </motion.div>
 
@@ -280,7 +280,7 @@ export default function AboutUsPage() {
               <div className={styles.mainImageWrapper}>
                 <Image 
                   src="/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller.webp" 
-                  alt="Kacper i Nikola Miller - Założyciele Ground Zero"
+                  alt="Kacper Miller i Nicole Drescher - Założyciele Ground Zero"
                   fill
                   className={styles.foundersImg}
                   sizes="(max-width: 768px) 100vw, 50vw"

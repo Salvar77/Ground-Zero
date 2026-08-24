@@ -60,7 +60,7 @@ export default function Hero() {
             className={styles.subtitle}
             {...(isDesktop && { variants: stealthReveal() })}
           >
-            PONAD 300 M² PRZESTRZENI TRENINGOWEJ, NOWOCZESNY SPRZĘT,
+            PONAD 400 M² PRZESTRZENI TRENINGOWEJ, NOWOCZESNY SPRZĘT,
             PROFESJONALNI TRENERZY. ZBUDUJ FORMĘ BEZ WYMÓWEK.
           </motion.p>
 
@@ -96,13 +96,13 @@ export default function Hero() {
         >
           <div className={styles.statsWrapper}>
             <div className={styles.statItem}>
-              <span className={styles.statValue}>40+</span>
+              <span className={styles.statValue}>50+</span>
               <span className={styles.statLabel}>STANOWISK</span>
             </div>
             <div className={styles.divider}></div>
             <div className={styles.statItem}>
               <span className={styles.statValue}>
-                300<span className={styles.smallUnit}>M²</span>
+                400<span className={styles.smallUnit}>M²</span>
               </span>
               <span className={styles.statLabel}>PRZESTRZENI</span>
             </div>
