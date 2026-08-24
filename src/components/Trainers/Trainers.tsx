@@ -20,19 +20,6 @@ type Trainer = {
 const trainersData: Trainer[] = [
   {
     id: "t1",
-    name: "Kacper",
-    role: "Trener Personalny",
-    specialization: [
-      "Trening Siłowy",
-      "Kształtowanie Sylwetki",
-      "Rehabilitacja Ruchowa",
-    ],
-    image: "/images/trener-wlasciciel-kacper-miller.webp",
-    description:
-      "Z branżą fitness związany od ponad 10 lat. Pomaga zbudować żelazną siłę i skorygować wady postawy.",
-  },
-  {
-    id: "t2",
     name: "Nicole",
     role: "Trenerka Personalna",
     specialization: [
@@ -43,6 +30,19 @@ const trainersData: Trainer[] = [
     image: "/images/trenerka-wlascicielka-nikola-miller.webp",
     description:
       "Trening siłowy to jej pasja. Pomaga kobietom w budowaniu silnej i wymodelowanej sylwetki. Skupia się na poprawie sprawności, sile i udowadnia, że każdy trening to rozmowa z Twoją siłą.",
+  },
+  {
+    id: "t2",
+    name: "Kacper",
+    role: "Trener Personalny",
+    specialization: [
+      "Trening Siłowy",
+      "Kształtowanie Sylwetki",
+      "Rehabilitacja Ruchowa",
+    ],
+    image: "/images/trener-wlasciciel-kacper-miller.webp",
+    description:
+      "Pomaga budować silne, sprawne i wydolne ciało — niezależnie od tego, czy Twoim celem jest poprawa sylwetki, zwiększenie siły, lepsza kondycja, czy przygotowanie do sportowej rywalizacji.",
   }
 ];
 

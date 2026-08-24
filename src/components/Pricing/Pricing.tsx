@@ -15,54 +15,41 @@ type MembershipOption = {
 
 const pricingOptions: MembershipOption[] = [
   {
+    name: "Karnet SMART",
+    price: 155,
+    period: "/ miesiąc",
+    badge: "PROMOCJA",
+    desc: "Karnet na miesiąc w cenie jedynie 155zł gwarancja ceny przez cały rok! To realna oszczędność prawie 300 zł w skali roku!\n\nUWAGA! Subskrypcja zawierana jest na okres 12 miesięcy i zapewnia nieprzerwany dostęp do usług przez cały czas jej obowiązywania. Karnet Siłownia Subskrybcja OPEN zapewnia nielimitowany dostęp do siłowni przez cały okres jego ważności.\n\nDodatkowo w ramach karnetu przysługuje:\n• 1 wejście dziennie na dowolne zajęcia grupowe (z wyjątkiem zajęć MMA)\n• pełny dostęp do strefy Recovery Room, w tym możliwość korzystania z drenażu limfatycznego\n• bezpłatna konsultacja trenerska, która pomoże wyznaczyć cele treningowe i dobrać odpowiedni plan ćwiczeń.\n\nTo idealny wybór dla osób, które chcą trenować bez ograniczeń, korzystać z zajęć grupowych oraz zadbać o skuteczną regenerację.\n\nUmowa przewiduje 2-miesięczny okres wypowiedzenia. Wypowiedzenie należy złożyć w formie określonej w załączonej umowie. Okres wypowiedzenia rozpoczyna bieg zgodnie z zasadami wskazanymi w regulaminie, a subskrypcja pozostaje aktywna do końca okresu wypowiedzenia. W tym czasie opłaty abonamentowe naliczane są zgodnie z obowiązującymi warunkami umowy.\n\nCZYM JEST PRO RATA?\nTwój abonament wystartuje pierwszego dnia miesiąca, a więc opłata za bieżący miesiąc to właśnie Pro Rata. Kwota Pro Raty zmienia się każdego dnia, ponieważ system kalkuluje ile dni zostało do końca miesiąca."
+  },
+  {
+    name: "Karnet OPEN",
+    price: 179,
+    period: "/ miesiąc",
+    desc: "Zwolnienie z VAT na podstawie art. 113 ust.1 ustawy o podatku od towarów i usług.\n\nKarnet Siłownia OPEN zapewnia nielimitowany dostęp do siłowni przez cały okres jego ważności.\n\nDodatkowo w ramach karnetu przysługuje:\n• 1 wejście dziennie na dowolne zajęcia grupowe (z wyjątkiem zajęć MMA)\n• pełny dostęp do strefy Recovery Room, w tym możliwość korzystania z drenażu limfatycznego\n• bezpłatna konsultacja trenerska, która pomoże wyznaczyć cele treningowe i dobrać odpowiedni plan ćwiczeń.\n\nTo idealny wybór dla osób, które chcą trenować bez ograniczeń, korzystać z zajęć grupowych oraz zadbać o skuteczną regenerację."
+  },
+  {
     name: "Karnet 1 wejście",
-    price: 30,
+    price: 40,
     period: "/ dzień",
-    desc: "Karnet na jedno wejście to idealna opcja dla osób, które chcą spróbować treningu bez zobowiązań lub potrzebują jednorazowego dostępu do zajęć czy siłowni. To wygodne rozwiązanie, gdy chcesz sprawdzić miejsce, wejść na szybki trening lub dopasować aktywność do napiętego grafiku. Karnet obowiązuje na Siłownię, zajęcia Fitness oraz zajęcia Cross",
+    desc: "Karnet na jedno wejście to idealna opcja dla osób, które chcą spróbować treningu bez zobowiązań lub potrzebują jednorazowego dostępu do zajęć czy siłowni. To wygodne rozwiązanie, gdy chcesz sprawdzić miejsce, wejść na szybki trening lub dopasować aktywność do napiętego grafiku. Karnet obowiązuje na Siłownię, zajęcia Fitness oraz zajęcia Cross."
   },
   {
-    name: "Karnet miesieczny - Cross",
-    price: 140,
-    period: "/ miesiąc",
-    desc: "Karnet miesięczny to idealne rozwiązanie dla osób, które chcą trenować regularnie i widzieć szybkie postępy. Zajęcia CROSS łączą elementy treningu funkcjonalnego, siłowego oraz kondycyjnego, dzięki czemu poprawisz swoją sprawność, zwiększysz siłę i wytrzymałość, a przy tym spalisz dużą ilość kalorii.",
+    name: "Karnet 365 Dni",
+    price: 1750,
+    period: "/ 365 dni",
+    desc: "Karnet OPEN 365 zapewnia nielimitowany dostęp do siłowni przez 365 dni od dnia aktywacji. W ramach karnetu otrzymujesz:\n• nielimitowaną liczbę wejść na siłownię\n• 1 wejście dziennie na wszystkie zajęcia grupowe (z wyjątkiem zajęć MMA)\n• pełny dostęp do strefy Recovery Room, w tym możliwość korzystania z drenażu limfatycznego\n• bezpłatną konsultację trenerską, która pomoże dobrać plan treningowy i osiągnąć zamierzone cele.\n\nKarnet jest opłacany z góry. Dla większej wygody istnieje możliwość rozłożenia płatności na 2 raty.\nDodatkowo karnet umożliwia:\n• 2-krotne zawieszenie karnetu w trakcie jego trwania\n• cesję karnetu na inną osobę."
   },
   {
-    name: "Karnet miesięczny - Fitness",
-    price: 140,
+    name: "Karnet 4 wejścia",
+    price: 120,
     period: "/ miesiąc",
-    desc: "Karnet miesięczny na fitness to świetny wybór dla osób, które chcą zadbać o swoje zdrowie, sylwetkę i dobre samopoczucie. Zajęcia fitness pozwalają rozwijać kondycję, wzmacniać mięśnie, poprawiać mobilność oraz redukować stres — a wszystko w przyjaznej, energicznej atmosferze.",
+    desc: "Idealny wybór, jeśli chcesz zacząć swoją przygodę z treningiem lub potrzebujesz elastycznego rozwiązania dopasowanego do Twojego trybu życia.\nKarnet obejmuje 4 wejścia, które możesz swobodnie wykorzystać na:\n• treningi na siłowni\n• wszystkie zajęcia grupowe (z wyjątkiem zajęć MMA).\nDzięki niemu masz pełną swobodę wyboru – trenujesz wtedy, kiedy masz czas i ochotę, bez zobowiązań.\nKarnet jest ważny przez 1 miesiąc od daty zakupu, co daje Ci komfort elastycznego planowania treningów. Niewykorzystane wejścia po upływie terminu ważności przepadają."
   },
   {
-    name: "Karnet miesięczny - Siłownia",
-    price: 150,
+    name: "Karnet Student/Senior/Mundurowy",
+    price: 165,
     period: "/ miesiąc",
-    desc: "Karnet miesięczny na siłownię to idealna opcja dla osób, które chcą trenować we własnym tempie i na własnych zasadach. Profesjonalnie wyposażona sala pozwala na kompleksowy trening siłowy, kondycyjny oraz funkcjonalny — niezależnie od poziomu zaawansowania.",
-  },
-  {
-    name: "Karnet na zajęcia MMA Grupa dziecięca",
-    price: 150,
-    period: "/ miesiąc",
-    desc: "Karnet na zajęcia MMA to idealna opcja dla osób, które chcą rozwijać swoją kondycję, siłę oraz umiejętności sztuk walki pod okiem profesjonalnych trenerów. Treningi łączą elementy boksu, zapasów i brazylijskiego jiu-jitsu, zapewniając wszechstronny rozwój oraz intensywny, angażujący wysiłek.\n\nKarnet obejmuje udział w regularnych zajęciach MMA w Siłowni Ground Zero Niemodlin, dostęp do pełnego wyposażenia treningowego oraz możliwość pracy w grupie dostosowanej do poziomu zaawansowania – zarówno dla początkujących, jak i bardziej doświadczonych zawodników.\nKarnet obowiązuje na zajęcia na grupę dziecięcą według obowiązującego grafiku zajęć",
-  },
-  {
-    name: "Karnet na zajęcia MMA grupa młodzież",
-    price: 150,
-    period: "/ miesiąc",
-    desc: "Karnet na zajęcia MMA to idealna opcja dla osób, które chcą rozwijać swoją kondycję, siłę oraz umiejętności sztuk walki pod okiem profesjonalnych trenerów. Treningi łączą elementy boksu, zapasów i brazylijskiego jiu-jitsu, zapewniając wszechstronny rozwój oraz intensywny, angażujący wysiłek.\n\nKarnet obejmuje udział w regularnych zajęciach MMA w Siłowni Ground Zero Niemodlin, dostęp do pełnego wyposażenia treningowego oraz możliwość pracy w grupie dostosowanej do poziomu zaawansowania – zarówno dla początkujących, jak i bardziej doświadczonych zawodników.\n\nKarnet obejmuje uczestnictwo w zajęciach grupy młodzieżowej według obowiązującego grafiku",
-  },
-  {
-    name: "Karnet Siłownia + Cross",
-    price: 250,
-    period: "/ miesiąc",
-    desc: "Karnet łączony to idealny wybór dla osób, które chcą maksymalnie wykorzystać możliwości treningowe. Połączenie nielimitowanego dostępu do siłowni z intensywnymi zajęciami Cross daje pełną swobodę planowania i pozwala rozwijać siłę, wytrzymałość oraz ogólną sprawność na każdym poziomie zaawansowania.",
-    badge: "COMBO",
-  },
-  {
-    name: "Karnet Siłownia + Fitness",
-    price: 250,
-    period: "/ miesiąc",
-    desc: "Karnet łączony to świetna propozycja dla osób, które chcą połączyć samodzielny trening na siłowni z energią zajęć fitness. Dzięki temu zyskujesz pełną elastyczność — możesz realizować własny plan treningowy, a jednocześnie korzystać z prowadzonej aktywności, która motywuje, wzmacnia i urozmaica codzienny ruch.",
-    badge: "COMBO",
+    desc: "Karnet Siłownia OPEN – STUDENT / SENIOR / MUNDUROWI oferuje te same korzyści co standardowy karnet OPEN, jednak dostępny jest w obniżonej cenie ze względu na przysługującą zniżkę.\n\nW ramach karnetu przysługuje:\n• nielimitowany dostęp do siłowni przez cały okres jego ważności\n• 1 wejście dziennie na dowolne zajęcia grupowe (z wyjątkiem zajęć MMA)\n• pełny dostęp do strefy Recovery Room, w tym możliwość korzystania z drenażu limfatycznego\n• bezpłatna konsultacja trenerska, która pomoże wyznaczyć cele treningowe i dobrać odpowiedni plan ćwiczeń.\n\nWarunkiem utrzymania zniżki jest dostarczenie odpowiedniego dokumentu potwierdzającego uprawnienia (np. legitymacji studenckiej, emeryta/rencisty lub służbowej) w ciągu 7 dni od zakupu karnetu. W przypadku niedostarczenia dokumentu w wymaganym terminie karnet zostaje zawieszony.\nTo idealna opcja dla osób uprawnionych do zniżki, które chcą korzystać z pełnej oferty klubu na preferencyjnych warunkach."
   }
 ];
 

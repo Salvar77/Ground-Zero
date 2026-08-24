@@ -61,7 +61,7 @@ export default function TrainersPage() {
 
         <div className={styles.trainersContainer}>
           
-          {/* KACPER MILLER */}
+          {/* NICOLE DRESCHER */}
           <div className={styles.profileRow}>
             <motion.div 
               className={styles.profileImageContainer}
@@ -70,11 +70,11 @@ export default function TrainersPage() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
             >
-              <div className={`${styles.neonGlow} ${styles.neonGlowKacper}`}></div>
-              <div className={`${styles.decoCorner} ${styles.cornerKacper}`}></div>
+              <div className={`${styles.neonGlow} ${styles.neonGlowNikola}`}></div>
+              <div className={`${styles.decoCorner} ${styles.cornerNikola}`}></div>
               <Image 
-                src="/images/trener-wlasciciel-kacper-miller.webp"
-                alt="Kacper Miller - Trener Personalny Niemodlin"
+                src="/images/trenerka-wlascicielka-nikola-miller.webp"
+                alt="Nicole Drescher - Trenerka Personalna Niemodlin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className={styles.profileImg}
@@ -87,37 +87,6 @@ export default function TrainersPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h2 className={styles.name}>KACPER</h2>
-              <p className={styles.desc}>
-                Specjalista od ciężkiego sprzętu i żelaznej dyscypliny. Jego domeną jest <strong>trening siłowy, hipertrofia i sporty walki</strong>. Jeśli chcesz budować masę mięśniową, siłę absolutną lub przygotować się motorycznie pod MMA – Kacper wyciśnie z Ciebie 110% normy.
-              </p>
-              
-              <div className={styles.featuresList}>
-                <div className={`${styles.featItem} ${styles.kacperFeat}`}>
-                  <FaDumbbell className={styles.featIcon} />
-                  <span>Trening Siłowy i Budowa Masy Mięśniowej</span>
-                </div>
-                <div className={`${styles.featItem} ${styles.kacperFeat}`}>
-                  <FaFistRaised className={styles.featIcon} />
-                  <span>Przygotowanie Motoryczne pod Sporty Walki (MMA)</span>
-                </div>
-                <div className={`${styles.featItem} ${styles.kacperFeat}`}>
-                  <FaChartLine className={styles.featIcon} />
-                  <span>Zaawansowana Rekompozycja Sylwetki</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* NICOLE DRESCHER */}
-          <div className={`${styles.profileRow} ${styles.reverse}`}>
-            <motion.div 
-              className={`${styles.profileInfo} ${styles.reverseInfo}`}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className={styles.name}>NICOLE</h2>
               <p className={styles.desc}>
@@ -141,6 +110,37 @@ export default function TrainersPage() {
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          {/* KACPER */}
+          <div className={`${styles.profileRow} ${styles.reverse}`}>
+            <motion.div 
+              className={`${styles.profileInfo} ${styles.reverseInfo}`}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className={styles.name}>KACPER</h2>
+              <p className={styles.desc}>
+                Pomagam budować silne, sprawne i wydolne ciało — niezależnie od tego, czy Twoim celem jest poprawa sylwetki, zwiększenie siły, lepsza kondycja, czy przygotowanie do sportowej rywalizacji.
+              </p>
+              
+              <div className={styles.featuresList}>
+                <div className={`${styles.featItem} ${styles.kacperFeat}`}>
+                  <FaDumbbell className={styles.featIcon} />
+                  <span>Trening Siłowy i Budowa Masy Mięśniowej</span>
+                </div>
+                <div className={`${styles.featItem} ${styles.kacperFeat}`}>
+                  <FaFistRaised className={styles.featIcon} />
+                  <span>Przygotowanie Motoryczne pod Sporty Walki (MMA)</span>
+                </div>
+                <div className={`${styles.featItem} ${styles.kacperFeat}`}>
+                  <FaChartLine className={styles.featIcon} />
+                  <span>Zaawansowana Rekompozycja Sylwetki</span>
+                </div>
+              </div>
+            </motion.div>
 
             <motion.div 
               className={`${styles.profileImageContainer} ${styles.reverseImage}`}
@@ -149,11 +149,11 @@ export default function TrainersPage() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className={`${styles.neonGlow} ${styles.neonGlowNikola}`}></div>
-              <div className={`${styles.decoCorner} ${styles.cornerNikola}`}></div>
+              <div className={`${styles.neonGlow} ${styles.neonGlowKacper}`}></div>
+              <div className={`${styles.decoCorner} ${styles.cornerKacper}`}></div>
               <Image 
-                src="/images/trenerka-wlascicielka-nikola-miller.webp"
-                alt="Nikola Miller - Instruktorka Fitness Niemodlin"
+                src="/images/trener-wlasciciel-kacper-miller.webp"
+                alt="Kacper - Trener Personalny Niemodlin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className={styles.profileImg}

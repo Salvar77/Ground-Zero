@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useDesktopAnimation } from "@/hooks/useDesktopAnimation";
@@ -68,6 +69,18 @@ export default function Hero() {
             {...(isDesktop && { variants: stealthReveal() })}
           >
             <Marquee />
+          </motion.div>
+
+          <motion.div 
+            className={styles.contactInfo}
+            {...(isDesktop && { variants: stealthReveal() })}
+          >
+            <a href="https://maps.app.goo.gl/YourLink" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+              <FaMapMarkerAlt /> ul. Opolska 54, 49-100 Niemodlin
+            </a>
+            <a href="tel:+48666310850" className={styles.contactItem}>
+              <FaPhoneAlt /> 666 310 850
+            </a>
           </motion.div>
 
           <motion.div 
