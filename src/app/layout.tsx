@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Ground Zero Niemodlin",
   },
   description:
-    "Najlepsza siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Oferujemy nowoczesny sprzęt, treningi personalne, recovery room i saunę. Zbuduj formę w Ground Zero na ul. Opolskiej 54!",
+    "Najlepsza siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Oferujemy nowoczesny sprzęt, treningi personalne i recovery room. Zbuduj formę w Ground Zero na ul. Opolskiej 54!",
   keywords: [
     "siłownia Niemodlin",
     "klub fitness Niemodlin",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     "trener personalny Grodków",
     "trening personalny Niemodlin",
     "najlepsza siłownia Niemodlin",
-    "sauna Niemodlin",
+    "siłownia opolskie",
     "recovery room opolskie",
     "siłownia Niemodlin i okolice"
   ],
@@ -133,7 +133,7 @@ const localBusinessSchema = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Sunday"],
-      opens: "13:00",
+      opens: "09:00",
       closes: "21:00",
     },
   ],
@@ -157,7 +157,7 @@ const localBusinessSchema = {
     { "@type": "AdministrativeArea", "name": "województwo opolskie" }
   ],
   priceRange: "$$",
-  description: "Najnowocześniejsza siłownia i klub fitness w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Ponad 300m² strefy maszyn, strefa wolnych ciężarów, recovery room oraz pomoc trenerów personalnych.",
+  description: "Najnowocześniejsza siłownia i klub fitness w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Ponad 400m² strefy maszyn, strefa wolnych ciężarów, recovery room oraz pomoc trenerów personalnych.",
 };
 
 export default function RootLayout({

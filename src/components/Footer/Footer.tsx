@@ -96,7 +96,7 @@ export default function Footer() {
                 <strong>Nasze wsparcie.</strong>
               </p>
               <p className={styles.brandDesc}>
-                Nowoczesna siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic) — ponad <strong>300 m²</strong> profesjonalnego 
+                Nowoczesna siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic) — ponad <strong>400 m²</strong> profesjonalnego 
                 sprzętu, wykwalifikowani trenerzy i recovery room. Zero sieciówek. 
                 Zero wymówek.
               </p>
@@ -171,7 +171,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.hoursRow}>
                   <span>Niedziela</span>
-                  <span className={styles.hoursValue}>13:00 – 21:00</span>
+                  <span className={styles.hoursValue}>09:00 – 21:00</span>
                 </div>
               </div>
             </motion.div>

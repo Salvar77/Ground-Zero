@@ -6,15 +6,15 @@ import WellnessEquipment from "@/components/WellnessSubpage/Equipment/WellnessEq
 import WellnessCta from "@/components/WellnessSubpage/CTA/WellnessCta";
 
 export const metadata: Metadata = {
-  title: "Recovery Room i Sauna | Ground Zero Niemodlin",
-  description: "Zregeneruj siły w naszym Recovery Room. Sauna fińska, pokój relaksu, drenaż limfatyczny i pistolety masujące w najlepszej siłowni w regionie.",
-  keywords: ["recovery room Niemodlin", "sauna Niemodlin", "sauna fińska Niemodlin", "drenaż limfatyczny Niemodlin", "odnowa biologiczna Niemodlin", "relaks siłownia", "masaż uciskowy", "regeneracja po treningu"],
+  title: "Recovery Room | Ground Zero Niemodlin",
+  description: "Zregeneruj siły w naszym Recovery Room. Drenaż limfatyczny i pistolety masujące w najlepszej siłowni w regionie.",
+  keywords: ["recovery room Niemodlin", "drenaż limfatyczny Niemodlin", "odnowa biologiczna Niemodlin", "relaks siłownia", "masaż uciskowy", "regeneracja po treningu"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/recovery-room",
   },
   openGraph: {
-    title: "Recovery Room i Sauna | Ground Zero Niemodlin",
-    description: "Zregeneruj siły w naszym Recovery Room. Sauna fińska, pokój relaksu, drenaż limfatyczny.",
+    title: "Recovery Room | Ground Zero Niemodlin",
+    description: "Zregeneruj siły w naszym Recovery Room. Drenaż limfatyczny i profesjonalna odnowa biologiczna.",
     url: "https://www.groundzero-niemodlin.pl/recovery-room",
     siteName: "Ground Zero Siłownia Niemodlin",
     locale: "pl_PL",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["WebPage", "Service"],
-  "name": "Recovery Room i Sauna - Ground Zero",
-  "description": "Profesjonalna odnowa biologiczna, sauna, drenaż limfatyczny i pokój relaksu w Niemodlinie.",
+  "name": "Recovery Room - Ground Zero",
+  "description": "Profesjonalna odnowa biologiczna, drenaż limfatyczny i pokój relaksu w Niemodlinie.",
   "url": "https://www.groundzero-niemodlin.pl/recovery-room",
   "provider": {
     "@type": "ExerciseGym",
@@ -45,13 +45,6 @@ const jsonLd = {
     "@type": "OfferCatalog",
     "name": "Usługi Recovery Room",
     "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Sauna Fińska"
-        }
-      },
       {
         "@type": "Offer",
         "itemOffered": {

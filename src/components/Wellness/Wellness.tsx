@@ -31,7 +31,7 @@ export default function Wellness() {
             <div className={styles.imageContainer}>
               <Image 
                 src="/images/drenaz-limfatyczny-wellness.webp" 
-                alt="Strefa Wellness i Sauna - Ground Zero Niemodlin" 
+                alt="Recovery Room - Ground Zero Niemodlin" 
                 width={600} 
                 height={500} 
                 style={{ width: "100%", height: "auto" }}
@@ -57,7 +57,7 @@ export default function Wellness() {
             })}
           >
             <div className={styles.header}>
-              <div className={styles.bgText}>SAUNA</div>
+              <div className={styles.bgText}>RECOVERY</div>
               <span className={styles.badge}>RECOVERY ROOM</span>
               <h2 className={styles.title}>
                 REGENERACJA NA<br />
@@ -67,7 +67,7 @@ export default function Wellness() {
             
             <p className={styles.description}>
               Po ciężkim treningu Twoje ciało zasługuje na najlepszy odpoczynek. 
-              Skorzystaj z naszej ekskluzywnej <strong>strefy saun i pokoju relaksu</strong>. 
+              Skorzystaj z naszej ekskluzywnej <strong>strefy Recovery Room</strong>. 
               To tutaj zbudujesz odporność, przyspieszysz regenerację włókien mięśniowych 
               oraz oczyścisz umysł z codziennego stresu. Prawdziwa odnowa biologiczna 
               dostępna dla każdego klubowicza.

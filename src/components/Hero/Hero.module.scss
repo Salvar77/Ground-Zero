@@ -401,6 +401,39 @@
   }
 }
 
+.tertiaryBtn {
+  position: relative;
+  background: #fff;
+  color: #000;
+  padding: 18px 45px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: var(--font-heading);
+  transition: all 0.4s ease;
+
+  @include respond-to("md") {
+    font-size: 1.7rem;
+  }
+
+  clip-path: polygon(
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%,
+    0 20px
+  );
+
+  &:hover {
+    transform: translateY(-3px);
+    background: #e6e6e6;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  }
+}
+
 .statsContainer {
   width: 100%;
   display: flex;

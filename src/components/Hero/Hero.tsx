@@ -94,6 +94,9 @@ export default function Hero() {
             <Link href="/grafik" className={styles.secondaryBtn}>
               <span className={styles.btnText}>GRAFIK ZAJĘĆ</span>
             </Link>
+            <a href="https://groundzero.oos.pl/buyCarnet" target="_blank" rel="noopener noreferrer" className={styles.tertiaryBtn}>
+              <span className={styles.btnText}>KUP KARNET</span>
+            </a>
           </motion.div>
         </motion.div>
 

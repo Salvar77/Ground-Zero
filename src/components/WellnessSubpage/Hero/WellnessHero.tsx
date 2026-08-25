@@ -60,7 +60,7 @@ export default function WellnessHero() {
             <span className={styles.outlineText}>SIŁY</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            Wejdź do Recovery Room w Ground Zero. Odkryj moc sauny i strefy relaksu. Zregeneruj ciało i umysł po najcięższym treningu.
+            Wejdź do Recovery Room w Ground Zero. Odkryj moc drenażu limfatycznego i strefy relaksu. Zregeneruj ciało i umysł po najcięższym treningu.
           </p>
         </motion.div>
       </div>

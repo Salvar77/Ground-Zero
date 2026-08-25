@@ -177,7 +177,7 @@ export default async function og() {
                 fontFamily: "sans-serif",
               }}
             >
-              Ponad 300 m² profesjonalnego sprzętu, recovery room i sauna. Bezkompromisowa atmosfera. Zero sieciówek, zero wymówek.
+              Ponad 400 m2 profesjonalnego sprzętu i recovery room. Bezkompromisowa atmosfera. Zero sieciówek, zero wymówek.
             </span>
           </div>
         </div>

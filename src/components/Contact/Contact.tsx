@@ -70,7 +70,7 @@ const Contact = ({ isSubpage = false }: ContactProps) => {
               </span>
               <p className={styles.text}>
                 Pon-Sob: 06:00 - 22:00<br/>
-                Niedziela: 13:00 - 21:00
+                Niedziela: 09:00 - 21:00
               </p>
             </div>
 
