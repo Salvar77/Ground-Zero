@@ -140,6 +140,8 @@ const localBusinessSchema = {
   sameAs: [
     "https://www.facebook.com/p/Ground-Zero-Si%C5%82ownia-Niemodlin-61576885212351/",
     "https://www.instagram.com/silownia.niemodlin.groundzero/",
+    "https://www.gowork.pl/ground-zero-kacper-miller,27155616/dane-kontaktowe-firmy",
+    "https://www.numo.pl/firmy/niemodlin/si%C5%82ownie%2C%20kulturystyka"
   ],
   areaServed: [
     { "@type": "AdministrativeArea", "name": "Niemodlin" },

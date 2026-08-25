@@ -27,6 +27,8 @@ const navSections = [
     links: [
       { label: "Polityka Prywatności", href: "/polityka-prywatnosci" },
       { label: "Regulamin", href: "/regulamin" },
+      { label: "Profil GoWork", href: "https://www.gowork.pl/ground-zero-kacper-miller,27155616/dane-kontaktowe-firmy" },
+      { label: "Katalog Numo", href: "https://www.numo.pl/firmy/niemodlin/si%C5%82ownie%2C%20kulturystyka" },
     ],
   },
 ];
