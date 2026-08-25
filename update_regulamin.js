@@ -1,37 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import type { Metadata } from "next";
-import { 
-  FiFileText, 
-  FiUsers, 
-  FiShield, 
-  FiAlertTriangle, 
-  FiMonitor, 
-  FiEdit3, 
-  FiCheckSquare, 
-  FiAlertCircle, 
-  FiChevronLeft
-} from "react-icons/fi";
-import styles from "../polityka-prywatnosci/page.module.scss";
+const fs = require('fs');
 
-export const metadata: Metadata = {
-  title: "Regulamin Siłowni | Ground Zero Niemodlin",
-  description: "Regulamin korzystania z siłowni Ground Zero Niemodlin oraz zasady świadczenia usług drogą elektroniczną.",
-  keywords: ["regulamin siłowni", "zasady siłowni", "Ground Zero regulamin", "siłownia Niemodlin regulamin"],
-  alternates: {
-    canonical: "https://www.groundzero-niemodlin.pl/regulamin",
-  },
-};
+const regulaminFile = 'c:/Users/lukas/Desktop/ground-zero/src/app/regulamin/page.tsx';
+let content = fs.readFileSync(regulaminFile, 'utf8');
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Regulamin Siłowni - Ground Zero",
-  "description": "Zasady korzystania z klubu fitness Ground Zero w Niemodlinie.",
-  "url": "https://www.groundzero-niemodlin.pl/regulamin"
-};
-
-const sections = [
+const newSections = `const sections = [
   {
     id: "postanowienia",
     icon: <FiFileText />,
@@ -191,70 +163,8 @@ const sections = [
       </ul>
     ),
   },
-];
+];`;
 
-export default function Regulamin() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <main className={styles.page}>
-      {/* Hero */}
-      <section className={styles.hero}>
-        <div className={styles.heroBg}></div>
-        <div className={styles.heroContent}>
-          <span className={styles.badge}>ZASADY KORZYSTANIA Z KLUBU</span>
-          <h1 className={styles.heroTitle}>
-            Regulamin<br /><span>Klubu</span>
-          </h1>
-          <p className={styles.heroSub}>
-            Zasady są po to, aby wszyscy mogli trenować w czystym,
-            bezpiecznym i profesjonalnym środowisku. Zero wymówek, pełen szacunek.
-          </p>
-        </div>
-      </section>
-
-      {/* Table of Contents */}
-      <div className={styles.container}>
-        <div className={styles.layout}>
-
-          {/* Sidebar TOC */}
-          <aside className={styles.toc}>
-            <div className={styles.tocInner}>
-              <p className={styles.tocTitle}>Spis Treści</p>
-              <nav>
-                {sections.map((s) => (
-                  <a key={s.id} href={`#${s.id}`} className={styles.tocLink}>
-                    <span className={styles.tocIcon}>{s.icon}</span> {s.title.replace(/^\d+\.\s/, "")}
-                  </a>
-                ))}
-              </nav>
-              <div className={styles.tocBack}>
-                <Link href="/"><FiChevronLeft /> Wróć na stronę główną</Link>
-              </div>
-            </div>
-          </aside>
-
-          {/* Content */}
-          <div className={styles.content}>
-            {sections.map((s) => (
-              <section key={s.id} id={s.id} className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <span className={styles.sectionIcon}>{s.icon}</span>
-                  <h2 className={styles.sectionTitle}>{s.title}</h2>
-                </div>
-                <div className={styles.sectionBody}>
-                  {s.content}
-                </div>
-              </section>
-            ))}
-          </div>
-
-        </div>
-      </div>
-    </main>
-    </>
-  );
-}
+content = content.replace(/const sections = \[[\s\S]*?\];\n\nexport default function Regulamin/, newSections + '\n\nexport default function Regulamin');
+fs.writeFileSync(regulaminFile, content);
+console.log("Regulamin updated successfully.");

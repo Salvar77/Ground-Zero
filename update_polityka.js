@@ -1,43 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import type { Metadata } from "next";
-import { 
-  FiBriefcase, 
-  FiList, 
-  FiTarget, 
-  FiClock, 
-  FiKey, 
-  FiDisc, 
-  FiUsers, 
-  FiLock, 
-  FiRefreshCw, 
-  FiMail, 
-  FiInfo, 
-  FiShield, 
-  FiCalendar, 
-  FiFileText,
-  FiChevronLeft
-} from "react-icons/fi";
-import styles from "./page.module.scss";
+const fs = require('fs');
 
-export const metadata: Metadata = {
-  title: "Polityka Prywatności | Ground Zero Niemodlin",
-  description: "Polityka prywatności siłowni Ground Zero Niemodlin. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.",
-  keywords: ["polityka prywatności siłownia", "RODO siłownia Niemodlin", "Ground Zero prywatność"],
-  alternates: {
-    canonical: "https://www.groundzero-niemodlin.pl/polityka-prywatnosci",
-  },
-};
+const politykaFile = 'c:/Users/lukas/Desktop/ground-zero/src/app/polityka-prywatnosci/page.tsx';
+let content = fs.readFileSync(politykaFile, 'utf8');
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Polityka Prywatności - Ground Zero",
-  "description": "Dokument określający zasady przetwarzania danych osobowych przez Ground Zero Siłownia Niemodlin w zgodzie z rozporządzeniem RODO.",
-  "url": "https://www.groundzero-niemodlin.pl/polityka-prywatnosci"
-};
-
-const sections = [
+const newSections = `const sections = [
   {
     id: "administrator",
     icon: <FiBriefcase />,
@@ -134,74 +100,8 @@ const sections = [
       </>
     ),
   }
-];
+];`;
 
-export default function PolitykaPrywatnosci() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <main className={styles.page}>
-      {/* Hero */}
-      <section className={styles.hero}>
-        <div className={styles.heroBg}></div>
-        <div className={styles.heroContent}>
-          <span className={styles.badge}>DOKUMENT PRAWNY</span>
-          <h1 className={styles.heroTitle}>
-            Polityka<br /><span>Prywatności</span>
-          </h1>
-          <p className={styles.heroSub}>
-            Dbamy o bezpieczeństwo Twoich danych. Przeczytaj, jak i dlaczego przetwarzamy
-            Twoje informacje osobowe zgodnie z RODO.
-          </p>
-          <div className={styles.heroMeta}>
-            <span><FiCalendar /> Ostatnia aktualizacja: 25 maja 2025</span>
-            <span><FiFileText /> Zgodność z RODO (UE) 2016/679</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Table of Contents */}
-      <div className={styles.container}>
-        <div className={styles.layout}>
-
-          {/* Sidebar TOC */}
-          <aside className={styles.toc}>
-            <div className={styles.tocInner}>
-              <p className={styles.tocTitle}>Spis Treści</p>
-              <nav>
-                {sections.map((s) => (
-                  <a key={s.id} href={`#${s.id}`} className={styles.tocLink}>
-                    <span className={styles.tocIcon}>{s.icon}</span> {s.title.replace(/^\d+\.\s/, "")}
-                  </a>
-                ))}
-              </nav>
-              <div className={styles.tocBack}>
-                <Link href="/"><FiChevronLeft /> Wróć na stronę główną</Link>
-              </div>
-            </div>
-          </aside>
-
-          {/* Content */}
-          <div className={styles.content}>
-            {sections.map((s) => (
-              <section key={s.id} id={s.id} className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <span className={styles.sectionIcon}>{s.icon}</span>
-                  <h2 className={styles.sectionTitle}>{s.title}</h2>
-                </div>
-                <div className={styles.sectionBody}>
-                  {s.content}
-                </div>
-              </section>
-            ))}
-          </div>
-
-        </div>
-      </div>
-    </main>
-    </>
-  );
-}
+content = content.replace(/const sections = \[[\s\S]*?\];\n\nexport default function PolitykaPrywatnosci/, newSections + '\n\nexport default function PolitykaPrywatnosci');
+fs.writeFileSync(politykaFile, content);
+console.log("Polityka updated successfully.");
