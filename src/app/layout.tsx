@@ -21,7 +21,7 @@ const barlowCondensed = Barlow_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.groundzero-niemodlin.pl"),
   title: {
-    default: "Ground Zero Siłownia Niemodlin | Twój Klub Fitness i Treningi",
+    default: "Ground Zero Niemodlin | Nowoczesna Siłownia Bezobsługowa",
     template: "%s | Ground Zero Niemodlin",
   },
   description:
