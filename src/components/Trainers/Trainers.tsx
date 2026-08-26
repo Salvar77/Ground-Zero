@@ -74,9 +74,7 @@ export default function Trainers() {
             className={styles.subtitle}
             {...(isDesktop && { variants: stealthReveal() })}
           >
-            Nasi instruktorzy to licencjonowani trenerzy z wieloletnim
-            doświadczeniem, czynni zawodnicy i pasjonaci zdrowego stylu życia. Z
-            nimi osiągniesz każdy cel.
+            Poznaj ekspertów, którzy nie uznają półśrodków. Przesuń swoje granice pod okiem profesjonalistów z wieloletnim doświadczeniem. <br/><strong className={styles.highlightText}>NIE SPRZEDAJEMY TRENINGU TYLKO REZULTAT</strong>
           </motion.p>
         </motion.div>
 

@@ -25,6 +25,7 @@ const REAL_IMAGES: ImageItem[] = [
   { id: 9, src: "/images/porecze-do-dipow-trening-silowy-ground-zero-niemodlin.webp", category: "Cross", size: "normal" },
   { id: 10, src: "/images/pistolet-do-masazu-recovery-room-ground-zero-niemodlin.webp", category: "Recovery Room", size: "normal" },
   { id: 11, src: "/images/drenaz-limfatyczny-wellness.webp", category: "Recovery Room", size: "normal" },
+  { id: 12, src: "/images/ground-zero-strength-zone.webp", category: "Siłownia", size: "wide" },
 ];
 
 const CATEGORIES = ["Wszystkie", "Siłownia", "Cross", "Fitness/MMA", "Recovery Room"];
