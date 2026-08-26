@@ -131,6 +131,15 @@
   line-height: 1.6;
 }
 
+.highlightText {
+  color: $gz-accent;
+  font-weight: 800;
+  display: block;
+  margin-top: 15px;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  letter-spacing: 1px;
+}
+
 /* Background Elements for Trainers Split Section */
 .plateOrnaments {
   position: absolute;

@@ -46,6 +46,7 @@ export default function TrainersPage() {
           </h1>
           <p className={styles.heroSubtitle}>
             Poznaj ekspertów, którzy nie uznają półśrodków. Przesuń swoje granice pod okiem profesjonalistów z wieloletnim doświadczeniem.
+            <strong className={styles.highlightText}>NIE SPRZEDAJEMY TRENINGU TYLKO REZULTAT</strong>
           </p>
         </motion.div>
       </section>
