@@ -2,14 +2,14 @@ import React from "react";
 import AboutUsPage from "@/components/AboutUsPage/AboutUsPage";
 
 export const metadata = {
-  title: "O Nas",
+  title: "O Nas | Siłownia i Fitness",
   description: "Poznaj Ground Zero - nowoczesne centrum treningowe w Niemodlinie. 400m², sprzęt HES, wolne ciężary, fitness i MMA. Kadra: Kacper Miller, Nicole Drescher.",
   keywords: ["o nas siłownia", "historia Ground Zero", "Kacper Miller", "Nicole Drescher", "siłownia Niemodlin kadra", "klub fitness Niemodlin", "najlepsza siłownia opolskie"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/o-nas",
   },
   openGraph: {
-    title: "O Nas",
+    title: "O Nas | Siłownia i Fitness",
     description: "Poznaj Ground Zero - innowacyjne centrum treningowe w Niemodlinie. Siłownia, wolne ciężary, fitness, MMA stworzone z pasji przez Kacpra i Nicole Drescher.",
     url: "https://www.groundzero-niemodlin.pl/o-nas",
     siteName: "Ground Zero Siłownia Niemodlin",

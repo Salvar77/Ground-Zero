@@ -4,14 +4,14 @@ import Pricing from "@/components/Pricing/Pricing";
 import Consultation from "@/components/Consultation/Consultation";
 
 export const metadata: Metadata = {
-  title: "Cennik Karnetów",
+  title: "Cennik Karnetów i Wejściówek",
   description: "Wybierz idealny karnet w Ground Zero Niemodlin! Siłownia, Cross, Fitness, zajęcia MMA. Posiadamy pakiety jednorazowe, miesięczne i combo. Sprawdź opcje!",
   keywords: ["cennik ground zero", "karnety siłownia", "ceny siłownia niemodlin", "karnet mma", "karnet cross", "karnet fitness", "ile kosztuje siłownia niemodlin"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/cennik",
   },
   openGraph: {
-    title: "Cennik Karnetów",
+    title: "Cennik Karnetów i Wejściówek",
     description: "Jasne zasady, brak ukrytych opłat. Sprawdź naszą ofertę karnetów miesięcznych i łączonych (Combo).",
     url: "https://www.groundzero-niemodlin.pl/cennik",
     siteName: "Ground Zero Siłownia Niemodlin",
