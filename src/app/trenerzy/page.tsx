@@ -3,14 +3,14 @@ import TrainersPage from "@/components/TrainersPage/TrainersPage";
 import Consultation from "@/components/Consultation/Consultation";
 
 export const metadata = {
-  title: "Nasi Trenerzy | Kacper Miller i Nicole Drescher - Ground Zero Niemodlin",
-  description: "Poznaj trenerów Ground Zero. Kacper Miller - ekspert od treningu siłowego i przygotowania motorycznego. Nicole Drescher - specjalistka od fitnessu i treningu kobiet. Zmień swoją sylwetkę w Niemodlinie.",
+  title: "Nasi Trenerzy",
+  description: "Poznaj trenerów Ground Zero: Kacper Miller (motoryka, trening siłowy) oraz Nicole Drescher (fitness kobiet). Zmień swoją sylwetkę pod ich okiem!",
   keywords: ["trener personalny Niemodlin", "trenerzy Ground Zero", "Kacper Miller trener", "Nicole Drescher trenerka", "trening personalny", "przygotowanie motoryczne", "fitness dla kobiet"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/trenerzy",
   },
   openGraph: {
-    title: "Nasi Trenerzy | Ground Zero Niemodlin",
+    title: "Nasi Trenerzy",
     description: "Kacper Miller i Nicole Drescher. Indywidualne podejście, bezlitosna praca nad formą i profesjonalna opieka trenerska na Opolszczyźnie.",
     url: "https://www.groundzero-niemodlin.pl/trenerzy",
     siteName: "Ground Zero Siłownia Niemodlin",

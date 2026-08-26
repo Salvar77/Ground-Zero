@@ -15,7 +15,7 @@ import {
 import styles from "../polityka-prywatnosci/page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Regulamin Siłowni | Ground Zero Niemodlin",
+  title: "Regulamin Siłowni",
   description: "Regulamin korzystania z siłowni Ground Zero Niemodlin oraz zasady świadczenia usług drogą elektroniczną.",
   keywords: ["regulamin siłowni", "zasady siłowni", "Ground Zero regulamin", "siłownia Niemodlin regulamin"],
   alternates: {

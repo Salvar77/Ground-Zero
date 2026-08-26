@@ -3,14 +3,14 @@ import Contact from "@/components/Contact/Contact";
 import FreeTrial from "@/components/FreeTrial/FreeTrial";
 
 export const metadata = {
-  title: "Kontakt | Ground Zero Siłownia Niemodlin",
+  title: "Kontakt",
   description: "Skontaktuj się z nami. Znajdziesz nas w Niemodlinie przy ul. Opolskiej 54. Zadzwoń lub napisz i dołącz do najlepszej siłowni w regionie.",
   keywords: ["kontakt siłownia Niemodlin", "Ground Zero kontakt", "adres siłownia Niemodlin", "telefon siłownia", "formularz kontaktowy", "siłownia Niemodlin kontakt"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/kontakt",
   },
   openGraph: {
-    title: "Kontakt | Ground Zero Siłownia Niemodlin",
+    title: "Kontakt",
     description: "Masz pytania? Skontaktuj się z nami! Znajdziesz nas przy ul. Opolskiej 54 w Niemodlinie.",
     url: "https://www.groundzero-niemodlin.pl/kontakt",
     siteName: "Ground Zero Siłownia Niemodlin",

@@ -6,14 +6,14 @@ import WellnessEquipment from "@/components/WellnessSubpage/Equipment/WellnessEq
 import WellnessCta from "@/components/WellnessSubpage/CTA/WellnessCta";
 
 export const metadata: Metadata = {
-  title: "Recovery Room | Ground Zero Niemodlin",
+  title: "Recovery Room",
   description: "Zregeneruj siły w naszym Recovery Room. Drenaż limfatyczny i pistolety masujące w najlepszej siłowni w regionie.",
   keywords: ["recovery room Niemodlin", "drenaż limfatyczny Niemodlin", "odnowa biologiczna Niemodlin", "relaks siłownia", "masaż uciskowy", "regeneracja po treningu"],
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/recovery-room",
   },
   openGraph: {
-    title: "Recovery Room | Ground Zero Niemodlin",
+    title: "Recovery Room",
     description: "Zregeneruj siły w naszym Recovery Room. Drenaż limfatyczny i profesjonalna odnowa biologiczna.",
     url: "https://www.groundzero-niemodlin.pl/recovery-room",
     siteName: "Ground Zero Siłownia Niemodlin",

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Ground Zero Niemodlin",
   },
   description:
-    "Najlepsza siłownia w Niemodlinie i okolicach (blisko Opola, Grodkowa, Tułowic). Oferujemy nowoczesny sprzęt, treningi personalne i recovery room. Zbuduj formę w Ground Zero na ul. Opolskiej 54!",
+    "Najlepsza siłownia w Niemodlinie! Nowoczesny sprzęt HES, wolne ciężary, treningi personalne i recovery room. Zbuduj formę na ul. Opolskiej 54.",
   keywords: [
     "siłownia Niemodlin",
     "klub fitness Niemodlin",

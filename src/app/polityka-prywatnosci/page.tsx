@@ -21,7 +21,7 @@ import {
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: "Polityka Prywatności | Ground Zero Niemodlin",
+  title: "Polityka Prywatności",
   description: "Polityka prywatności siłowni Ground Zero Niemodlin. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.",
   keywords: ["polityka prywatności siłownia", "RODO siłownia Niemodlin", "Ground Zero prywatność"],
   alternates: {

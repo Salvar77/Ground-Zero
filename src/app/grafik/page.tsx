@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Schedule from "@/components/Schedule/Schedule";
 
 export const metadata: Metadata = {
-  title: "Grafik Zajęć | Ground Zero Niemodlin",
+  title: "Grafik Zajęć",
   description: "Sprawdź aktualny grafik zajęć grupowych w Ground Zero Niemodlin. Cross, Fitness, MMA dla dzieci, młodzieży i dorosłych. Znajdź trening dla siebie!",
   alternates: {
     canonical: "https://www.groundzero-niemodlin.pl/grafik",
