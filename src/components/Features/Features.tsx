@@ -16,7 +16,7 @@ const featuresData = [
   {
     id: '02',
     title: 'SALA FITNESS I SPORTÓW WALKI',
-    image: '/images/strefa-sportow-walki-mma-worek-treningowy-ground-zero-niemodli.webp'
+    image: '/images/strefa-sportow-walki-mma-worek-treningowy-ground-zero-niemodlin.webp'
   },
   {
     id: '03',

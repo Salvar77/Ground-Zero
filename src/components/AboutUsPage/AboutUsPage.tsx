@@ -67,7 +67,7 @@ export default function AboutUsPage() {
           {/* Bottom fade gradient to seamlessly blend into next section */}
           <div className={styles.bottomFade}></div>
           <Image 
-            src="/images/trenerzy-personalni-niemodlin-kacper-nikola.webp" 
+            src="/images/trenerzy-wlasciciele-kacper-nikola-miller-drescher.webp" 
             alt="Trener personalny Niemodlin - Kacper Miller i Nicole Drescher" 
             fill
             sizes="100vw"
@@ -175,7 +175,7 @@ export default function AboutUsPage() {
             >
               <div className={styles.imageCard}>
                 <Image 
-                  src="/images/trenerzy-personalni-niemodlin-kacper-nikola.webp" 
+                  src="/images/trenerzy-wlasciciele-kacper-nikola-miller-drescher.webp" 
                   alt="Kacper i Nicole - Kadra Ground Zero Niemodlin"
                   width={550}
                   height={650}
@@ -280,7 +280,7 @@ export default function AboutUsPage() {
             >
               <div className={styles.mainImageWrapper}>
                 <Image 
-                  src="/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller.webp" 
+                  src="/images/wlasciciele-silowni-ground-zero-niemodlin-kacper-nikola-miller-drescher.webp" 
                   alt="Kacper Miller i Nicole Drescher - Kadra Ground Zero"
                   fill
                   className={styles.foundersImg}

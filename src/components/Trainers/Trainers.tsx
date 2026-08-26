@@ -27,7 +27,7 @@ const trainersData: Trainer[] = [
       "Budowanie Siły",
       "Trening Siłowy",
     ],
-    image: "/images/trenerka-wlascicielka-nikola-miller.webp",
+    image: "/images/trenerka-wlascicielka-nicole-drescher.webp",
     description:
       "Trening siłowy to jej pasja. Pomaga kobietom w budowaniu silnej i wymodelowanej sylwetki. Skupia się na poprawie sprawności, sile i udowadnia, że każdy trening to rozmowa z Twoją siłą.",
   },

@@ -73,7 +73,7 @@ export default function TrainersPage() {
               <div className={`${styles.neonGlow} ${styles.neonGlowNikola}`}></div>
               <div className={`${styles.decoCorner} ${styles.cornerNikola}`}></div>
               <Image 
-                src="/images/trenerka-wlascicielka-nikola-miller.webp"
+                src="/images/trenerka-wlascicielka-nicole-drescher.webp"
                 alt="Nicole Drescher - Trenerka Personalna Niemodlin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
