@@ -83,7 +83,7 @@ export default function About() {
                 <div>
                   <h4 className={styles.featureTitle}>Sprzęt Klasy Premium</h4>
                   <p className={styles.featureDesc}>
-                    Starannie wyselekcjonowane maszyny półwolne Hammer, strefa wolnych ciężarów i profesjonalna klatka.
+                    Starannie wyselekcjonowane maszyny renomowanej polskiej firmy HES, strefa wolnych ciężarów i profesjonalna klatka.
                   </p>
                 </div>
               </div>

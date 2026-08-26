@@ -30,7 +30,7 @@ export default function AboutUsPage() {
   const fundamenty = [
     {
       title: "Sprzęt Premium",
-      desc: "Maszyny półwolne Hammer Strength i najwyższej klasy wolny ciężar, który nie uznaje kompromisów. Każda maszyna została wyselekcjonowana tak, aby zapewnić optymalną biomechanikę ruchu i maksymalne czucie mięśniowe.",
+      desc: "Maszyny renomowanej polskiej firmy HES i najwyższej klasy wolny ciężar, który nie uznaje kompromisów. Każda maszyna została wyselekcjonowana tak, aby zapewnić optymalną biomechanikę ruchu i maksymalne czucie mięśniowe.",
       icon: <FaDumbbell />,
       delay: 0.1,
       color: "#0066ff" // Blue
