@@ -15,6 +15,7 @@ const FACILITIES = ["Wszystkie obiekty", "Sala Fitness", "Salka Cross"];
 export default function Schedule() {
   const [filterType, setFilterType] = useState<string>("Wszystkie aktywności");
   const [filterFacility, setFilterFacility] = useState<string>("Wszystkie obiekty");
+  const [activeDay, setActiveDay] = useState<string>("Poniedziałek");
 
   const filteredData = scheduleData.filter(item => {
     if (filterType !== "Wszystkie aktywności" && item.type !== filterType) return false;
@@ -130,6 +131,55 @@ export default function Schedule() {
             </div>
           </div>
         </motion.div>
+
+        {/* MOBILE AGENDA VIEW */}
+        <div className={styles.mobileAgendaWrapper}>
+          <div className={styles.dayTabsScroll}>
+            <div className={styles.dayTabs}>
+              {DAYS.map(day => (
+                <button 
+                  key={day} 
+                  className={`${styles.dayTabBtn} ${activeDay === day ? styles.activeTab : ''}`}
+                  onClick={() => setActiveDay(day)}
+                >
+                  {day.substring(0, 3)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.agendaList}>
+            {TIMES.map(time => {
+              const items = filteredData.filter(i => i.day === activeDay && i.time === time);
+              if (items.length === 0) return null;
+              
+              return (
+                <div key={`${activeDay}-${time}`} className={styles.agendaTimeGroup}>
+                  <div className={styles.agendaTimeHeader}>{time}</div>
+                  <div className={styles.agendaItems}>
+                    {items.map(item => (
+                      <motion.div 
+                        key={item.id} 
+                        className={`${styles.classBlock} ${getClassColor(item.type)}`}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <span className={styles.className}>{item.type}</span>
+                        <span className={styles.classDuration}>{item.duration}</span>
+                        <span className={styles.classCapacity}>Zarezerwowano: 0 / {item.capacityLimit}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+            
+            {filteredData.filter(i => i.day === activeDay).length === 0 && (
+              <div className={styles.emptyAgenda}>Brak zajęć w tym dniu.</div>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
