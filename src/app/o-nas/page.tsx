@@ -15,7 +15,7 @@ export const metadata = {
     siteName: "Ground Zero Siłownia Niemodlin",
     images: [
       {
-        url: "/images/o-nas-hero-desktop.jpg",
+        url: "/images/o-nas-hero-desktop.webp",
         width: 1200,
         height: 630,
         alt: "Wnętrze siłowni Ground Zero Niemodlin",
@@ -30,7 +30,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["AboutPage", "LocalBusiness"],
   "name": "Ground Zero Siłownia Niemodlin",
-  "image": "https://groundzeroniemodlin.pl/images/o-nas-hero-desktop.jpg",
+  "image": "https://groundzeroniemodlin.pl/images/o-nas-hero-desktop.webp",
   "description": "Nowoczesne centrum treningowe w Niemodlinie (powierzchnia ponad 400 m²). Oferujemy strefę wolnych ciężarów ze sprzętem Hammer Strength, zajęcia fitness oraz MMA.",
   "url": "https://groundzeroniemodlin.pl/o-nas",
   "address": {

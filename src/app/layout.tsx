@@ -104,7 +104,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ExerciseGym",
   name: "Ground Zero Siłownia Niemodlin",
-  image: "https://www.groundzero-niemodlin.pl/images/hero-grafika.jpg",
+  image: "https://www.groundzero-niemodlin.pl/images/hero-grafika.webp",
   "@id": "https://www.groundzero-niemodlin.pl",
   url: "https://www.groundzero-niemodlin.pl",
   telephone: "+48666310850",

@@ -31,7 +31,7 @@ const jsonLd = {
   "provider": {
     "@type": "ExerciseGym",
     "name": "Ground Zero Siłownia Niemodlin",
-    "image": "https://www.groundzero-niemodlin.pl/images/hero-grafika.jpg",
+    "image": "https://www.groundzero-niemodlin.pl/images/hero-grafika.webp",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "ul. Opolska 54",

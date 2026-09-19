@@ -85,7 +85,7 @@ export default function Footer() {
             >
               <Link href="/" className={styles.logoLink}>
                 <Image
-                  src="/images/ground-zero-logo.png"
+                  src="/images/ground-zero-logo.webp"
                   alt="Ground Zero Siłownia Niemodlin – Logo"
                   width={120}
                   height={120}
